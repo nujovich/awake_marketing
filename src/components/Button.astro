@@ -1,0 +1,47 @@
+---
+type Variant = "primary" | "secondary" | "ghost";
+
+interface Props {
+  href?: string;
+  variant?: Variant;
+  type?: "button" | "submit";
+  class?: string;
+}
+
+const { href, variant = "primary", type = "button", class: cls = "" } = Astro.props;
+
+const base =
+  "inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bone-50 focus-visible:ring-space-indigo-500";
+
+const styles: Record<Variant, string> = {
+  primary:
+    "bg-space-indigo-700 text-bone-50 hover:bg-space-indigo-800 hover:-translate-y-0.5 shadow-sm hover:shadow",
+  secondary:
+    "bg-powder-petal-500 text-bone-50 hover:bg-powder-petal-600 hover:-translate-y-0.5 shadow-sm hover:shadow",
+  ghost:
+    "border border-space-indigo-700/30 text-space-indigo-800 hover:bg-space-indigo-700/10",
+};
+
+const className = `${base} ${styles[variant]} ${cls}`.trim();
+
+const Tag = href ? "a" : "button";
+---
+
+<Tag class={className} href={href} type={!href ? type : undefined}>
+  <slot />
+  <svg
+    aria-hidden="true"
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="transition-transform duration-200 group-hover:translate-x-0.5"
+  >
+    <path d="M5 12h14"></path>
+    <path d="m12 5 7 7-7 7"></path>
+  </svg>
+</Tag>

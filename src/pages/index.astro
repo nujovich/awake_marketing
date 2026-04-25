@@ -1,0 +1,190 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import CoreMethod from "../components/CoreMethod.astro";
+import PriceCard from "../components/PriceCard.astro";
+import RadarOrb from "../components/RadarOrb.astro";
+import { brand, valueProp, sinceridad } from "../data/content";
+import { branding, rrss, diagnostico } from "../data/services";
+
+const featured = [
+  diagnostico.find((t) => t.id === "radar")!,
+  branding.find((t) => t.id === "core-total")!,
+  rrss.find((t) => t.id === "pro")!,
+];
+---
+
+<Layout>
+  {/* ========= HERO ========= */}
+  <section class="relative overflow-hidden bg-bone-50">
+    <div
+      class="absolute inset-0 -z-10 opacity-60"
+      style="background: radial-gradient(60% 50% at 80% 20%, rgba(108,91,164,0.18), transparent 60%), radial-gradient(40% 50% at 10% 90%, rgba(189,119,66,0.15), transparent 60%);"
+    >
+    </div>
+
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28">
+      <div class="grid items-center gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <p
+            class="reveal inline-flex items-center gap-2 rounded-full bg-space-indigo-900/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-space-indigo-800"
+          >
+            <span class="h-1.5 w-1.5 rounded-full bg-jungle-teal-600"></span>
+            Visión de Radar
+          </p>
+
+          <h1
+            class="reveal mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-semibold leading-[1.02] tracking-tight text-space-indigo-900"
+          >
+            Despertamos la <span class="italic text-vintage-grape-700">claridad</span>
+            estratégica para que tu marca deje de ser una opción y sea
+            <span class="italic text-powder-petal-600">la solución</span>.
+          </h1>
+
+          <p
+            class="reveal mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-space-indigo-800/80"
+          >
+            Somos un equipo creativo con visión de radar. Atravesamos el ruido,
+            detectamos el diamante enterrado en tu marca y lo transformamos en
+            una presencia con autoridad y estilo propio.
+          </p>
+
+          <div class="reveal mt-8 flex flex-wrap items-center gap-3">
+            <Button href="/contacto" variant="primary">
+              Reservar consultoría gratis
+            </Button>
+            <Button href="#metodo" variant="ghost">Ver el Método CORE</Button>
+          </div>
+
+          <dl
+            class="reveal mt-12 grid grid-cols-3 gap-6 max-w-md border-t border-space-indigo-900/10 pt-6"
+          >
+            <div>
+              <dt class="text-xs uppercase tracking-[0.18em] text-space-indigo-800/60">
+                Método
+              </dt>
+              <dd class="mt-1 font-display text-2xl text-space-indigo-900">
+                CORE
+              </dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-[0.18em] text-space-indigo-800/60">
+                Etapas
+              </dt>
+              <dd class="mt-1 font-display text-2xl text-space-indigo-900">04</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-[0.18em] text-space-indigo-800/60">
+                Valor base
+              </dt>
+              <dd class="mt-1 font-display text-2xl text-space-indigo-900">
+                Honestidad
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="reveal lg:col-span-5">
+          <RadarOrb />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ========= PROPUESTA DE VALOR ========= */}
+  <section class="bg-bone-50 py-20 sm:py-24">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <SectionTitle
+        eyebrow={valueProp.eyebrow}
+        title={valueProp.title}
+        intro={valueProp.body[0]}
+      />
+      <p
+        class="reveal mt-4 max-w-3xl text-base sm:text-lg leading-relaxed text-space-indigo-800/75"
+      >
+        {valueProp.body[1]}
+      </p>
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          valueProp.pillars.map((pillar, i) => (
+            <div
+              class="reveal group rounded-2xl border border-space-indigo-900/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-space-indigo-700/40 hover:bg-bone-100"
+              style={`transition-delay: ${i * 60}ms`}
+            >
+              <p class="font-display text-lg font-semibold text-space-indigo-900">
+                {pillar.title}
+              </p>
+              <p class="mt-2 text-sm leading-relaxed text-space-indigo-800/70">
+                {pillar.body}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  {/* ========= MÉTODO CORE ========= */}
+  <section id="metodo" class="bg-space-indigo-950 py-20 sm:py-28 text-bone-50">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <SectionTitle
+        eyebrow="Método CORE"
+        title="Cuatro etapas que van directo al núcleo."
+        intro="Transformamos el caos visual y estratégico en una presencia con autoridad y estilo propio."
+        tone="dark"
+      />
+
+      <div class="mt-12">
+        <CoreMethod variant="compact" tone="dark" />
+      </div>
+
+      <div class="reveal mt-12">
+        <Button href="/servicios#core" variant="secondary">
+          Conocer el método completo
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  {/* ========= SERVICIOS DESTACADOS ========= */}
+  <section class="bg-bone-50 py-20 sm:py-28">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <SectionTitle
+        eyebrow="Servicios destacados"
+        title="Empezá donde estés. Te llevamos donde tu marca merece llegar."
+        intro="Tres puntos de partida frecuentes. Si nada encaja, armamos algo a medida."
+      />
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        {featured.map((tier) => <PriceCard tier={tier} />)}
+      </div>
+
+      <div class="reveal mt-10 text-center">
+        <Button href="/servicios" variant="ghost">Ver todos los servicios</Button>
+      </div>
+    </div>
+  </section>
+
+  {/* ========= CIERRE / SINCERIDAD ========= */}
+  <section class="bg-bone-100 py-20 sm:py-28">
+    <div class="mx-auto max-w-4xl px-5 sm:px-8 text-center">
+      <p
+        class="reveal text-xs font-medium uppercase tracking-[0.22em] text-powder-petal-600"
+      >
+        Sin humo
+      </p>
+      <blockquote
+        class="reveal mt-5 font-display text-2xl sm:text-3xl md:text-4xl leading-snug text-space-indigo-900"
+      >
+        “{sinceridad.body}”
+      </blockquote>
+      <div class="reveal mt-10">
+        <Button href="/contacto" variant="primary">
+          Hablemos de tu marca
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

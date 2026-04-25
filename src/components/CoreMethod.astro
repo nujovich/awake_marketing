@@ -1,0 +1,46 @@
+---
+import { coreMethodCompact, coreMethodFull } from "../data/content";
+
+interface Props {
+  variant?: "compact" | "full";
+  tone?: "light" | "dark";
+}
+
+const { variant = "compact", tone = "light" } = Astro.props;
+const steps = variant === "full" ? coreMethodFull : coreMethodCompact;
+
+const cardBg =
+  tone === "dark"
+    ? "bg-space-indigo-900/40 ring-1 ring-bone-100/10"
+    : "bg-bone-100 ring-1 ring-space-indigo-900/5";
+
+const titleColor = tone === "dark" ? "text-bone-50" : "text-space-indigo-900";
+const bodyColor = tone === "dark" ? "text-bone-200/80" : "text-space-indigo-800/75";
+const summaryColor = tone === "dark" ? "text-jungle-teal-300" : "text-jungle-teal-700";
+---
+
+<ol class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+  {
+    steps.map((step, i) => (
+      <li
+        class={`reveal group relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 ${cardBg}`}
+        style={`transition-delay: ${i * 60}ms`}
+      >
+        <div class="flex items-center gap-3">
+          <span class="font-display text-5xl font-semibold leading-none text-powder-petal-500 transition-transform duration-300 group-hover:scale-110">
+            {step.letter}
+          </span>
+          {"summary" in step && step.summary && (
+            <span class={`text-[11px] uppercase tracking-[0.18em] ${summaryColor}`}>
+              {step.summary}
+            </span>
+          )}
+        </div>
+        <h3 class={`mt-4 font-display text-xl font-semibold leading-snug ${titleColor}`}>
+          {step.title}
+        </h3>
+        <p class={`mt-2 text-sm leading-relaxed ${bodyColor}`}>{step.body}</p>
+      </li>
+    ))
+  }
+</ol>

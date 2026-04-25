@@ -1,0 +1,45 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  align?: "left" | "center";
+  tone?: "light" | "dark";
+}
+
+const {
+  eyebrow,
+  title,
+  intro,
+  align = "left",
+  tone = "light",
+} = Astro.props;
+
+const wrap = align === "center" ? "text-center mx-auto max-w-3xl" : "max-w-3xl";
+const eyebrowColor =
+  tone === "dark" ? "text-powder-petal-300" : "text-powder-petal-600";
+const titleColor = tone === "dark" ? "text-bone-50" : "text-space-indigo-900";
+const introColor = tone === "dark" ? "text-bone-200/80" : "text-space-indigo-800/75";
+---
+
+<div class={`reveal ${wrap}`}>
+  {
+    eyebrow && (
+      <p class={`text-xs font-medium uppercase tracking-[0.22em] ${eyebrowColor}`}>
+        {eyebrow}
+      </p>
+    )
+  }
+  <h2
+    class={`mt-3 font-display text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tight ${titleColor}`}
+  >
+    {title}
+  </h2>
+  {
+    intro && (
+      <p class={`mt-5 text-base sm:text-lg leading-relaxed ${introColor}`}>
+        {intro}
+      </p>
+    )
+  }
+</div>

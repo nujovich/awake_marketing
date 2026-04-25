@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  body: string;
+  icon: "radar" | "flame" | "compass" | "spark" | "diamond";
+}
+
+const { title, subtitle, body, icon } = Astro.props;
+
+const icons: Record<Props["icon"], string> = {
+  radar: `<circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" /><path d="m12 3 0 2 M12 19l0 2 M3 12l2 0 M19 12l2 0" />`,
+  flame: `<path d="M12 2c1 4 5 5 5 10a5 5 0 0 1-10 0c0-3 2-4 2-7 1 1 2 2 3 4z" />`,
+  compass: `<circle cx="12" cy="12" r="9" /><path d="m9 15 2-6 6-2-2 6z" />`,
+  spark: `<path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" />`,
+  diamond: `<path d="M6 3h12l3 6-9 12L3 9z" /><path d="M3 9h18 M9 3 9 9 12 21 15 9 15 3" />`,
+};
+---
+
+<article
+  class="reveal group flex h-full flex-col rounded-2xl bg-bone-100 p-6 ring-1 ring-space-indigo-900/5 transition-all duration-300 hover:-translate-y-1 hover:ring-space-indigo-900/15 hover:shadow-md"
+>
+  <div
+    class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-space-indigo-900 text-powder-petal-300 transition-transform duration-300 group-hover:rotate-6"
+  >
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+      set:html={icons[icon]}
+    />
+  </div>
+  <h3 class="mt-5 font-display text-xl font-semibold text-space-indigo-900">
+    {title}
+  </h3>
+  <p class="text-xs uppercase tracking-[0.18em] text-jungle-teal-700 mt-1">
+    {subtitle}
+  </p>
+  <p class="mt-3 text-sm leading-relaxed text-space-indigo-800/75">{body}</p>
+</article>

@@ -1,0 +1,22 @@
+---
+type Tone = "teal" | "petal" | "indigo";
+interface Props {
+  tone?: Tone;
+}
+const { tone = "teal" } = Astro.props;
+
+const styles: Record<Tone, string> = {
+  teal: "bg-jungle-teal-600 text-bone-50",
+  petal: "bg-powder-petal-500 text-bone-50",
+  indigo: "bg-space-indigo-700 text-bone-50",
+};
+---
+
+<span
+  class={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] ${styles[tone]}`}
+>
+  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="m12 2 2.39 7.36H22l-6.31 4.59L18.08 22 12 17.27 5.92 22l2.39-8.05L2 9.36h7.61z"/>
+  </svg>
+  <slot />
+</span>
