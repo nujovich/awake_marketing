@@ -5,7 +5,7 @@ import SectionTitle from "../components/SectionTitle.astro";
 import CoreMethod from "../components/CoreMethod.astro";
 import PriceCard from "../components/PriceCard.astro";
 import RadarOrb from "../components/RadarOrb.astro";
-import { brand, valueProp, sinceridad } from "../data/content";
+import { brand, valueProp, pillarsSection, sinceridad } from "../data/content";
 import { branding, rrss, diagnostico } from "../data/services";
 
 const featured = [
@@ -100,26 +100,32 @@ const featured = [
         title={valueProp.title}
         intro={valueProp.body[0]}
       />
-      <p
-        class="reveal mt-4 max-w-3xl text-base sm:text-lg leading-relaxed text-space-indigo-800/75"
-      >
-        {valueProp.body[1]}
-      </p>
+    </div>
+  </section>
+
+  {/* ========= 4 PILARES ========= */}
+  <section class="bg-bone-100 py-20 sm:py-24">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <SectionTitle
+        eyebrow={pillarsSection.eyebrow}
+        title={pillarsSection.title}
+        intro={pillarsSection.intro}
+      />
 
       <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {
-          valueProp.pillars.map((pillar, i) => (
-            <div
-              class="reveal group rounded-2xl border border-space-indigo-900/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-space-indigo-700/40 hover:bg-bone-100"
+          pillarsSection.pillars.map((pillar, i) => (
+            <article
+              class="reveal group rounded-2xl bg-bone-50 p-6 ring-1 ring-space-indigo-900/5 transition-all duration-300 hover:-translate-y-1 hover:ring-space-indigo-700/30 hover:shadow-md"
               style={`transition-delay: ${i * 60}ms`}
             >
-              <p class="font-display text-lg font-semibold text-space-indigo-900">
+              <h3 class="font-display text-xl font-semibold text-space-indigo-900">
                 {pillar.title}
-              </p>
-              <p class="mt-2 text-sm leading-relaxed text-space-indigo-800/70">
+              </h3>
+              <p class="mt-3 text-sm leading-relaxed text-space-indigo-800/75">
                 {pillar.body}
               </p>
-            </div>
+            </article>
           ))
         }
       </div>

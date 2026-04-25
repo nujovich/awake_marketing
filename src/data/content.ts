@@ -23,24 +23,30 @@ export const valueProp = {
   title: "No somos un proveedor más. Somos tu equipo creativo con visión de radar.",
   body: [
     "Sabemos que hay marcas con un gran potencial, pero el desorden de la operación diaria las ha vuelto invisibles. Nosotras también estuvimos ahí, y por eso nos tomamos tu objetivo como un desafío personal.",
-    "Nuestra Visión de Radar no se deja engañar por la niebla del caos: atraviesa el ruido y detecta el objetivo con precisión. Localizamos ese diamante enterrado que aún no ha nacido en las marcas, vemos lo que nadie ve y excavamos hasta encontrarlo.",
   ],
+};
+
+export const pillarsSection = {
+  eyebrow: "Nuestros valores",
+  title: "Nos basamos en 4 pilares.",
+  intro:
+    "Cuatro principios que ordenan cómo trabajamos cada decisión por tu marca.",
   pillars: [
     {
-      title: "Energía",
-      body: "Trabajamos con buena onda y los pies en la tierra.",
-    },
-    {
       title: "Empatía",
-      body: "Entendemos al humano detrás de la marca.",
+      body: "Tu marca no es un número, es nuestra prioridad. Sintonizamos con tu propósito para que nuestra energía trabaje en armonía con la tuya. Logros respaldando tu tranquilidad.",
     },
     {
       title: "Creatividad",
-      body: "Sin estrategia no vende. Sin belleza no impacta.",
+      body: "Creemos en la belleza con propósito. Sin estrategia no hay ventas, pero sin impacto visual no hay memoria. Fusionamos el arte con los datos para que tu marca no solo se vea bien, sino que rinda.",
     },
     {
-      title: "Mentalidad guerrera",
-      body: "Una obstinación sana por el éxito de quien confía en nosotras.",
+      title: "Energía",
+      body: "Trabajamos con los pies en la tierra y la energía en alto. Tener la energía necesaria es una parte fundamental para que el proceso sea fluido, manteniendo el rigor técnico que tu negocio exige.",
+    },
+    {
+      title: "Tenacidad",
+      body: "Nos define una obsesión sana por el éxito. No somos observadores, somos aliados que luchan por tu cuota en el mercado. En Awake, rendirse no es una opción estratégica.",
     },
   ],
 };
@@ -48,50 +54,52 @@ export const valueProp = {
 export const coreMethodCompact = [
   {
     letter: "C",
-    title: "Entendemos tu marca",
-    body: "Analizamos dónde estás parado y qué te frena. Sin claridad no hay avance posible.",
+    title: "Claridad",
+    body: "Entendemos tu marca en profundidad.",
   },
   {
     letter: "O",
-    title: "Definimos el rumbo",
-    body: "Estrategia clara, sin improvisar. Decisiones que se traducen en criterio de ejecución.",
+    title: "Orden",
+    body: "Fase de estructura. Corregimos, afrontamos, mantenemos y explotamos las oportunidades. Tomamos las decisiones clave y definimos el rumbo. Es el puente donde el análisis se convierte en criterio.",
   },
   {
     letter: "R",
-    title: "Tu marca se ve como lo que es",
-    body: "Diseño con autoridad: identidad coherente para ser digna de confianza al primer vistazo.",
+    title: "Realce",
+    // TODO: completar texto de Realce
+    body: "TODO: completar texto de Realce",
   },
   {
     letter: "E",
-    title: "Escalas",
-    body: "Con base sólida, la marca está lista para crecer. Resultados reales en ejecución constante.",
+    title: "Expansión",
+    body: "Con base sólida, tu marca está lista para escalar.",
   },
 ];
 
 export const coreMethodFull = [
   {
     letter: "C",
-    title: "Claridad — La Auditoría",
+    title: "Claridad",
     summary: "Fase de Diagnóstico",
-    body: "Usamos el Radar para entender dónde estás parado. Analizamos problemas, números y competencia para identificar al gigante dormido. Sin claridad sobre lo que te frena, no hay avance posible.",
+    body: "Entendemos tu marca en profundidad.",
   },
   {
     letter: "O",
-    title: "Orden — La Estrategia CAME",
+    title: "Orden",
     summary: "Fase de Estructura",
-    body: "Aplicamos la matriz para Corregir, Afrontar, Mantener y Explotar. Tomamos las decisiones clave y definimos el rumbo. Es el puente donde el análisis se convierte en criterio de ejecución.",
+    body: "Corregimos, afrontamos, mantenemos y explotamos las oportunidades. Tomamos las decisiones clave y definimos el rumbo. Es el puente donde el análisis se convierte en criterio.",
   },
   {
     letter: "R",
-    title: "Realce — Awake Aesthetics",
+    title: "Realce",
     summary: "Fase de Manifestación",
-    body: "Si la marca ya sabe quién es, ahora tiene que verse como tal. Construimos coherencia visual (logos, tipografías, fotografía) para que el diseño proyecte autoridad. Es el impulso estético para ser digno de confianza al primer vistazo.",
+    // TODO: completar texto de Realce
+    body: "TODO: completar texto de Realce",
   },
   {
     letter: "E",
-    title: "Expansión — El Resultado",
+    title: "Expansión",
     summary: "La Marca Despierta",
-    body: "Con una base sólida, la marca está lista para escalar. Aquí la gestión de redes y la comunicación dan resultados reales porque ya no hay desorden; hay una marca estratégica en ejecución constante.",
+    body: "Con base sólida, tu marca está lista para escalar.",
   },
 ];
 

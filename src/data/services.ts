@@ -29,7 +29,7 @@ export const diagnostico: Tier[] = [
   {
     id: "radar",
     name: "Diagnóstico RADAR",
-    price: "75 €",
+    price: "150 €",
     priceNote: "+ IVA · bonificable con el Pack CORE",
     tagline:
       "El primer paso del Método CORE. Auditoría de situación actual, FODA y hoja de ruta accionable.",
