@@ -8,12 +8,12 @@ const isActive = (href: string) =>
 ---
 
 <header
-  class="sticky top-0 z-40 bg-paper/95 backdrop-blur border-b border-rule"
+  class="sticky top-0 z-40 bg-violet/92 backdrop-blur border-b border-paper/10"
   transition:persist
 >
   <div class="mx-auto max-w-[1280px] px-6 sm:px-14">
     <div class="flex h-20 items-center justify-between">
-      <Logo />
+      <Logo variant="light" />
 
       <nav class="hidden md:flex items-center gap-10">
         {
@@ -23,8 +23,8 @@ const isActive = (href: string) =>
               class:list={[
                 "font-display text-[11px] font-semibold uppercase tracking-[0.22em] transition-colors duration-200",
                 isActive(item.href)
-                  ? "text-violet"
-                  : "text-ink hover:text-violet",
+                  ? "text-paper"
+                  : "text-paper/85 hover:text-paper",
               ]}
             >
               {item.label}
@@ -36,7 +36,7 @@ const isActive = (href: string) =>
       <div class="hidden md:block">
         <a
           href="/contacto"
-          class="inline-flex items-center gap-2 bg-ink text-paper px-5 py-3 font-display text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-violet transition-colors"
+          class="inline-flex items-center gap-2 border border-paper/60 text-paper px-5 py-3 font-display text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-paper hover:text-violet transition-colors"
         >
           Diagnóstico
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
@@ -58,7 +58,7 @@ const isActive = (href: string) =>
       </button>
     </div>
 
-    <div id="mobile-nav" class="md:hidden hidden pb-6 pt-2 border-t border-rule">
+    <div id="mobile-nav" class="md:hidden hidden pb-6 pt-2 border-t border-paper/20">
       <nav class="flex flex-col">
         {
           nav.map((item) => (
@@ -66,7 +66,7 @@ const isActive = (href: string) =>
               href={item.href}
               class:list={[
                 "py-4 font-display text-xs font-semibold uppercase tracking-[0.22em] border-b border-rule",
-                isActive(item.href) ? "text-violet" : "text-ink",
+                isActive(item.href) ? "text-paper" : "text-paper/85",
               ]}
             >
               {item.label}
@@ -75,7 +75,7 @@ const isActive = (href: string) =>
         }
         <a
           href="/contacto"
-          class="mt-6 inline-flex items-center justify-center gap-2 bg-ink text-paper px-5 py-4 font-display text-xs font-semibold uppercase tracking-[0.2em]"
+          class="mt-6 inline-flex items-center justify-center gap-2 bg-paper text-violet px-5 py-4 font-display text-xs font-semibold uppercase tracking-[0.2em]"
         >
           Diagnóstico gratis →
         </a>
