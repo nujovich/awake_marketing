@@ -5,16 +5,21 @@ import { brand, nav } from "../data/content";
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-ink text-paper">
-  <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24">
+<footer class="bg-violet text-paper">
+  <div class="mx-auto max-w-[1280px] px-6 sm:px-14 pt-20 pb-24">
+    <p class="font-display font-bold text-[clamp(56px,8vw,88px)] leading-[0.9] tracking-[-0.04em] text-paper">
+      Awake.
+    </p>
+    <div class="mt-8 mb-16 h-px w-16 bg-coral"></div>
+
     <div class="grid gap-16 md:grid-cols-12">
       <div class="md:col-span-5">
         <Logo variant="light" />
         <p class="mt-8 max-w-sm text-sm leading-relaxed text-paper/70">
           {brand.tagline}
         </p>
-        <div class="mt-10 h-px w-16 bg-gold"></div>
-        <p class="mt-6 font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
+        <div class="mt-10 h-px w-16 bg-coral"></div>
+        <p class="mt-6 font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/70">
           Método CORE · v2.0
         </p>
       </div>
@@ -29,7 +34,7 @@ const year = new Date().getFullYear();
               <li>
                 <a
                   href={item.href}
-                  class="text-sm text-paper hover:text-gold transition-colors duration-200"
+                  class="text-sm text-paper hover:text-coral transition-colors duration-200"
                 >
                   {item.label}
                 </a>
@@ -47,7 +52,7 @@ const year = new Date().getFullYear();
           <li>
             <a
               href={`mailto:${brand.email}`}
-              class="hover:text-gold transition-colors"
+              class="hover:text-coral transition-colors"
             >
               {brand.email}
             </a>
@@ -62,7 +67,7 @@ const year = new Date().getFullYear();
       class="mt-20 pt-8 border-t border-paper/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] uppercase tracking-[0.22em] text-paper/40 font-display font-medium"
     >
       <span>© {year} · {brand.full}</span>
-      <span class="text-gold">Sin excusas. Resultados medibles.</span>
+      <span class="text-coral">Sin excusas. Resultados medibles.</span>
     </div>
   </div>
 </footer>
