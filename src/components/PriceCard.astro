@@ -13,7 +13,7 @@ const featured = !!tier.featured;
     "reveal group relative flex h-full flex-col p-8 sm:p-10 transition-colors duration-300",
     featured
       ? "bg-violet text-paper"
-      : "bg-paper text-ink border border-violet-line hover:border-violet",
+      : "bg-paper text-ink border border-violet hover:border-violet-deep",
   ]}
 >
   {
@@ -22,7 +22,7 @@ const featured = !!tier.featured;
         <span
           class:list={[
             "inline-block px-3 py-1 font-display text-[10px] font-semibold uppercase tracking-[0.22em]",
-            featured ? "bg-gold text-ink" : "bg-ink text-paper",
+            featured ? "bg-coral text-paper" : "bg-ink text-paper",
           ]}
         >
           {tier.badge}
@@ -50,13 +50,13 @@ const featured = !!tier.featured;
     </p>
   </header>
 
-  <div class:list={["mt-8 h-px w-12", featured ? "bg-gold" : "bg-violet"]}></div>
+  <div class:list={["mt-8 h-px w-12", featured ? "bg-coral" : "bg-violet"]}></div>
 
   <div class="mt-6 flex items-baseline gap-2">
     <span
       class:list={[
         "font-display text-[42px] font-light leading-none tracking-tight",
-        featured ? "text-gold" : "text-ink",
+        featured ? "text-paper" : "text-ink",
       ]}
     >
       {tier.price}
@@ -94,7 +94,7 @@ const featured = !!tier.featured;
           <span
             class:list={[
               "mt-2 inline-block h-1.5 w-1.5 flex-none",
-              featured ? "bg-gold" : "bg-violet",
+              featured ? "bg-coral" : "bg-violet",
             ]}
           />
           <span
@@ -117,7 +117,7 @@ const featured = !!tier.featured;
         class:list={[
           "mt-10 inline-flex items-center justify-center gap-2 px-6 py-3 font-display text-[11px] font-semibold uppercase tracking-[0.22em] transition-colors",
           featured
-            ? "bg-gold text-ink hover:bg-paper"
+            ? "bg-paper text-violet hover:bg-violet-soft"
             : "bg-ink text-paper hover:bg-violet",
         ]}
       >
