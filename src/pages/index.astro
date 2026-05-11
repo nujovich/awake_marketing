@@ -4,8 +4,7 @@ import Button from "../components/Button.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import CoreMethod from "../components/CoreMethod.astro";
 import PriceCard from "../components/PriceCard.astro";
-import RadarOrb from "../components/RadarOrb.astro";
-import { brand, valueProp, pillarsSection, sinceridad } from "../data/content";
+import { pillarsSection, sinceridad } from "../data/content";
 import { branding, rrss, diagnostico } from "../data/services";
 
 const featured = [
@@ -13,116 +12,257 @@ const featured = [
   branding.find((t) => t.id === "core-total")!,
   rrss.find((t) => t.id === "pro")!,
 ];
+
+const coreRows = [
+  {
+    letter: "C",
+    name: "Claridad",
+    stage: "Diagnóstico",
+    body: "Auditoría técnica del ecosistema digital. Análisis DAFO y posicionamiento competitivo. Identificamos las fricciones que detienen el crecimiento.",
+  },
+  {
+    letter: "O",
+    name: "Orden",
+    stage: "Estructura",
+    body: "Matriz de acción que convierte el diagnóstico en hoja de ruta. Definimos criterios de ejecución y rumbo estratégico de la marca.",
+  },
+  {
+    letter: "R",
+    name: "Realce",
+    stage: "Proyección",
+    body: "Narrativa y sistema visual coherentes. Branding, tipografía y dirección de arte que validan tu capacidad y generan confianza inmediata.",
+  },
+  {
+    letter: "E",
+    name: "Expansión",
+    stage: "Ejecución",
+    body: "Gestión de canales y comunicación de alto impacto. La marca crece de forma constante, medible y estratégica.",
+  },
+];
+
+const yesItems = [
+  "Tu perfil está perdiendo clientes cada día.",
+  "Te digo exactamente qué falla. Gratis.",
+  "Resultados visibles en 60 días o no seguimos.",
+  "Nos tomamos tu proyecto como algo personal.",
+  "Sin permanencia. Mes a mes.",
+];
+const noItems = [
+  "Somos la mejor agencia de España.",
+  "Ofrecemos soluciones integrales 360°.",
+  "Garantizamos el éxito de tu marca.",
+  "Contamos con amplia experiencia.",
+  "Planes flexibles adaptados a ti.",
+];
+
+const marqueeWords = [
+  "Claridad",
+  "Orden",
+  "Realce",
+  "Expansión",
+  "Autoridad",
+  "Resultados",
+  "Honestidad",
+  "Estructura",
+];
 ---
 
 <Layout>
   {/* ========= HERO ========= */}
-  <section class="relative overflow-hidden bg-bone-50">
-    <div
-      class="absolute inset-0 -z-10 opacity-60"
-      style="background: radial-gradient(60% 50% at 80% 20%, rgba(108,91,164,0.18), transparent 60%), radial-gradient(40% 50% at 10% 90%, rgba(189,119,66,0.15), transparent 60%);"
-    >
-    </div>
-
-    <div class="mx-auto max-w-6xl px-5 sm:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28">
-      <div class="grid items-center gap-12 lg:grid-cols-12">
-        <div class="lg:col-span-7">
-          <p
-            class="reveal inline-flex items-center gap-2 rounded-full bg-space-indigo-900/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-space-indigo-800"
-          >
-            <span class="h-1.5 w-1.5 rounded-full bg-jungle-teal-600"></span>
-            Visión de Radar
-          </p>
+  <section class="relative bg-paper border-b border-rule overflow-hidden">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-14 pt-20 sm:pt-28 pb-24 sm:pb-32">
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-16 items-end">
+        <div class="lg:col-span-8">
+          <div class="reveal flex items-center gap-4">
+            <span class="font-display text-[11px] font-semibold uppercase tracking-[0.32em] text-violet">
+              v2.0 / 2026
+            </span>
+            <span class="h-px flex-1 bg-rule"></span>
+            <span class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/70">
+              Valencia · Alicante
+            </span>
+          </div>
 
           <h1
-            class="reveal mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-semibold leading-[1.02] tracking-tight text-space-indigo-900"
+            class="reveal mt-12 font-display text-5xl sm:text-6xl md:text-7xl lg:text-[84px] font-extrabold leading-[0.95] tracking-[-0.03em] text-ink"
           >
-            Despertamos la <span class="italic text-vintage-grape-700">claridad</span>
-            estratégica para que tu marca deje de ser una opción y sea
-            <span class="italic text-powder-petal-600">la solución</span>.
+            Transformamos<br />
+            negocios <span class="italic font-light text-violet">invisibles</span><br />
+            en marcas con<br />
+            <span class="relative inline-block">
+              autoridad
+              <span class="absolute left-0 -bottom-1 h-1 w-full bg-gold"></span>
+            </span>.
           </h1>
 
           <p
-            class="reveal mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-space-indigo-800/80"
+            class="reveal mt-10 max-w-xl text-base sm:text-lg font-light leading-relaxed text-graphite"
           >
-            Somos un equipo creativo con visión de radar. Atravesamos el ruido,
-            detectamos el diamante enterrado en tu marca y lo transformamos en
-            una presencia con autoridad y estilo propio.
+            Estructura, narrativa y resultados medibles. Aplicamos el
+            <span class="font-semibold text-ink">Método CORE</span> para eliminar
+            el caos operativo y consolidar marcas que dejan de competir por precio.
+            <span class="italic">Sin excusas.</span>
           </p>
 
-          <div class="reveal mt-8 flex flex-wrap items-center gap-3">
+          <div class="reveal mt-12 flex flex-wrap items-center gap-6">
             <Button href="/contacto" variant="primary">
-              Reservar consultoría gratis
+              Diagnóstico gratis
             </Button>
-            <Button href="#metodo" variant="ghost">Ver el Método CORE</Button>
+            <Button href="#metodo" variant="ghost">Ver el método</Button>
           </div>
-
-          <dl
-            class="reveal mt-12 grid grid-cols-3 gap-6 max-w-md border-t border-space-indigo-900/10 pt-6"
-          >
-            <div>
-              <dt class="text-xs uppercase tracking-[0.18em] text-space-indigo-800/60">
-                Método
-              </dt>
-              <dd class="mt-1 font-display text-2xl text-space-indigo-900">
-                CORE
-              </dd>
-            </div>
-            <div>
-              <dt class="text-xs uppercase tracking-[0.18em] text-space-indigo-800/60">
-                Etapas
-              </dt>
-              <dd class="mt-1 font-display text-2xl text-space-indigo-900">04</dd>
-            </div>
-            <div>
-              <dt class="text-xs uppercase tracking-[0.18em] text-space-indigo-800/60">
-                Valor base
-              </dt>
-              <dd class="mt-1 font-display text-2xl text-space-indigo-900">
-                Honestidad
-              </dd>
-            </div>
-          </dl>
         </div>
 
-        <div class="reveal lg:col-span-5">
-          <RadarOrb />
+        <div class="reveal lg:col-span-4">
+          <div class="border-t border-ink pt-8">
+            <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-violet">
+              — Método CORE
+            </p>
+            <ul class="mt-6 space-y-4 font-display text-sm font-semibold">
+              {
+                coreRows.map((row) => (
+                  <li class="flex items-baseline gap-4 border-b border-rule pb-3">
+                    <span class="font-extrabold text-2xl text-violet w-6">
+                      {row.letter}
+                    </span>
+                    <span class="flex-1 text-ink">{row.name}</span>
+                    <span class="text-[10px] font-light uppercase tracking-[0.2em] text-graphite/60">
+                      {row.stage}
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+            <p class="mt-8 font-sans text-xs font-light italic text-graphite/70 leading-relaxed">
+              "Si una frase no transmite claridad, honestidad o compromiso, se reescribe."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Marquee */}
+    <div class="border-t border-rule overflow-hidden bg-paper py-6">
+      <div class="marquee-track flex whitespace-nowrap font-display text-2xl sm:text-3xl font-extrabold uppercase tracking-[-0.01em] text-ink">
+        {
+          [...marqueeWords, ...marqueeWords].map((w, i) => (
+            <span class="px-8 flex items-center gap-8">
+              {w}
+              <span class={i % 3 === 1 ? "text-gold" : "text-violet"}>●</span>
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  {/* ========= INTRO / MANIFIESTO ========= */}
+  <section class="bg-paper border-b border-rule">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <SectionTitle
+            number="01"
+            eyebrow="Manifiesto"
+            title="No vendemos humo. Vendemos estructura."
+          />
+        </div>
+        <div class="lg:col-span-7 lg:col-start-6">
+          <p class="reveal font-display text-2xl sm:text-3xl font-light leading-[1.25] tracking-[-0.01em] text-ink">
+            Hay marcas con potencial enorme atrapadas en una operación
+            desordenada. <span class="italic text-violet font-light">Las
+            despertamos</span>. Diagnosticamos lo que frena el crecimiento,
+            ordenamos la ejecución y construimos una presencia visual que
+            transmite autoridad desde el primer segundo.
+          </p>
+          <div class="reveal mt-12 grid grid-cols-3 gap-8 border-t border-rule pt-8">
+            <div>
+              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60">
+                Método
+              </p>
+              <p class="mt-2 font-display text-3xl font-extrabold text-ink">
+                CORE
+              </p>
+            </div>
+            <div>
+              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60">
+                Fases
+              </p>
+              <p class="mt-2 font-display text-3xl font-extrabold text-ink">
+                04
+              </p>
+            </div>
+            <div>
+              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60">
+                Permanencia
+              </p>
+              <p class="mt-2 font-display text-3xl font-extrabold text-violet">
+                Cero
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  {/* ========= PROPUESTA DE VALOR ========= */}
-  <section class="bg-bone-50 py-20 sm:py-24">
-    <div class="mx-auto max-w-6xl px-5 sm:px-8">
-      <SectionTitle
-        eyebrow={valueProp.eyebrow}
-        title={valueProp.title}
-        intro={valueProp.body[0]}
-      />
+  {/* ========= MÉTODO CORE ========= */}
+  <section id="metodo" class="bg-violet-dark text-paper">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <SectionTitle
+            number="02"
+            eyebrow="Método CORE"
+            title="Cuatro fases. Cero relleno."
+            intro="Del diagnóstico al impacto medible. Cada fase tiene entregables claros y criterios de avance."
+            tone="dark"
+          />
+        </div>
+      </div>
+
+      <div class="reveal mt-16">
+        <CoreMethod variant="compact" tone="dark" />
+      </div>
+
+      <div class="reveal mt-16">
+        <Button href="/servicios#core" variant="secondary">
+          Ver método completo
+        </Button>
+      </div>
     </div>
   </section>
 
-  {/* ========= 4 PILARES ========= */}
-  <section class="bg-bone-100 py-20 sm:py-24">
-    <div class="mx-auto max-w-6xl px-5 sm:px-8">
-      <SectionTitle
-        eyebrow={pillarsSection.eyebrow}
-        title={pillarsSection.title}
-        intro={pillarsSection.intro}
-      />
+  {/* ========= PILARES / VALORES ========= */}
+  <section class="bg-violet-soft border-b border-rule">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+      <div class="grid gap-12 lg:grid-cols-12 mb-16">
+        <div class="lg:col-span-6">
+          <SectionTitle
+            number="03"
+            eyebrow={pillarsSection.eyebrow}
+            title={pillarsSection.title}
+            intro={pillarsSection.intro}
+          />
+        </div>
+      </div>
 
-      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-px bg-violet-line border border-violet-line sm:grid-cols-2 lg:grid-cols-4">
         {
           pillarsSection.pillars.map((pillar, i) => (
             <article
-              class="reveal group rounded-2xl bg-bone-50 p-6 ring-1 ring-space-indigo-900/5 transition-all duration-300 hover:-translate-y-1 hover:ring-space-indigo-700/30 hover:shadow-md"
+              class="reveal group bg-paper p-8 sm:p-10 transition-colors duration-300 hover:bg-ink hover:text-paper"
               style={`transition-delay: ${i * 60}ms`}
             >
-              <h3 class="font-display text-xl font-semibold text-space-indigo-900">
+              <div class="flex items-center justify-between">
+                <span class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-violet group-hover:text-gold">
+                  0{i + 1}
+                </span>
+                <span class="h-1.5 w-1.5 bg-violet group-hover:bg-gold"></span>
+              </div>
+              <h3 class="mt-10 font-display text-2xl font-bold tracking-[-0.01em]">
                 {pillar.title}
               </h3>
-              <p class="mt-3 text-sm leading-relaxed text-space-indigo-800/75">
+              <p class="mt-4 text-sm font-light leading-relaxed text-graphite/85 group-hover:text-paper/80">
                 {pillar.body}
               </p>
             </article>
@@ -132,64 +272,114 @@ const featured = [
     </div>
   </section>
 
-  {/* ========= MÉTODO CORE ========= */}
-  <section id="metodo" class="bg-space-indigo-950 py-20 sm:py-28 text-bone-50">
-    <div class="mx-auto max-w-6xl px-5 sm:px-8">
-      <SectionTitle
-        eyebrow="Método CORE"
-        title="Cuatro etapas que van directo al núcleo."
-        intro="Transformamos el caos visual y estratégico en una presencia con autoridad y estilo propio."
-        tone="dark"
-      />
-
-      <div class="mt-12">
-        <CoreMethod variant="compact" tone="dark" />
-      </div>
-
-      <div class="reveal mt-12">
-        <Button href="/servicios#core" variant="secondary">
-          Conocer el método completo
-        </Button>
-      </div>
-    </div>
-  </section>
-
   {/* ========= SERVICIOS DESTACADOS ========= */}
-  <section class="bg-bone-50 py-20 sm:py-28">
-    <div class="mx-auto max-w-6xl px-5 sm:px-8">
-      <SectionTitle
-        eyebrow="Servicios destacados"
-        title="Empezá donde estés. Te llevamos donde tu marca merece llegar."
-        intro="Tres puntos de partida frecuentes. Si nada encaja, armamos algo a medida."
-      />
+  <section class="bg-paper border-b border-rule">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+      <div class="grid gap-12 lg:grid-cols-12 mb-16">
+        <div class="lg:col-span-7">
+          <SectionTitle
+            number="04"
+            eyebrow="Servicios"
+            title="Tres puntos de partida. Una sola obsesión: resultados."
+            intro="Empezá donde estés. Si nada encaja, armamos un Pack Libre a medida."
+          />
+        </div>
+      </div>
 
-      <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <div class="grid gap-8 md:grid-cols-3 pt-3">
         {featured.map((tier) => <PriceCard tier={tier} />)}
       </div>
 
-      <div class="reveal mt-10 text-center">
+      <div class="reveal mt-16">
         <Button href="/servicios" variant="ghost">Ver todos los servicios</Button>
       </div>
     </div>
   </section>
 
-  {/* ========= CIERRE / SINCERIDAD ========= */}
-  <section class="bg-bone-100 py-20 sm:py-28">
-    <div class="mx-auto max-w-4xl px-5 sm:px-8 text-center">
-      <p
-        class="reveal text-xs font-medium uppercase tracking-[0.22em] text-powder-petal-600"
-      >
-        Sin humo
-      </p>
-      <blockquote
-        class="reveal mt-5 font-display text-2xl sm:text-3xl md:text-4xl leading-snug text-space-indigo-900"
-      >
-        “{sinceridad.body}”
-      </blockquote>
-      <div class="reveal mt-10">
-        <Button href="/contacto" variant="primary">
-          Hablemos de tu marca
-        </Button>
+  {/* ========= SÍ / NO DECIMOS ========= */}
+  <section class="bg-offwhite border-b border-rule">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+      <div class="grid gap-12 lg:grid-cols-12 mb-16">
+        <div class="lg:col-span-6">
+          <SectionTitle
+            number="05"
+            eyebrow="Voz & tono"
+            title="Cercana pero seria. Directa. Sin artificios."
+            intro="Hablamos de tú a tú. Lo que decimos lo cumplimos. Lo que no podemos cumplir, no lo prometemos."
+          />
+        </div>
+      </div>
+
+      <div class="grid gap-px bg-rule border border-rule lg:grid-cols-2">
+        <div class="bg-paper p-10 sm:p-12">
+          <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-violet">
+            ✓ Sí decimos
+          </p>
+          <ul class="mt-8 space-y-5">
+            {
+              yesItems.map((t) => (
+                <li class="reveal flex items-start gap-4 border-b border-rule pb-5 last:border-b-0">
+                  <span class="mt-2 h-1.5 w-1.5 flex-none bg-gold"></span>
+                  <p class="font-display text-lg sm:text-xl font-semibold leading-snug tracking-[-0.01em] text-ink">
+                    "{t}"
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div class="bg-ink text-paper p-10 sm:p-12">
+          <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
+            ✗ No decimos
+          </p>
+          <ul class="mt-8 space-y-5">
+            {
+              noItems.map((t) => (
+                <li class="reveal flex items-start gap-4 border-b border-paper/15 pb-5 last:border-b-0">
+                  <span class="mt-2 h-px w-4 flex-none bg-paper/40"></span>
+                  <p class="text-lg sm:text-xl font-light italic leading-snug text-paper/60 line-through decoration-paper/20">
+                    {t}
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ========= CIERRE ========= */}
+  <section class="bg-ink text-paper">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-28 sm:py-40">
+      <div class="grid gap-12 lg:grid-cols-12 items-end">
+        <div class="lg:col-span-8">
+          <p class="reveal font-display text-[11px] font-semibold uppercase tracking-[0.32em] text-gold">
+            — Sinceridad ante todo
+          </p>
+          <blockquote
+            class="reveal mt-10 font-display text-3xl sm:text-5xl md:text-6xl font-extrabold leading-[1.02] tracking-[-0.02em]"
+          >
+            "{sinceridad.body}"
+          </blockquote>
+        </div>
+        <div class="lg:col-span-4">
+          <div class="reveal border-t border-paper/20 pt-8">
+            <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/50">
+              ¿Hablamos?
+            </p>
+            <p class="mt-6 text-base font-light leading-relaxed text-paper/70">
+              Reservá un diagnóstico gratuito. Te decimos exactamente qué falla
+              en tu ecosistema digital, y si podemos ayudarte. Sin compromiso.
+            </p>
+            <div class="mt-10">
+              <Button href="/contacto" variant="secondary">
+                Reservar diagnóstico
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

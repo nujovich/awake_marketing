@@ -5,27 +5,31 @@ import { brand, nav } from "../data/content";
 const year = new Date().getFullYear();
 ---
 
-<footer class="mt-24 bg-space-indigo-950 text-bone-100">
-  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16">
-    <div class="grid gap-12 md:grid-cols-3">
-      <div>
+<footer class="bg-ink text-paper">
+  <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24">
+    <div class="grid gap-16 md:grid-cols-12">
+      <div class="md:col-span-5">
         <Logo variant="light" />
-        <p class="mt-4 max-w-sm text-sm leading-relaxed text-bone-200/80">
+        <p class="mt-8 max-w-sm text-sm leading-relaxed text-paper/70">
           {brand.tagline}
+        </p>
+        <div class="mt-10 h-px w-16 bg-gold"></div>
+        <p class="mt-6 font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
+          Método CORE · v2.0
         </p>
       </div>
 
-      <div>
-        <h3 class="text-xs uppercase tracking-[0.2em] text-bone-200/50">
+      <div class="md:col-span-3">
+        <h3 class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/40">
           Navegación
         </h3>
-        <ul class="mt-4 space-y-2">
+        <ul class="mt-6 space-y-3">
           {
             nav.map((item) => (
               <li>
                 <a
                   href={item.href}
-                  class="text-sm text-bone-100 hover:text-powder-petal-300 transition-colors duration-200"
+                  class="text-sm text-paper hover:text-gold transition-colors duration-200"
                 >
                   {item.label}
                 </a>
@@ -35,32 +39,30 @@ const year = new Date().getFullYear();
         </ul>
       </div>
 
-      <div>
-        <h3 class="text-xs uppercase tracking-[0.2em] text-bone-200/50">
+      <div class="md:col-span-4">
+        <h3 class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/40">
           Contacto
         </h3>
-        <ul class="mt-4 space-y-2 text-sm">
+        <ul class="mt-6 space-y-3 text-sm">
           <li>
             <a
               href={`mailto:${brand.email}`}
-              class="hover:text-powder-petal-300 transition-colors"
+              class="hover:text-gold transition-colors"
             >
               {brand.email}
             </a>
           </li>
-          <li class="text-bone-200/70">{brand.whatsapp}</li>
-          <li class="text-bone-200/70">{brand.city}</li>
+          <li class="text-paper/70">{brand.whatsapp}</li>
+          <li class="text-paper/70">{brand.city}</li>
         </ul>
       </div>
     </div>
 
     <div
-      class="mt-14 pt-6 border-t border-bone-100/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-bone-200/50"
+      class="mt-20 pt-8 border-t border-paper/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] uppercase tracking-[0.22em] text-paper/40 font-display font-medium"
     >
-      <span>© {year} {brand.full}. Todos los derechos reservados.</span>
-      <span class="font-display italic text-bone-200/70">
-        Visión de Radar · Método CORE
-      </span>
+      <span>© {year} · {brand.full}</span>
+      <span class="text-gold">Sin excusas. Resultados medibles.</span>
     </div>
   </div>
 </footer>

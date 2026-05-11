@@ -9,37 +9,42 @@ interface Props {
 const { variant = "compact", tone = "light" } = Astro.props;
 const steps = variant === "full" ? coreMethodFull : coreMethodCompact;
 
-const cardBg =
-  tone === "dark"
-    ? "bg-space-indigo-900/40 ring-1 ring-bone-100/10"
-    : "bg-bone-100 ring-1 ring-space-indigo-900/5";
-
-const titleColor = tone === "dark" ? "text-bone-50" : "text-space-indigo-900";
-const bodyColor = tone === "dark" ? "text-bone-200/80" : "text-space-indigo-800/75";
-const summaryColor = tone === "dark" ? "text-jungle-teal-300" : "text-jungle-teal-700";
+const cardBorder =
+  tone === "dark" ? "border-paper/15 hover:border-gold" : "border-violet-line hover:border-violet";
+const cardBg = tone === "dark" ? "bg-transparent" : "bg-paper";
+const letterColor = tone === "dark" ? "text-gold" : "text-violet";
+const titleColor = tone === "dark" ? "text-paper" : "text-ink";
+const bodyColor = tone === "dark" ? "text-paper/70" : "text-graphite/80";
+const summaryColor = tone === "dark" ? "text-paper/40" : "text-violet/60";
+const ruleColor = tone === "dark" ? "bg-paper/15" : "bg-violet-line";
 ---
 
-<ol class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+<ol class="grid gap-0 md:grid-cols-2 lg:grid-cols-4 border-t border-l-0 md:border-l border-r-0 md:border-r border-b
+  border-current/0">
   {
     steps.map((step, i) => (
       <li
-        class={`reveal group relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 ${cardBg}`}
+        class={`reveal group relative flex flex-col p-8 sm:p-10 border-b ${cardBorder} ${cardBg} ${i < steps.length - 1 ? "lg:border-r" : ""} transition-colors duration-300`}
         style={`transition-delay: ${i * 60}ms`}
       >
-        <div class="flex items-center gap-3">
-          <span class="font-display text-5xl font-semibold leading-none text-powder-petal-500 transition-transform duration-300 group-hover:scale-110">
+        <div class="flex items-baseline justify-between">
+          <span class={`font-display text-7xl font-extrabold leading-none ${letterColor}`}>
             {step.letter}
           </span>
+          <span class={`font-display text-[10px] font-semibold uppercase tracking-[0.22em] ${summaryColor}`}>
+            {String(i + 1).padStart(2, "0")}
+          </span>
+        </div>
+        <div class={`mt-6 h-px w-10 ${ruleColor}`}></div>
+        <h3 class={`mt-6 font-display text-xl font-bold tracking-[-0.01em] ${titleColor}`}>
+          {step.title}
           {"summary" in step && step.summary && (
-            <span class={`text-[11px] uppercase tracking-[0.18em] ${summaryColor}`}>
+            <span class={`block mt-1 font-sans text-xs font-light italic ${summaryColor}`}>
               {step.summary}
             </span>
           )}
-        </div>
-        <h3 class={`mt-4 font-display text-xl font-semibold leading-snug ${titleColor}`}>
-          {step.title}
         </h3>
-        <p class={`mt-2 text-sm leading-relaxed ${bodyColor}`}>{step.body}</p>
+        <p class={`mt-4 text-sm font-light leading-relaxed ${bodyColor}`}>{step.body}</p>
       </li>
     ))
   }
