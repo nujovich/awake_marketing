@@ -1,5 +1,5 @@
 ---
-type Variant = "primary" | "secondary" | "ghost" | "ink";
+type Variant = "primary" | "secondary" | "outline" | "ghost" | "ink";
 
 interface Props {
   href?: string;
@@ -7,6 +7,7 @@ interface Props {
   type?: "button" | "submit";
   class?: string;
   arrow?: boolean;
+  onDark?: boolean;
 }
 
 const {
@@ -15,19 +16,22 @@ const {
   type = "button",
   class: cls = "",
   arrow = true,
+  onDark = false,
 } = Astro.props;
 
 const base =
-  "group inline-flex items-center justify-center gap-3 px-6 py-3 font-display text-xs font-semibold uppercase tracking-[0.18em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-paper focus-visible:ring-violet";
+  "group inline-flex items-center justify-center gap-3 px-7 py-4 font-display text-[13px] font-semibold uppercase tracking-[0.14em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-paper focus-visible:ring-violet";
 
 const styles: Record<Variant, string> = {
-  primary:
-    "bg-violet text-paper hover:bg-violet-dark",
-  secondary:
-    "bg-gold text-ink hover:bg-ink hover:text-gold",
-  ghost:
-    "text-ink hover:text-violet border-b border-ink hover:border-violet pb-1 px-0",
-  ink: "bg-ink text-paper hover:bg-gold hover:text-ink",
+  primary:   "bg-violet text-paper hover:bg-violet-deep",
+  secondary: "border border-violet text-violet hover:bg-violet hover:text-paper",
+  outline:   onDark
+               ? "border border-paper/60 text-paper hover:bg-paper hover:text-violet"
+               : "border border-violet text-violet hover:bg-violet hover:text-paper",
+  ghost:     onDark
+               ? "text-paper/80 hover:text-paper border-b border-paper/40 hover:border-paper pb-1 px-0"
+               : "text-ink hover:text-violet border-b border-ink hover:border-violet pb-1 px-0",
+  ink:       "bg-ink text-paper hover:bg-coral hover:text-ink",
 };
 
 const className = `${base} ${styles[variant]} ${cls}`.trim();
