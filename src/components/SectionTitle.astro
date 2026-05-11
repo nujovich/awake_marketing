@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 
 const wrap = align === "center" ? "text-center mx-auto max-w-3xl" : "max-w-3xl";
-const eyebrowColor = tone === "dark" ? "text-gold" : "text-violet";
+const eyebrowColor = tone === "dark" ? "text-paper/70" : "text-violet";
 const titleColor = tone === "dark" ? "text-paper" : "text-ink";
 const introColor = tone === "dark" ? "text-paper/70" : "text-graphite/80";
 const numColor = tone === "dark" ? "text-paper/30" : "text-violet/30";
@@ -27,7 +27,7 @@ const numColor = tone === "dark" ? "text-paper/30" : "text-violet/30";
 <div class={`reveal ${wrap}`}>
   {
     number && (
-      <p class={`font-display text-[11px] font-semibold uppercase tracking-[0.22em] ${numColor}`}>
+      <p class={`num ${numColor}`}>
         {number}
       </p>
     )
