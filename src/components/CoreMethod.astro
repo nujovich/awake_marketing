@@ -10,9 +10,9 @@ const { variant = "compact", tone = "light" } = Astro.props;
 const steps = variant === "full" ? coreMethodFull : coreMethodCompact;
 
 const cardBorder =
-  tone === "dark" ? "border-paper/15 hover:border-gold" : "border-violet-line hover:border-violet";
+  tone === "dark" ? "border-paper/15 hover:border-coral" : "border-violet-line hover:border-violet";
 const cardBg = tone === "dark" ? "bg-transparent" : "bg-paper";
-const letterColor = tone === "dark" ? "text-gold" : "text-violet";
+const letterColor = tone === "dark" ? "text-coral" : "text-violet";
 const titleColor = tone === "dark" ? "text-paper" : "text-ink";
 const bodyColor = tone === "dark" ? "text-paper/70" : "text-graphite/80";
 const summaryColor = tone === "dark" ? "text-paper/40" : "text-violet/60";
