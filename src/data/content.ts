@@ -193,3 +193,34 @@ export const faq = [
     a: "Sí. El Pack Libre se presupuesta según las necesidades específicas de tu marca y momento del negocio.",
   },
 ];
+
+export const serviceList = [
+  {
+    idx: "01",
+    name: "Branding",
+    nameItalic: "& identidad",
+    desc: "Sistema visual completo, naming, manual de uso y dirección de arte.",
+    href: "/servicios",
+  },
+  {
+    idx: "02",
+    name: "Redes sociales",
+    nameItalic: undefined,
+    desc: "Estrategia, contenido, sesión de fotos mensual y comunidad gestionada.",
+    href: "/servicios",
+  },
+  {
+    idx: "03",
+    name: "Web",
+    nameItalic: "& e-commerce",
+    desc: "Diseño y desarrollo que convierte. SEO técnico y analítica mes a mes.",
+    href: "/servicios",
+  },
+  {
+    idx: "04",
+    name: "Campañas pagadas",
+    nameItalic: undefined,
+    desc: "Meta Ads y Google Ads con foco en local. Reporting transparente desde el día uno.",
+    href: "/servicios",
+  },
+] as const;
