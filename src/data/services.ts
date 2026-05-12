@@ -96,6 +96,57 @@ export const branding: Tier[] = [
   },
 ];
 
+export const web: Tier[] = [
+  {
+    id: "web-basica",
+    name: "Web Básica",
+    price: "300 €",
+    priceNote: "+ IVA",
+    tagline:
+      "Presencia digital sólida para autónomos y pequeños negocios que necesitan transmitir profesionalidad desde el día uno.",
+    time: "2 – 3 semanas",
+    features: [
+      "Sitio institucional de hasta 4 secciones principales",
+      "Diseño responsive adaptado a tu identidad de marca",
+      "Optimización básica de velocidad y SEO técnico",
+      "Una ronda completa de ajustes menores",
+    ],
+    cta: { label: "Quiero la Web Básica", href: "/contacto" },
+  },
+  {
+    id: "web-ampliada",
+    name: "Web Ampliada",
+    price: "400 €",
+    priceNote: "+ IVA",
+    tagline:
+      "Para empresas que buscan destacar con una imagen digital más sofisticada y mayor capacidad de contenido.",
+    time: "3 – 5 semanas",
+    features: [
+      "Web completa de hasta 6 secciones con estructura editorial",
+      "Animaciones sutiles e iconografía personalizada",
+      "Blog o sección de casos / portfolio",
+      "Dos rondas de ajustes menores para máxima personalización",
+    ],
+    cta: { label: "Quiero la Web Ampliada", href: "/contacto" },
+  },
+  {
+    id: "web-ecommerce",
+    name: "E-commerce & Proyectos Complejos",
+    price: "Consultar",
+    priceNote: "Presupuesto según alcance y funcionalidades",
+    tagline:
+      "Tiendas online, integraciones de pago, membresías, portales y cualquier proyecto que supere el diseño estándar.",
+    badge: "A medida",
+    features: [
+      "Análisis de requisitos y propuesta técnica personalizada",
+      "E-commerce con carrito, pasarela de pago y gestión de stock",
+      "Integraciones con ERP, CRM o sistemas externos",
+      "Soporte y mantenimiento definido según proyecto",
+    ],
+    cta: { label: "Pedir presupuesto", href: "/contacto" },
+  },
+];
+
 export const rrss: Tier[] = [
   {
     id: "esencial",

@@ -5,7 +5,7 @@ import SectionTitle from "../components/SectionTitle.astro";
 import PriceCard from "../components/PriceCard.astro";
 import CoreMethod from "../components/CoreMethod.astro";
 import { brand, condicionesPago } from "../data/content";
-import { branding, rrss, diagnostico } from "../data/services";
+import { branding, rrss, diagnostico, web } from "../data/services";
 ---
 
 <Layout
@@ -32,6 +32,7 @@ import { branding, rrss, diagnostico } from "../data/services";
       <div class="reveal mt-8 flex flex-wrap justify-center gap-3">
         <Button href="#diagnostico" variant="ghost">Diagnóstico</Button>
         <Button href="#branding" variant="ghost">Branding</Button>
+        <Button href="#web" variant="ghost">Web</Button>
         <Button href="#rrss" variant="ghost">Redes Sociales</Button>
         <Button href="#core" variant="ghost">Método CORE</Button>
       </div>
@@ -86,11 +87,25 @@ import { branding, rrss, diagnostico } from "../data/services";
     </div>
   </section>
 
+  {/* WEB */}
+  <section id="web" class="bg-offwhite py-20 sm:py-28 scroll-mt-20">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <SectionTitle
+        eyebrow="03 · Web & E-commerce"
+        title="Tu presencia digital, a medida."
+        intro="Desde una web institucional limpia hasta un e-commerce completo. Cada proyecto se diseña respetando la identidad de marca establecida."
+      />
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        {web.map((tier) => <PriceCard tier={tier} />)}
+      </div>
+    </div>
+  </section>
+
   {/* RRSS */}
   <section id="rrss" class="bg-paper py-20 sm:py-28 scroll-mt-20">
     <div class="mx-auto max-w-6xl px-5 sm:px-8">
       <SectionTitle
-        eyebrow="03 · Awake Momentum"
+        eyebrow="04 · Awake Momentum"
         title="Gestión mensual de redes sociales."
         intro="Cinco paquetes pensados para el ciclo de vida de tu marca. El PRO es nuestra recomendación: el equilibrio justo entre diseño y crecimiento."
       />
