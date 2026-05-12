@@ -1,0 +1,406 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Button from "../../components/Button.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import CoreMethod from "../../components/CoreMethod.astro";
+import ServiceRow from "../../components/ServiceRow.astro";
+import { getLocalizedUrl } from "../../i18n/utils";
+import t from "../../i18n/es.json";
+
+const locale = "es";
+const currentSlug = "";
+
+const coreSteps = t.home.method.phases.map((p) => ({
+    letter: p.letter,
+    title: p.name,
+    body: p.body,
+    summary: p.stage,
+}));
+
+const servicesHref = getLocalizedUrl(locale, "servicios");
+const contactHref = getLocalizedUrl(locale, "contacto");
+---
+
+<Layout
+    locale={locale}
+    currentSlug={currentSlug}
+    title={t.home.metaTitle}
+    description={t.home.metaDescription}
+>
+    {/* ========= HERO ========= */}
+    <section class="relative bg-violet overflow-hidden">
+        <div
+            class="mx-auto max-w-[1280px] px-6 sm:px-14 pt-20 sm:pt-28 pb-24 sm:pb-32"
+        >
+            <div class="grid gap-12 lg:grid-cols-12 lg:gap-16 items-end">
+                <div class="lg:col-span-8">
+                    <div class="reveal flex items-center gap-4">
+                        <span class="h-px flex-1 bg-paper/20"></span>
+                        <span
+                            class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/50"
+                        >
+                            {t.home.hero.location}
+                        </span>
+                    </div>
+
+                    <h1
+                        class="reveal mt-12 font-display text-5xl sm:text-6xl md:text-7xl lg:text-[84px] font-extrabold leading-[0.95] tracking-[-0.03em] text-paper"
+                    >
+                        {t.home.hero.title.split(" ").slice(0, -1).join(" ")}{
+                            " "
+                        }
+                        <span class="relative inline-block">
+                            {
+                                t.home.hero.title
+                                    .split(" ")
+                                    .at(-1)
+                                    ?.replace(".", "")
+                            }
+                            <span
+                                class="absolute left-0 -bottom-1 h-1 w-full bg-coral"
+                            ></span>
+                        </span>.
+                    </h1>
+
+                    <p
+                        class="reveal mt-10 max-w-xl text-base sm:text-lg font-light leading-relaxed text-paper/80"
+                    >
+                        {t.home.hero.body}
+                        <span class="font-semibold text-paper"
+                            >{t.home.hero.bodyBold}</span
+                        >
+                        <span class="italic"> {t.home.hero.bodyItalic}</span>
+                    </p>
+
+                    <div class="reveal mt-12 flex flex-wrap items-center gap-6">
+                        <Button
+                            href={contactHref}
+                            variant="outline"
+                            onDark={true}
+                        >
+                            {t.home.hero.ctaPrimary}
+                        </Button>
+                        <Button href="#metodo" variant="ghost" onDark={true}>
+                            {t.home.hero.ctaSecondary}
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Marquee */}
+        <div
+            class="border-t border-paper/10 overflow-hidden bg-violet-deep py-6"
+        >
+            <div
+                class="marquee-track flex whitespace-nowrap font-display text-2xl sm:text-3xl font-extrabold uppercase tracking-[-0.01em] text-paper/90"
+            >
+                {
+                    [
+                        ...t.home.hero.marqueeWords,
+                        ...t.home.hero.marqueeWords,
+                    ].map((w, i) => (
+                        <span class="px-8 flex items-center gap-8">
+                            {w}
+                            <span
+                                class={
+                                    i % 3 === 1 ? "text-paper/40" : "text-coral"
+                                }
+                            >
+                                ●
+                            </span>
+                        </span>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    {/* ========= MANIFIESTO ========= */}
+    <section class="bg-paper border-b border-rule">
+        <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+            <div class="grid gap-12 lg:grid-cols-12">
+                <div class="lg:col-span-4">
+                    <SectionTitle
+                        number="01"
+                        eyebrow={t.home.manifesto.eyebrow}
+                        title={t.home.manifesto.title}
+                    />
+                </div>
+                <div class="lg:col-span-7 lg:col-start-6">
+                    <p
+                        class="reveal font-display text-2xl sm:text-3xl font-light leading-[1.25] tracking-[-0.01em] text-ink"
+                    >
+                        {t.home.manifesto.body}{" "}
+                        <span class="italic text-violet font-light"
+                            >{t.home.manifesto.bodyItalic}</span
+                        >
+                        {t.home.manifesto.bodyRest}
+                    </p>
+                    <div
+                        class="reveal mt-12 grid grid-cols-3 gap-8 border-t border-rule pt-8"
+                    >
+                        <div>
+                            <p
+                                class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60"
+                            >
+                                {t.home.manifesto.statMethodLabel}
+                            </p>
+                            <p
+                                class="mt-2 font-display text-3xl font-extrabold text-ink"
+                            >
+                                {t.home.manifesto.statMethodValue}
+                            </p>
+                        </div>
+                        <div>
+                            <p
+                                class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60"
+                            >
+                                {t.home.manifesto.statPhasesLabel}
+                            </p>
+                            <p
+                                class="mt-2 font-display text-3xl font-extrabold text-ink"
+                            >
+                                {t.home.manifesto.statPhasesValue}
+                            </p>
+                        </div>
+                        <div>
+                            <p
+                                class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60"
+                            >
+                                {t.home.manifesto.statCommitmentLabel}
+                            </p>
+                            <p
+                                class="mt-2 font-display text-3xl font-extrabold text-violet"
+                            >
+                                {t.home.manifesto.statCommitmentValue}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/* ========= MÉTODO CORE ========= */}
+    <section id="metodo" class="bg-offwhite">
+        <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+            <div class="grid gap-12 lg:grid-cols-12">
+                <div class="lg:col-span-5">
+                    <SectionTitle
+                        number={t.home.method.number}
+                        eyebrow={t.home.method.eyebrow}
+                        title={t.home.method.title}
+                        intro={t.home.method.intro}
+                    />
+                </div>
+            </div>
+
+            <div class="reveal mt-16">
+                <CoreMethod steps={coreSteps} />
+            </div>
+
+            <div class="reveal mt-16">
+                <Button href={`${servicesHref}#core`} variant="secondary">
+                    {t.home.method.ctaLabel}
+                </Button>
+            </div>
+        </div>
+    </section>
+
+    {/* ========= PILARES ========= */}
+    <section class="bg-violet-soft border-b border-rule">
+        <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+            <div class="grid gap-12 lg:grid-cols-12 mb-16">
+                <div class="lg:col-span-6">
+                    <SectionTitle
+                        number={t.home.pillars.number}
+                        eyebrow={t.home.pillars.eyebrow}
+                        title={t.home.pillars.title}
+                        intro={t.home.pillars.intro}
+                    />
+                </div>
+            </div>
+
+            <div
+                class="grid gap-px bg-violet-line border border-violet-line sm:grid-cols-2 lg:grid-cols-4"
+            >
+                {
+                    t.home.pillars.items.map((pillar, i) => (
+                        <article
+                            class="reveal group bg-paper p-8 sm:p-10 transition-colors duration-300 hover:bg-ink hover:text-paper"
+                            style={`transition-delay: ${i * 60}ms`}
+                        >
+                            <div class="flex items-center justify-between">
+                                <span class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-violet group-hover:text-coral">
+                                    0{i + 1}
+                                </span>
+                                <span class="h-1.5 w-1.5 bg-violet group-hover:bg-coral" />
+                            </div>
+                            <h3 class="mt-10 font-display text-2xl font-bold tracking-[-0.01em]">
+                                {pillar.title}
+                            </h3>
+                            <p class="mt-4 text-sm font-light leading-relaxed text-graphite/85 group-hover:text-paper/80">
+                                {pillar.body}
+                            </p>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    {/* ========= SERVICIOS ========= */}
+    <section class="bg-violet text-paper">
+        <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+            <div class="grid gap-12 lg:grid-cols-12 mb-16">
+                <div class="lg:col-span-7">
+                    <SectionTitle
+                        number={t.home.services.number}
+                        eyebrow={t.home.services.eyebrow}
+                        title={t.home.services.title}
+                        intro={t.home.services.intro}
+                        tone="dark"
+                    />
+                </div>
+            </div>
+
+            <div>
+                {
+                    t.home.services.items.map((svc) => (
+                        <ServiceRow
+                            idx={svc.idx}
+                            name={svc.name}
+                            nameItalic={svc.nameItalic ?? undefined}
+                            desc={svc.desc}
+                            href={servicesHref}
+                            learnMore={t.home.services.learnMore}
+                        />
+                    ))
+                }
+            </div>
+
+            <div class="reveal mt-16">
+                <Button href={servicesHref} variant="outline" onDark={true}>
+                    {t.home.services.ctaLabel}
+                </Button>
+            </div>
+        </div>
+    </section>
+
+    {/* ========= VOZ & TONO ========= */}
+    <section class="bg-offwhite border-b border-rule">
+        <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-24 sm:py-32">
+            <div class="grid gap-12 lg:grid-cols-12 mb-16">
+                <div class="lg:col-span-6">
+                    <SectionTitle
+                        number={t.home.voiceAndTone.number}
+                        eyebrow={t.home.voiceAndTone.eyebrow}
+                        title={t.home.voiceAndTone.title}
+                        intro={t.home.voiceAndTone.intro}
+                    />
+                </div>
+            </div>
+
+            <div class="grid gap-px bg-rule border border-rule lg:grid-cols-2">
+                <div class="bg-paper p-10 sm:p-12">
+                    <p
+                        class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-violet"
+                    >
+                        {t.home.voiceAndTone.yesLabel}
+                    </p>
+                    <ul class="mt-8 space-y-5">
+                        {
+                            t.home.voiceAndTone.yesItems.map((item) => (
+                                <li class="reveal flex items-start gap-4 border-b border-rule pb-5 last:border-b-0">
+                                    <span class="mt-2 h-1.5 w-1.5 flex-none bg-coral" />
+                                    <p class="font-display text-lg sm:text-xl font-semibold leading-snug tracking-[-0.01em] text-ink">
+                                        "{item}"
+                                    </p>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+
+                <div class="bg-ink text-paper p-10 sm:p-12">
+                    <p
+                        class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-coral"
+                    >
+                        {t.home.voiceAndTone.noLabel}
+                    </p>
+                    <ul class="mt-8 space-y-5">
+                        {
+                            t.home.voiceAndTone.noItems.map((item) => (
+                                <li class="reveal flex items-start gap-4 border-b border-paper/15 pb-5 last:border-b-0">
+                                    <span class="mt-2 h-px w-4 flex-none bg-paper/40" />
+                                    <p class="text-lg sm:text-xl font-light italic leading-snug text-paper/60 line-through decoration-paper/20">
+                                        {item}
+                                    </p>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/* ========= CIERRE / CTA ========= */}
+    <section class="bg-violet-deep text-paper">
+        <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-28 sm:py-40">
+            <div class="grid gap-12 lg:grid-cols-12 items-end">
+                <div class="lg:col-span-8">
+                    <p
+                        class="reveal font-display text-[11px] font-semibold uppercase tracking-[0.32em] text-paper/60"
+                    >
+                        — {t.home.cta.sinceridad}
+                    </p>
+                    <blockquote
+                        class="reveal mt-10 font-display text-3xl sm:text-5xl md:text-6xl font-extrabold leading-[1.02] tracking-[-0.02em]"
+                    >
+                        "{t.home.cta.quote}"
+                    </blockquote>
+                </div>
+                <div class="lg:col-span-4">
+                    <div class="reveal border-t border-paper/20 pt-8">
+                        <p
+                            class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/50"
+                        >
+                            {t.home.cta.eyebrow}
+                        </p>
+                        <p
+                            class="mt-6 text-base font-light leading-relaxed text-paper/70"
+                        >
+                            {t.home.cta.body}
+                        </p>
+                        <div class="mt-10">
+                            <Button
+                                href={contactHref}
+                                variant="outline"
+                                onDark={true}
+                            >
+                                {t.home.cta.ctaLabel}
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .marquee-track {
+        animation: marquee 28s linear infinite;
+        will-change: transform;
+    }
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+</style>

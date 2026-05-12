@@ -1,0 +1,377 @@
+{
+  "brand": {
+    "name": "Awake",
+    "full": "Awake Marketing",
+    "tagline": "Despertamos la claridad estratégica para que las marcas dejen de ser simplemente una opción y se conviertan en la solución.",
+    "shortTagline": "Despertamos marcas con visión de radar.",
+    "email": "hola@awakemkt.com",
+    "whatsapp": "+34 600 000 000",
+    "city": "Alicante / Valencia · España",
+    "metodoCore": "Método CORE",
+    "footerTagline": "Sin excusas. Resultados medibles."
+  },
+  "nav": {
+    "inicio": "Inicio",
+    "sobreNosotros": "Sobre nosotros",
+    "servicios": "Servicios",
+    "contacto": "Contacto",
+    "diagnostico": "Diagnóstico",
+    "navegacion": "Navegación",
+    "contactoLabel": "Contacto"
+  },
+  "home": {
+    "metaTitle": "Awake Marketing — Despertamos marcas con visión de radar.",
+    "metaDescription": "Transformamos negocios invisibles en marcas creativas y estrategias cuidadas.",
+    "hero": {
+      "location": "Valencia · Alicante",
+      "title": "Potenciamos tu marca.",
+      "body": "Transformamos negocios invisibles en marcas creativas y estrategias cuidadas.",
+      "bodyBold": "Cremos conexiones reales",
+      "bodyItalic": "entre la empresa y tu comunidad.",
+      "ctaPrimary": "Diagnóstico gratis",
+      "ctaSecondary": "Conoce nuestro método",
+      "marqueeWords": ["Claridad", "Orden", "Realce", "Expansión", "Autoridad", "Resultados", "Honestidad", "Estructura"]
+    },
+    "manifesto": {
+      "eyebrow": "Manifiesto",
+      "title": "No vendemos humo. Vendemos estructura.",
+      "body": "Hay marcas con potencial enorme atrapadas en una operación desordenada.",
+      "bodyItalic": "Las despertamos",
+      "bodyRest": ". Diagnosticamos lo que frena el crecimiento, ordenamos la ejecución y construimos una presencia visual que transmite autoridad desde el primer segundo.",
+      "statMethodLabel": "Método",
+      "statMethodValue": "CORE",
+      "statPhasesLabel": "Fases",
+      "statPhasesValue": "04",
+      "statCommitmentLabel": "Permanencia",
+      "statCommitmentValue": "Cero"
+    },
+    "method": {
+      "number": "02",
+      "eyebrow": "Método CORE",
+      "title": "Cuatro fases. Cero relleno.",
+      "intro": "Del diagnóstico al impacto medible. Cada fase tiene entregables claros y criterios de avance.",
+      "ctaLabel": "Ver método completo",
+      "ctaHref": "/es/servicios#core",
+      "phases": [
+        { "letter": "C", "name": "Claridad", "stage": "Diagnóstico", "body": "Auditoría técnica del ecosistema digital. Análisis DAFO y posicionamiento competitivo. Identificamos las fricciones que detienen el crecimiento." },
+        { "letter": "O", "name": "Orden", "stage": "Estructura", "body": "Matriz de acción que convierte el diagnóstico en hoja de ruta. Definimos criterios de ejecución y rumbo estratégico de la marca." },
+        { "letter": "R", "name": "Realce", "stage": "Proyección", "body": "Narrativa y sistema visual coherentes. Branding, tipografía y dirección de arte que validan tu capacidad y generan confianza inmediata." },
+        { "letter": "E", "name": "Expansión", "stage": "Ejecución", "body": "Gestión de canales y comunicación de alto impacto. La marca crece de forma constante, medible y estratégica." }
+      ]
+    },
+    "pillars": {
+      "number": "03",
+      "eyebrow": "Nuestros valores",
+      "title": "Nos basamos en 4 pilares.",
+      "intro": "Cuatro principios que ordenan cómo trabajamos cada decisión por tu marca.",
+      "items": [
+        { "title": "Empatía", "body": "Tu marca no es un número, es nuestra prioridad. Sintonizamos con tu propósito para que nuestra energía trabaje en armonía con la tuya. Logros respaldando tu tranquilidad." },
+        { "title": "Creatividad", "body": "Creemos en la belleza con propósito. Sin estrategia no hay ventas, pero sin impacto visual no hay memoria. Fusionamos el arte con los datos para que tu marca no solo se vea bien, sino que rinda." },
+        { "title": "Energía", "body": "Trabajamos con los pies en la tierra y la energía en alto. Tener la energía necesaria es una parte fundamental para que el proceso sea fluido, manteniendo el rigor técnico que tu negocio exige." },
+        { "title": "Tenacidad", "body": "Nos define una obsesión sana por el éxito. No somos observadores, somos aliados que luchan por tu cuota en el mercado. En Awake, rendirse no es una opción estratégica." }
+      ]
+    },
+    "services": {
+      "number": "04",
+      "eyebrow": "Servicios",
+      "title": "Lo que hacemos por tu marca.",
+      "intro": "Cuatro líneas de trabajo. Una sola obsesión: que tu negocio vuelva a aparecer donde importa.",
+      "learnMore": "Saber más",
+      "ctaLabel": "Ver todos los servicios",
+      "ctaHref": "/es/servicios",
+      "items": [
+        { "idx": "01", "name": "Branding", "nameItalic": "& identidad", "desc": "Sistema visual completo, naming, manual de uso y dirección de arte." },
+        { "idx": "02", "name": "Redes sociales", "nameItalic": null, "desc": "Estrategia, contenido, sesión de fotos mensual y comunidad gestionada." },
+        { "idx": "03", "name": "Web", "nameItalic": "& e-commerce", "desc": "Diseño y desarrollo que convierte. SEO técnico y analítica mes a mes." },
+        { "idx": "04", "name": "Campañas pagadas", "nameItalic": null, "desc": "Meta Ads y Google Ads con foco en local. Reporting transparente desde el día uno." }
+      ]
+    },
+    "voiceAndTone": {
+      "number": "05",
+      "eyebrow": "Voz & tono",
+      "title": "Cercana pero seria. Directa. Sin artificios.",
+      "intro": "Hablamos de tú a tú. Lo que decimos lo cumplimos. Lo que no podemos cumplir, no lo prometemos.",
+      "yesLabel": "✓ Sí decimos",
+      "noLabel": "✗ No decimos",
+      "yesItems": [
+        "Tu perfil está perdiendo clientes cada día.",
+        "Te digo exactamente qué falla. Gratis.",
+        "Resultados visibles en 60 días o no seguimos.",
+        "Nos tomamos tu proyecto como algo personal.",
+        "Sin permanencia. Mes a mes."
+      ],
+      "noItems": [
+        "Somos la mejor agencia de España.",
+        "Ofrecemos soluciones integrales 360°.",
+        "Garantizamos el éxito de tu marca.",
+        "Contamos con amplia experiencia.",
+        "Planes flexibles adaptados a ti."
+      ]
+    },
+    "cta": {
+      "sinceridad": "Tu negocio merece existir",
+      "quote": "Trabajamos con negocios físicos consolidados que no logran su presencia en medios digitales. Tienen clientes REALES, pero sus redes no muestran su potencial.",
+      "eyebrow": "¿Hablamos?",
+      "body": "Reservá un diagnóstico gratuito. Te decimos exactamente qué falla en tu ecosistema digital, y si podemos ayudarte. Sin compromiso.",
+      "ctaLabel": "Reservar diagnóstico",
+      "ctaHref": "/es/contacto"
+    }
+  },
+  "about": {
+    "metaTitle": "Sobre nosotros — Awake Marketing",
+    "metaDescription": "Quiénes somos, por qué nos llamamos Awake y cómo trabajamos. Misión, visión y valores.",
+    "heroEyebrow": "Por qué nos llamamos Awake",
+    "heroTitle": "Despertamos la claridad estratégica para que las marcas dejen de ser simplemente una opción y se conviertan en la solución.",
+    "heroTitleItalic1": "simplemente una opción",
+    "heroTitleItalic2": "la solución",
+    "misionEyebrow": "Misión",
+    "misionTitle": "Lo que hacemos todos los días.",
+    "mision": "Transformar negocios mediante orden estratégico y diseño de alto impacto. Resolvemos fallas estructurales para convertir marcas invisibles en activos rentables y con autoridad.",
+    "visionEyebrow": "Visión",
+    "visionTitle": "A dónde queremos llegar.",
+    "vision": "Escalar nuestro impacto global ayudando a marcas de todo el mundo a alcanzar su máximo potencial. Aspiramos a democratizar el acceso a la estrategia de alto nivel y el diseño de autoridad.",
+    "valoresEyebrow": "Valores",
+    "valoresTitle": "Principios innegociables. El ADN de las guerreras.",
+    "valoresIntro": "No son adornos: son los criterios que usamos para tomar cada decisión por tu marca.",
+    "valores": [
+      { "title": "Perspicacia", "subtitle": "Visión de Radar", "body": "No nos quedamos en la superficie. Analizamos lo que otros ignoran para encontrar el diamante en el barro." },
+      { "title": "Compromiso obstinado", "subtitle": "No paramos hasta lograrlo", "body": "El desafío de nuestro cliente es nuestra batalla personal." },
+      { "title": "Claridad radical", "subtitle": "Sin ruido", "body": "Hablamos con la verdad, diagnosticamos con precisión y eliminamos el ruido para que el mensaje del cliente sea directo." },
+      { "title": "Energía empática", "subtitle": "Buena onda con garra", "body": "Trabajamos con buena onda, pero con los pies en la tierra. Entendemos al humano detrás de la marca para potenciar su negocio con ganas y garra." },
+      { "title": "Excelencia estética", "subtitle": "Estrategia + belleza", "body": "La estrategia sin belleza no impacta, y la belleza sin estrategia no vende. Buscamos el equilibrio perfecto." }
+    ],
+    "sinceridad": {
+      "title": "Tu negocio merece existir",
+      "body": "Trabajamos con negocios físicos consolidados que no logran su presencia en medios digitales. Tienen clientes REALES, pero sus redes no muestran su potencial.",
+      "ctaLabel": "Empezar con la consultoría gratuita",
+      "ctaHref": "/es/contacto"
+    },
+    "glosarioEyebrow": "Glosario",
+    "glosarioTitle": "Tres palabras que vas a escucharnos repetir.",
+    "glosario": [
+      { "term": "CORE", "def": "Significa núcleo. Refuerza nuestra misión de ir a la raíz del problema para solucionarlo desde adentro." },
+      { "term": "Radar", "def": "Nuestra capacidad de atravesar el ruido y localizar el diamante de la marca incluso en la oscuridad del caos." },
+      { "term": "Obstinación", "def": "Nuestra negativa a rendirnos ante los desafíos de nuestros clientes." }
+    ]
+  },
+  "services": {
+    "metaTitle": "Servicios — Awake Marketing",
+    "metaDescription": "Diagnóstico, branding y gestión de redes. El Método CORE aplicado a paquetes claros y precios honestos.",
+    "heroEyebrow": "Servicios",
+    "heroTitle": "Paquetes claros. Sin letra pequeña.",
+    "heroBody": "Hacemos que tu marca destaque, conecte, inspire y atraiga. Estrategia + creatividad + presencia",
+    "navDiagnostico": "Diagnóstico",
+    "navBranding": "Branding",
+    "navWeb": "Web",
+    "navRrss": "Redes Sociales",
+    "navCore": "Método CORE",
+    "coreEyebrow": "Método CORE",
+    "coreTitle": "El sistema de transformación que aplicamos a cada cliente.",
+    "coreIntro": "Cuatro etapas que van directo al núcleo. Cada paquete usa este método según el momento de tu marca.",
+    "coreMethodFull": [
+      { "letter": "C", "title": "Claridad", "summary": "Fase de Diagnóstico", "body": "Entendemos tu marca en profundidad." },
+      { "letter": "O", "title": "Orden", "summary": "Fase de Estructura", "body": "Corregimos, afrontamos, mantenemos y explotamos las oportunidades. Tomamos las decisiones clave y definimos el rumbo. Es el puente donde el análisis se convierte en criterio." },
+      { "letter": "R", "title": "Realce", "summary": "Fase de Manifestación", "body": "TODO: completar texto de Realce" },
+      { "letter": "E", "title": "Expansión", "summary": "La Marca Despierta", "body": "Con base sólida, tu marca está lista para escalar." }
+    ],
+    "diagnosticoEyebrow": "01 · Punto de partida",
+    "diagnosticoTitle": "Diagnóstico e impulso.",
+    "diagnosticoIntro": "Antes de gastar un euro en diseño o redes, hay que entender qué está frenando a tu marca. Empezamos siempre por acá.",
+    "brandingEyebrow": "02 · Identidad",
+    "brandingTitle": "Paquetes de branding.",
+    "brandingIntro": "Identidad, imagen, construcción, tono y ADN de marca. Tres niveles, un solo objetivo: que se vea como lo que es.",
+    "brandingNote": "Nota: en una agencia senior de Alicante / Valencia, el Pack CORE + Branding Total costaría unos 2.500 €. El precio de 990 € es promocional para 2026.",
+    "webEyebrow": "03 · Web & E-commerce",
+    "webTitle": "Tu presencia digital, a medida.",
+    "webIntro": "Desde una web institucional limpia hasta un e-commerce completo. Cada proyecto se diseña respetando la identidad de marca establecida.",
+    "rrssEyebrow": "04 · Awake Momentum",
+    "rrssTitle": "Gestión mensual de redes sociales.",
+    "rrssIntro": "Cinco paquetes pensados para el ciclo de vida de tu marca. El PRO es nuestra recomendación: el equilibrio justo entre diseño y crecimiento.",
+    "pagosEyebrow": "Política de precios y pago",
+    "pagosIntro": "Todo claro desde el primer minuto. Para que Awake sea un negocio sano y vos sepas dónde te metés.",
+    "timeLabel": "Tiempo ·",
+    "ctaTitle": "¿Cuál encaja con tu marca?",
+    "ctaBody": "Si no estás seguro, lo vemos juntos en la consultoría gratuita. 30 minutos, sin compromiso, con recomendación honesta.",
+    "ctaLabel": "Reservar consultoría gratis",
+    "ctaHref": "/es/contacto",
+    "condicionesPago": {
+      "title": "Condiciones de pago",
+      "items": [
+        { "title": "50% / 50%", "body": "50% de anticipo para reservar agenda e iniciar el Radar. 50% restante antes de la entrega de archivos finales o publicación." },
+        { "title": "−5% por pago único", "body": "Si abonás por adelantado el ciclo completo (3 o 6 meses), aplicamos un 5% de descuento por transferencia única inmediata." },
+        { "title": "Métodos", "body": "Bizum, transferencia bancaria, Revolut o PayPal (la comisión PayPal corre por cuenta del cliente)." },
+        { "title": "IVA", "body": "Si necesitás factura, sumamos el IVA correspondiente al precio publicado." }
+      ]
+    },
+    "diagnosticoTiers": [
+      {
+        "id": "consultoria",
+        "name": "Consultoría de Descubrimiento",
+        "price": "Gratis",
+        "priceNote": "Sesión de 30 min por videollamada",
+        "tagline": "Nos conocemos, entendemos qué necesita tu marca y te presupuestamos. Si tu marca está bien, te lo decimos. Si no podemos ayudarte, también.",
+        "features": ["30 minutos por videollamada", "Sin compromiso, sin letra chica", "Recomendación honesta sobre próximos pasos"],
+        "cta": { "label": "Reservar consultoría", "href": "/es/contacto" }
+      },
+      {
+        "id": "radar",
+        "name": "Diagnóstico RADAR",
+        "price": "150 €",
+        "priceNote": "+ IVA · bonificable con el Pack CORE",
+        "tagline": "El primer paso del Método CORE. Auditoría de situación actual, FODA y hoja de ruta accionable.",
+        "features": ["Auditoría de marca, números y competencia", "Análisis FODA y matriz CAME", "Hoja de ruta priorizada", "Sesión de devolución estratégica"],
+        "cta": { "label": "Pedir diagnóstico", "href": "/es/contacto" }
+      }
+    ],
+    "brandingTiers": [
+      {
+        "id": "rebranding-basico",
+        "name": "Rebranding Básico",
+        "price": "150 €",
+        "tagline": "Para los que ya existen. Marcas con base pero que se ven antiguas o desordenadas.",
+        "time": "2 – 3 semanas",
+        "features": ["Auditoría de marca actual", "Rediseño de logotipo (2 propuestas)", "Paleta de colores y tipografías", "Mini guía de estilo"],
+        "cta": { "label": "Quiero el básico", "href": "/es/contacto" }
+      },
+      {
+        "id": "rebranding-redes",
+        "name": "Rebranding + Redes",
+        "price": "290 €",
+        "tagline": "El impulso. Para quien quiere cambiar su imagen y empezar a mostrarla con estrategia.",
+        "time": "1 mes aprox.",
+        "features": ["Todo lo del Rebranding Básico", "Estrategia CORE básica", "Pack de lanzamiento: 6 posts + 4 stories de 'Hola, cambiamos'", "Optimización de bio"],
+        "cta": { "label": "Quiero el impulso", "href": "/es/contacto" }
+      },
+      {
+        "id": "core-total",
+        "name": "Pack CORE + Branding Total",
+        "price": "990 € – 1.200 €",
+        "priceNote": "+ IVA · precio promocional 2026 (en agencia senior costaría 2.500 €)",
+        "tagline": "El despertar completo. Para una marca que nace o se reinventa de raíz.",
+        "time": "1 a 1,5 meses",
+        "badge": "Estrella",
+        "featured": true,
+        "features": [
+          "Estrategia CORE: claridad, objetivo y guía estratégica",
+          "Identidad visual: logotipo (3 propuestas + revisiones), paleta, tipografías y mini guía de marca",
+          "Kit de lanzamiento: 8 posts de Instagram (estrategia de ventas), 4 stories de captación y animación de logo para Reels",
+          "Herramientas Pro: tarjeta digital, plantillas de presupuesto y servicios, firma de email/WhatsApp y 5 plantillas Canva",
+          "Dossier comercial en PDF + sesión de asesoría personalizada"
+        ],
+        "cta": { "label": "Quiero el despertar", "href": "/es/contacto" }
+      }
+    ],
+    "webTiers": [
+      {
+        "id": "web-basica",
+        "name": "Web Básica",
+        "price": "300 €",
+        "tagline": "Presencia digital sólida para autónomos y pequeños negocios que necesitan transmitir profesionalidad desde el día uno.",
+        "time": "2 – 3 semanas",
+        "features": ["Sitio institucional de hasta 4 secciones principales", "Diseño responsive adaptado a tu identidad de marca", "Optimización básica de velocidad y SEO técnico", "Una ronda completa de ajustes menores"],
+        "cta": { "label": "Quiero la Web Básica", "href": "/es/contacto" }
+      },
+      {
+        "id": "web-ampliada",
+        "name": "Web Ampliada",
+        "price": "400 €",
+        "tagline": "Para empresas que buscan destacar con una imagen digital más sofisticada y mayor capacidad de contenido.",
+        "time": "3 – 5 semanas",
+        "features": ["Web completa de hasta 6 secciones con estructura editorial", "Animaciones sutiles e iconografía personalizada", "Blog o sección de casos / portfolio", "Dos rondas de ajustes menores para máxima personalización"],
+        "cta": { "label": "Quiero la Web Ampliada", "href": "/es/contacto" }
+      },
+      {
+        "id": "web-ecommerce",
+        "name": "E-commerce & Proyectos Complejos",
+        "price": "Consultar",
+        "priceNote": "Presupuesto según alcance y funcionalidades",
+        "tagline": "Tiendas online, integraciones de pago, membresías, portales y cualquier proyecto que supere el diseño estándar.",
+        "badge": "A medida",
+        "features": ["Análisis de requisitos y propuesta técnica personalizada", "E-commerce con carrito, pasarela de pago y gestión de stock", "Integraciones con ERP, CRM o sistemas externos", "Soporte y mantenimiento definido según proyecto"],
+        "cta": { "label": "Pedir presupuesto", "href": "/es/contacto" }
+      }
+    ],
+    "rrsssTiers": [
+      {
+        "id": "esencial",
+        "name": "Pack Esencial",
+        "price": "220 €/mes",
+        "tagline": "Presencia sólida y profesional.",
+        "features": ["5 posts en feed", "2 Reels sencillos (sin edición compleja)", "4 plantillas editables para stories", "Estrategia mensual básica de contenido", "Calendario estratégico básico", "Evaluación de métricas mensuales"],
+        "cta": { "label": "Empezar con Esencial", "href": "/es/contacto" }
+      },
+      {
+        "id": "gold",
+        "name": "Pack Gold — Despertar",
+        "price": "330 €/mes",
+        "tagline": "Para que sientas que 'por fin alguien te soluciona todo' por un precio que podés pagar.",
+        "features": ["8 publicaciones al mes (6 posts + 2 Reels sencillos)", "4 stories + 2 plantillas editables", "1 hora de fotos y vídeos básicos", "Definición de objetivos y 4 pilares de contenido", "Regalo: ajuste de bio y portadas de destacadas (primer mes)"],
+        "cta": { "label": "Empezar con Gold", "href": "/es/contacto" }
+      },
+      {
+        "id": "pro",
+        "name": "Pack PRO",
+        "price": "450 €/mes",
+        "tagline": "El equilibrio perfecto entre diseño y crecimiento.",
+        "badge": "Recomendado",
+        "featured": true,
+        "features": ["5 posts + 2 Reels + 2 stories diseñadas con interacción + 2 stories editables", "Estrategia mensual de contenido", "Calendario estratégico + evaluación de métricas", "Sesión mensual de filmmaking"],
+        "cta": { "label": "Quiero el PRO", "href": "/es/contacto" }
+      },
+      {
+        "id": "elite",
+        "name": "Pack Elite",
+        "price": "650 €/mes",
+        "tagline": "Máximo impacto. Para marcas que quieren dominar su nicho.",
+        "features": ["10 posts + 4 Reels + 4 stories diseñadas", "4 stories interactivas (enfoque captación) + 2 stories editables", "Estrategia + calendario + evaluación de métricas", "2 sesiones de fotos y vídeos al mes"],
+        "cta": { "label": "Quiero el Elite", "href": "/es/contacto" }
+      },
+      {
+        "id": "libre",
+        "name": "Pack Libre — A medida",
+        "price": "Presupuesto",
+        "priceNote": "Según cantidad de Reels, gestión y momento de la marca",
+        "tagline": "Cuando ningún pack encaja. Empezamos con la consultoría gratuita y armamos algo a tu medida.",
+        "features": ["Sesión de descubrimiento gratuita (30 min)", "Propuesta personalizada según ciclo de vida de la marca", "Combina branding, contenido y/o producción audiovisual", "Si no es necesario o no podemos ayudarte, te lo decimos"],
+        "cta": { "label": "Pedir presupuesto", "href": "/es/contacto" }
+      }
+    ]
+  },
+  "contact": {
+    "metaTitle": "Contacto — Awake Marketing",
+    "metaDescription": "Reservá tu consultoría de descubrimiento gratuita: 30 minutos por videollamada para entender qué necesita tu marca.",
+    "heroEyebrow": "Consultoría de Descubrimiento — Gratis",
+    "heroTitle1": "30 minutos para",
+    "heroTitleItalic": "conocernos",
+    "heroTitle2": "y entender qué necesita tu marca.",
+    "heroBody": "Si tu marca está bien, te lo decimos. Si no podemos ayudarte, también. Sin letra chica.",
+    "benefits": [
+      "Videollamada de 30 min, sin compromiso.",
+      "Diagnóstico inicial y recomendación honesta de próximos pasos.",
+      "Si encajamos, presupuestamos en el momento."
+    ],
+    "emailLabel": "Email",
+    "whatsappLabel": "WhatsApp",
+    "formEyebrow": "Reservar consultoría",
+    "formTitle": "Contanos de tu marca.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailFieldLabel": "Email",
+    "emailPlaceholder": "hola@tumarca.com",
+    "brandLabel": "Marca o negocio",
+    "brandPlaceholder": "Cómo se llama",
+    "serviceLabel": "¿En qué te podemos ayudar?",
+    "serviceOptions": ["Consultoría gratuita", "Diagnóstico RADAR", "Branding", "Gestión de redes sociales", "Pack a medida", "Diseño web", "Otro"],
+    "messageLabel": "Contanos un poco más",
+    "messagePlaceholder": "¿Qué te frena hoy? ¿Qué necesitás?",
+    "submitLabel": "Enviar mensaje",
+    "responseNote": "Te responderemos en menos de 24 h hábiles.",
+    "faqEyebrow": "Preguntas frecuentes",
+    "faqTitle": "Lo que nos preguntan antes de empezar.",
+    "faq": [
+      { "q": "¿Cómo se cobra?", "a": "50% al reservar y 50% antes de la entrega o publicación. Tenés −5% si pagás por adelantado el ciclo completo (3 o 6 meses)." },
+      { "q": "¿Los precios incluyen IVA?", "a": "Los precios publicados son sin IVA. Si pedís factura, lo sumamos." },
+      { "q": "¿Hacen paquetes a medida?", "a": "Sí. El Pack Libre se presupuesta según las necesidades específicas de tu marca y momento del negocio." }
+    ]
+  }
+}

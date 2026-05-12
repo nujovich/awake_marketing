@@ -1,98 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  /* ====== Paleta Awake ====== */
-  --color-space-indigo-50: #eeeef7;
-  --color-space-indigo-100: #ddddee;
-  --color-space-indigo-200: #babbde;
-  --color-space-indigo-300: #989acd;
-  --color-space-indigo-400: #7578bd;
-  --color-space-indigo-500: #5356ac;
-  --color-space-indigo-600: #42458a;
-  --color-space-indigo-700: #323467;
-  --color-space-indigo-800: #212245;
-  --color-space-indigo-900: #111122;
-  --color-space-indigo-950: #0c0c18;
+  /* ====== Paleta Awake (DESIGN.md v2.1) ====== */
+  --color-ink:          #0a0a0a;
+  --color-graphite:     #2c2c2c;
+  --color-paper:        #ffffff;
+  --color-offwhite:     #f4f4f4;
+  --color-rule:         #e8e4ea;
 
-  --color-vintage-grape-50: #f0eff6;
-  --color-vintage-grape-100: #e2deed;
-  --color-vintage-grape-200: #c4bddb;
-  --color-vintage-grape-300: #a79cc9;
-  --color-vintage-grape-400: #897bb7;
-  --color-vintage-grape-500: #6c5ba4;
-  --color-vintage-grape-600: #564884;
-  --color-vintage-grape-700: #413663;
-  --color-vintage-grape-800: #2b2442;
-  --color-vintage-grape-900: #161221;
-  --color-vintage-grape-950: #0f0d17;
-
-  --color-jungle-teal-50: #eef6f2;
-  --color-jungle-teal-100: #deede4;
-  --color-jungle-teal-200: #bcdcca;
-  --color-jungle-teal-300: #9bcaaf;
-  --color-jungle-teal-400: #79b995;
-  --color-jungle-teal-500: #58a77a;
-  --color-jungle-teal-600: #468662;
-  --color-jungle-teal-700: #356449;
-  --color-jungle-teal-800: #234331;
-  --color-jungle-teal-900: #122118;
-  --color-jungle-teal-950: #0c1711;
-
-  --color-bone-50: #f5f4f0;
-  --color-bone-100: #eaeae1;
-  --color-bone-200: #d6d4c2;
-  --color-bone-300: #c1bfa4;
-  --color-bone-400: #aca986;
-  --color-bone-500: #989467;
-  --color-bone-600: #797653;
-  --color-bone-700: #5b593e;
-  --color-bone-800: #3d3b29;
-  --color-bone-900: #1e1e15;
-  --color-bone-950: #15150e;
-
-  --color-powder-petal-50: #f8f1ec;
-  --color-powder-petal-100: #f2e4d9;
-  --color-powder-petal-200: #e4c9b4;
-  --color-powder-petal-300: #d7ae8e;
-  --color-powder-petal-400: #ca9268;
-  --color-powder-petal-500: #bd7742;
-  --color-powder-petal-600: #975f35;
-  --color-powder-petal-700: #714828;
-  --color-powder-petal-800: #4b301b;
-  --color-powder-petal-900: #26180d;
-  --color-powder-petal-950: #1a1109;
+  --color-violet:       #6b2470;
+  --color-violet-deep:  #3a1840;
+  --color-violet-soft:  #f3e9f7;
+  --color-violet-line:  #e6d5ee;
+  --color-coral:        #e89b7b;
 
   /* ====== Tipografía ====== */
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, sans-serif;
-  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans:     "Raleway", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display:  "Montserrat", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   /* ====== Animaciones ====== */
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   --animate-fade-in: fade-in 0.6s ease-out both;
 
   @keyframes fade-up {
-    from {
-      opacity: 0;
-      transform: translateY(16px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
   @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
   }
 }
 
-/* ====== Reveal helper (con IntersectionObserver) ====== */
+/* ====== Reveal helper (IntersectionObserver) ====== */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -117,17 +63,44 @@
 /* ====== Base ====== */
 html {
   scroll-behavior: smooth;
-  background-color: var(--color-bone-50);
-  color: var(--color-space-indigo-900);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
 }
 
 body {
   font-family: var(--font-sans);
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background-color: var(--color-space-indigo-700);
-  color: var(--color-bone-50);
+  background-color: var(--color-violet);
+  color: var(--color-paper);
+}
+
+/* ====== Brand utilities ====== */
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.num {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }

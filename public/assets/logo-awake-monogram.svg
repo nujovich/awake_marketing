@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="AWAKE monogram">
+  <title>AWAKE — monogram</title>
+  <circle cx="120" cy="120" r="118" fill="#6B2470"></circle>
+  <text x="120" y="135" text-anchor="middle" font-family="Montserrat, &#39;Helvetica Neue&#39;, Arial, sans-serif" font-weight="700" font-size="92" letter-spacing="2" fill="#FFFFFF">A</text>
+  <rect x="70" y="150" width="100" height="18" fill="#FFFFFF"></rect>
+  <text x="120" y="163" text-anchor="middle" font-family="Montserrat, &#39;Helvetica Neue&#39;, Arial, sans-serif" font-weight="500" font-size="10" letter-spacing="6" fill="#6B2470">MARKETING</text>
+</svg>

@@ -1,31 +1,66 @@
 ---
 import Logo from "./Logo.astro";
-import Button from "./Button.astro";
-import { nav } from "../data/content";
+import { getLocalizedUrl } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
-const { pathname } = Astro.url;
-const isActive = (href: string) =>
-  href === "/" ? pathname === "/" : pathname.startsWith(href);
+interface Props {
+  t: Record<string, any>;
+  locale: string;
+  currentSlug: string;
+}
+
+const { t, locale, currentSlug } = Astro.props;
+
+const navItems = [
+  { slug: "", label: t.nav.inicio, href: getRelativeLocaleUrl(locale, "/") },
+  {
+    slug: "sobre-nosotros",
+    label: t.nav.sobreNosotros,
+    href: getLocalizedUrl(locale, "sobre-nosotros"),
+  },
+  {
+    slug: "servicios",
+    label: t.nav.servicios,
+    href: getLocalizedUrl(locale, "servicios"),
+  },
+  {
+    slug: "contacto",
+    label: t.nav.contacto,
+    href: getLocalizedUrl(locale, "contacto"),
+  },
+];
+
+const allSlugs: Record<string, string[]> = {
+  "": [""],
+  "sobre-nosotros": ["sobre-nosotros", "about-us", "chi-siamo"],
+  servicios: ["servicios", "services", "servizi"],
+  contacto: ["contacto", "contact", "contatto"],
+};
+
+const isActive = (slug: string) =>
+  (allSlugs[slug] ?? [slug]).includes(currentSlug);
+const contactHref = getLocalizedUrl(locale, "contacto");
+const locales = ["es", "en", "it"] as const;
 ---
 
 <header
-  class="sticky top-0 z-40 backdrop-blur-md bg-bone-50/80 border-b border-space-indigo-900/5"
-  transition:persist
+  class="sticky top-0 z-40 bg-violet/92 backdrop-blur border-b border-paper/10"
 >
-  <div class="mx-auto max-w-6xl px-5 sm:px-8">
-    <div class="flex h-16 items-center justify-between">
-      <Logo />
+  <div class="mx-auto max-w-[1280px] px-6 sm:px-14">
+    <div class="flex h-20 items-center justify-between">
+      <Logo variant="light" />
 
-      <nav class="hidden md:flex items-center gap-1">
+      <nav class="hidden md:flex items-center gap-10">
         {
-          nav.map((item) => (
+          navItems.map((item) => (
             <a
               href={item.href}
+              data-nav-slug={item.slug}
               class:list={[
-                "rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200",
-                isActive(item.href)
-                  ? "text-space-indigo-900 bg-space-indigo-900/5"
-                  : "text-space-indigo-800/70 hover:text-space-indigo-900 hover:bg-space-indigo-900/5",
+                "font-display text-[11px] font-semibold uppercase tracking-[0.22em] transition-colors duration-200",
+                isActive(item.slug)
+                  ? "text-paper"
+                  : "text-paper/85 hover:text-paper",
               ]}
             >
               {item.label}
@@ -34,39 +69,90 @@ const isActive = (href: string) =>
         }
       </nav>
 
-      <div class="hidden md:block">
-        <Button href="/contacto" variant="primary">Consultoría gratis</Button>
+      <div class="hidden md:flex items-center gap-6">
+        <div class="flex items-center">
+          {
+            locales.map((loc, i) => (
+              <span class="flex items-center">
+                {i > 0 && (
+                  <span class="mx-1.5 text-paper/40 font-display text-[10px] font-semibold select-none">
+                    ·
+                  </span>
+                )}
+                <a
+                  href={getLocalizedUrl(loc, currentSlug)}
+                  data-locale-btn={loc}
+                  class:list={[
+                    "font-display text-[10px] font-semibold uppercase tracking-[0.15em] transition-colors duration-200",
+                    loc === locale
+                      ? "text-paper"
+                      : "text-paper/40 hover:text-paper",
+                  ]}
+                >
+                  {loc.toUpperCase()}
+                </a>
+              </span>
+            ))
+          }
+        </div>
+
+        <a
+          href={contactHref}
+          class="inline-flex items-center gap-2 border border-paper/60 text-paper px-5 py-3 font-display text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-paper hover:text-violet transition-colors"
+        >
+          {t.nav.diagnostico}
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
       </div>
 
       <button
         id="nav-toggle"
-        class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-space-indigo-900 hover:bg-space-indigo-900/5 transition-colors"
+        class="md:hidden inline-flex h-10 w-10 items-center justify-center text-paper border border-paper/60"
         aria-label="Abrir menú"
         aria-expanded="false"
         aria-controls="mobile-nav"
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 12h18"></path>
-          <path d="M3 6h18"></path>
-          <path d="M3 18h18"></path>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 6h18"></path><path d="M3 12h18"></path><path d="M3 18h18"
+          ></path>
         </svg>
       </button>
     </div>
 
     <div
       id="mobile-nav"
-      class="md:hidden hidden pb-4 pt-1 border-t border-space-indigo-900/5"
+      class="md:hidden hidden pb-6 pt-2 border-t border-paper/20"
     >
-      <nav class="flex flex-col gap-1">
+      <nav class="flex flex-col">
         {
-          nav.map((item) => (
+          navItems.map((item) => (
             <a
               href={item.href}
+              data-nav-slug={item.slug}
+              data-mobile-nav
               class:list={[
-                "rounded-lg px-4 py-3 text-sm font-medium transition-colors",
-                isActive(item.href)
-                  ? "text-space-indigo-900 bg-space-indigo-900/5"
-                  : "text-space-indigo-800/70 hover:text-space-indigo-900 hover:bg-space-indigo-900/5",
+                "py-4 font-display text-xs font-semibold uppercase tracking-[0.22em] border-b border-rule",
+                isActive(item.slug) ? "text-paper" : "text-paper/85",
               ]}
             >
               {item.label}
@@ -74,11 +160,36 @@ const isActive = (href: string) =>
           ))
         }
         <a
-          href="/contacto"
-          class="mt-2 inline-flex items-center justify-center rounded-full bg-space-indigo-700 px-4 py-3 text-sm font-medium text-bone-50 hover:bg-space-indigo-800 transition-colors"
+          href={contactHref}
+          class="mt-6 inline-flex items-center justify-center gap-2 bg-paper text-violet px-5 py-4 font-display text-xs font-semibold uppercase tracking-[0.2em]"
         >
-          Consultoría gratis
+          {t.nav.diagnostico} →
         </a>
+        <div class="mt-6 flex items-center justify-center">
+          {
+            locales.map((loc, i) => (
+              <span class="flex items-center">
+                {i > 0 && (
+                  <span class="mx-2 text-paper/40 font-display text-[10px] font-semibold select-none">
+                    ·
+                  </span>
+                )}
+                <a
+                  href={getLocalizedUrl(loc, currentSlug)}
+                  data-locale-btn={loc}
+                  class:list={[
+                    "font-display text-[10px] font-semibold uppercase tracking-[0.15em] transition-colors duration-200",
+                    loc === locale
+                      ? "text-paper"
+                      : "text-paper/40 hover:text-paper",
+                  ]}
+                >
+                  {loc.toUpperCase()}
+                </a>
+              </span>
+            ))
+          }
+        </div>
       </nav>
     </div>
   </div>
@@ -94,6 +205,37 @@ const isActive = (href: string) =>
       toggle.setAttribute("aria-expanded", String(open));
     });
   };
+
+  const updateActiveStates = () => {
+    // Detect current locale from URL path segment
+    const locale = window.location.pathname.split("/")[1] || "es";
+
+    // Update language switcher buttons
+    document.querySelectorAll("[data-locale-btn]").forEach((el) => {
+      const btnLocale = (el as HTMLElement).dataset.localeBtn;
+      const isActive = btnLocale === locale;
+      el.classList.toggle("text-paper", isActive);
+      el.classList.toggle("text-paper/40", !isActive);
+      el.classList.toggle("hover:text-paper", !isActive);
+    });
+
+    // Update nav links — match href pathname to current pathname
+    const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+    document.querySelectorAll("[data-nav-slug]").forEach((el) => {
+      const href = el.getAttribute("href") || "";
+      const linkPath = href.replace(/\/$/, "") || "/";
+      const isActive = linkPath === currentPath;
+      const isMobile = el.hasAttribute("data-mobile-nav");
+      el.classList.toggle("text-paper", isActive);
+      el.classList.toggle("text-paper/85", !isActive);
+      if (!isMobile) {
+        el.classList.toggle("hover:text-paper", !isActive);
+      }
+    });
+  };
+
   setupNav();
-  document.addEventListener("astro:page-load", setupNav);
+  updateActiveStates();
+  document.addEventListener("astro:after-swap", setupNav);
+  document.addEventListener("astro:page-load", updateActiveStates);
 </script>

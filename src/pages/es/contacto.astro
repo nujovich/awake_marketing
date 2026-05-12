@@ -1,0 +1,254 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Button from "../../components/Button.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import t from "../../i18n/es.json";
+
+const locale = "es";
+const currentSlug = "contacto";
+---
+
+<Layout
+    locale={locale}
+    currentSlug={currentSlug}
+    title={t.contact.metaTitle}
+    description={t.contact.metaDescription}
+>
+    {/* HERO */}
+    <section class="relative overflow-hidden bg-bone-50 py-16 sm:py-24">
+        <div
+            class="absolute inset-0 -z-10 opacity-50"
+            style="background: radial-gradient(50% 50% at 80% 30%, rgba(108,91,164,0.18), transparent 60%);"
+        >
+        </div>
+
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 grid gap-12 lg:grid-cols-12">
+            <div class="lg:col-span-6">
+                <p
+                    class="reveal text-xs font-medium uppercase tracking-[0.22em] text-powder-petal-600"
+                >
+                    {t.contact.heroEyebrow}
+                </p>
+                <h1
+                    class="reveal mt-5 font-display text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight text-space-indigo-900"
+                >
+                    {t.contact.heroTitle1}
+                    <span class="italic text-vintage-grape-700">
+                        {t.contact.heroTitleItalic}</span
+                    >
+                    {" "}{t.contact.heroTitle2}
+                </h1>
+                <p
+                    class="reveal mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-space-indigo-800/80"
+                >
+                    {t.contact.heroBody}
+                </p>
+
+                <ul
+                    class="reveal mt-8 space-y-3 text-sm text-space-indigo-800/80"
+                >
+                    {
+                        t.contact.benefits.map((benefit) => (
+                            <li class="flex items-start gap-3">
+                                <span class="mt-1 h-2 w-2 rounded-full bg-jungle-teal-600 flex-none" />
+                                <span>{benefit}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+
+                <div class="reveal mt-10 grid gap-4 sm:grid-cols-2 max-w-md">
+                    <a
+                        href={`mailto:${t.brand.email}`}
+                        class="rounded-2xl bg-bone-100 p-4 ring-1 ring-space-indigo-900/5 transition-all hover:-translate-y-0.5 hover:ring-space-indigo-700/30"
+                    >
+                        <p
+                            class="text-xs uppercase tracking-[0.18em] text-space-indigo-800/60"
+                        >
+                            {t.contact.emailLabel}
+                        </p>
+                        <p
+                            class="mt-1 font-medium text-space-indigo-900 text-sm"
+                        >
+                            {t.brand.email}
+                        </p>
+                    </a>
+                    <div
+                        class="rounded-2xl bg-bone-100 p-4 ring-1 ring-space-indigo-900/5"
+                    >
+                        <p
+                            class="text-xs uppercase tracking-[0.18em] text-space-indigo-800/60"
+                        >
+                            {t.contact.whatsappLabel}
+                        </p>
+                        <p
+                            class="mt-1 font-medium text-space-indigo-900 text-sm"
+                        >
+                            {t.brand.whatsapp}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {/* FORM */}
+            <div class="lg:col-span-6">
+                <form
+                    class="reveal rounded-3xl bg-space-indigo-950 p-8 sm:p-10 text-bone-100 shadow-xl shadow-space-indigo-900/15"
+                    action={`mailto:${t.brand.email}`}
+                    method="post"
+                    enctype="text/plain"
+                >
+                    <p
+                        class="text-xs font-medium uppercase tracking-[0.22em] text-powder-petal-300"
+                    >
+                        {t.contact.formEyebrow}
+                    </p>
+                    <h2
+                        class="mt-3 font-display text-2xl sm:text-3xl font-semibold text-bone-50"
+                    >
+                        {t.contact.formTitle}
+                    </h2>
+
+                    <div class="mt-6 space-y-4">
+                        <label class="block">
+                            <span
+                                class="text-xs uppercase tracking-[0.18em] text-bone-200/60"
+                            >
+                                {t.contact.nameLabel}
+                            </span>
+                            <input
+                                required
+                                name="nombre"
+                                type="text"
+                                placeholder={t.contact.namePlaceholder}
+                                class="mt-2 w-full rounded-xl bg-space-indigo-900/60 border border-bone-100/10 px-4 py-3 text-sm text-bone-50 placeholder:text-bone-200/40 focus:outline-none focus:border-powder-petal-300 focus:ring-2 focus:ring-powder-petal-300/30 transition-colors"
+                            />
+                        </label>
+
+                        <label class="block">
+                            <span
+                                class="text-xs uppercase tracking-[0.18em] text-bone-200/60"
+                            >
+                                {t.contact.emailFieldLabel}
+                            </span>
+                            <input
+                                required
+                                name="email"
+                                type="email"
+                                placeholder={t.contact.emailPlaceholder}
+                                class="mt-2 w-full rounded-xl bg-space-indigo-900/60 border border-bone-100/10 px-4 py-3 text-sm text-bone-50 placeholder:text-bone-200/40 focus:outline-none focus:border-powder-petal-300 focus:ring-2 focus:ring-powder-petal-300/30 transition-colors"
+                            />
+                        </label>
+
+                        <label class="block">
+                            <span
+                                class="text-xs uppercase tracking-[0.18em] text-bone-200/60"
+                            >
+                                {t.contact.brandLabel}
+                            </span>
+                            <input
+                                name="marca"
+                                type="text"
+                                placeholder={t.contact.brandPlaceholder}
+                                class="mt-2 w-full rounded-xl bg-space-indigo-900/60 border border-bone-100/10 px-4 py-3 text-sm text-bone-50 placeholder:text-bone-200/40 focus:outline-none focus:border-powder-petal-300 focus:ring-2 focus:ring-powder-petal-300/30 transition-colors"
+                            />
+                        </label>
+
+                        <label class="block">
+                            <span
+                                class="text-xs uppercase tracking-[0.18em] text-bone-200/60"
+                            >
+                                {t.contact.serviceLabel}
+                            </span>
+                            <select
+                                name="servicio"
+                                class="mt-2 w-full rounded-xl bg-space-indigo-900/60 border border-bone-100/10 px-4 py-3 text-sm text-bone-50 focus:outline-none focus:border-powder-petal-300 focus:ring-2 focus:ring-powder-petal-300/30 transition-colors"
+                            >
+                                {
+                                    t.contact.serviceOptions.map((opt) => (
+                                        <option>{opt}</option>
+                                    ))
+                                }
+                            </select>
+                        </label>
+
+                        <label class="block">
+                            <span
+                                class="text-xs uppercase tracking-[0.18em] text-bone-200/60"
+                            >
+                                {t.contact.messageLabel}
+                            </span>
+                            <textarea
+                                name="mensaje"
+                                rows="4"
+                                placeholder={t.contact.messagePlaceholder}
+                                class="mt-2 w-full rounded-xl bg-space-indigo-900/60 border border-bone-100/10 px-4 py-3 text-sm text-bone-50 placeholder:text-bone-200/40 focus:outline-none focus:border-powder-petal-300 focus:ring-2 focus:ring-powder-petal-300/30 transition-colors resize-none"
+                            ></textarea>
+                        </label>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-powder-petal-500 px-5 py-3 text-sm font-medium text-bone-50 transition-all duration-200 hover:bg-powder-petal-400 hover:-translate-y-0.5"
+                    >
+                        {t.contact.submitLabel}
+                        <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"
+                            ></path>
+                        </svg>
+                    </button>
+                    <p class="mt-3 text-[11px] text-bone-200/50 text-center">
+                        {t.contact.responseNote}
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    {/* FAQ */}
+    <section class="bg-bone-100 py-20 sm:py-24">
+        <div class="mx-auto max-w-4xl px-5 sm:px-8">
+            <SectionTitle
+                eyebrow={t.contact.faqEyebrow}
+                title={t.contact.faqTitle}
+            />
+            <div class="mt-10 space-y-3">
+                {
+                    t.contact.faq.map((item) => (
+                        <details class="reveal group rounded-2xl bg-bone-50 p-5 ring-1 ring-space-indigo-900/5 open:ring-space-indigo-700/30 transition-all">
+                            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg text-space-indigo-900">
+                                {item.q}
+                                <svg
+                                    class="h-5 w-5 flex-none text-space-indigo-700 transition-transform duration-200 group-open:rotate-45"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M12 5v14" />
+                                    <path d="M5 12h14" />
+                                </svg>
+                            </summary>
+                            <p class="mt-3 text-sm leading-relaxed text-space-indigo-800/80">
+                                {item.a}
+                            </p>
+                        </details>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+</Layout>
