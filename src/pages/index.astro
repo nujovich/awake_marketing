@@ -1,3 +1,141 @@
 ---
-return Astro.redirect("/es/", 301);
+// Browser-language detection happens client-side.
+// <meta refresh> is the JS-disabled fallback.
 ---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="refresh" content="0;url=/es/" />
+        <title>Awake Marketing</title>
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/assets/logo-awake-monogram.svg"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+        />
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background: #6b2470;
+                color: #fff;
+                font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+                min-height: 100dvh;
+                display: grid;
+                place-items: center;
+            }
+
+            .splash {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+                padding: 32px;
+                text-align: center;
+                animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+            }
+
+            @keyframes fade-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(16px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .logo {
+                width: clamp(140px, 30vw, 220px);
+                height: auto;
+            }
+
+            .divider {
+                width: 48px;
+                height: 1px;
+                background: rgba(255, 255, 255, 0.3);
+            }
+
+            .lang-list {
+                display: flex;
+                gap: 8px;
+                list-style: none;
+            }
+
+            .lang-list a {
+                display: inline-block;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+                padding: 10px 20px;
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                transition:
+                    color 180ms,
+                    border-color 180ms,
+                    background 180ms;
+            }
+
+            .lang-list a:hover {
+                color: #6b2470;
+                background: #fff;
+                border-color: #fff;
+            }
+
+            .tagline {
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.45);
+            }
+        </style>
+
+        <script>
+            (function () {
+                const supported = ["es", "en", "it"];
+                const paths = { es: "/es/", en: "/en/", it: "/it/" };
+                const lang = (navigator.language || "es")
+                    .slice(0, 2)
+                    .toLowerCase();
+                const target = supported.includes(lang) ? paths[lang] : "/es/";
+                window.location.replace(target);
+            })();
+        </script>
+    </head>
+    <body>
+        <div class="splash">
+            <img
+                class="logo"
+                src="/assets/logo-awake-inverse.svg"
+                alt="Awake Marketing"
+                width="220"
+                height="80"
+            />
+            <div class="divider"></div>
+            <ul class="lang-list">
+                <li><a href="/es/">ES</a></li>
+                <li><a href="/en/">EN</a></li>
+                <li><a href="/it/">IT</a></li>
+            </ul>
+            <p class="tagline">Valencia · Alicante · Spain</p>
+        </div>
+    </body>
+</html>
