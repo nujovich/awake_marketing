@@ -236,8 +236,6 @@ const locales = ["es", "en", "it"] as const;
 
   setupNav();
   updateActiveStates();
-  document.addEventListener("astro:page-load", () => {
-    setupNav();
-    updateActiveStates();
-  });
+  document.addEventListener("astro:after-swap", setupNav);
+  document.addEventListener("astro:page-load", updateActiveStates);
 </script>
