@@ -45,7 +45,6 @@ const locales = ["es", "en", "it"] as const;
 
 <header
   class="sticky top-0 z-40 bg-violet/92 backdrop-blur border-b border-paper/10"
-  transition:persist
 >
   <div class="mx-auto max-w-[1280px] px-6 sm:px-14">
     <div class="flex h-20 items-center justify-between">
@@ -56,6 +55,7 @@ const locales = ["es", "en", "it"] as const;
           navItems.map((item) => (
             <a
               href={item.href}
+              data-nav-slug={item.slug}
               class:list={[
                 "font-display text-[11px] font-semibold uppercase tracking-[0.22em] transition-colors duration-200",
                 isActive(item.slug)
@@ -81,6 +81,7 @@ const locales = ["es", "en", "it"] as const;
                 )}
                 <a
                   href={getLocalizedUrl(loc, currentSlug)}
+                  data-locale-btn={loc}
                   class:list={[
                     "font-display text-[10px] font-semibold uppercase tracking-[0.15em] transition-colors duration-200",
                     loc === locale
@@ -147,6 +148,8 @@ const locales = ["es", "en", "it"] as const;
           navItems.map((item) => (
             <a
               href={item.href}
+              data-nav-slug={item.slug}
+              data-mobile-nav
               class:list={[
                 "py-4 font-display text-xs font-semibold uppercase tracking-[0.22em] border-b border-rule",
                 isActive(item.slug) ? "text-paper" : "text-paper/85",
@@ -173,6 +176,7 @@ const locales = ["es", "en", "it"] as const;
                 )}
                 <a
                   href={getLocalizedUrl(loc, currentSlug)}
+                  data-locale-btn={loc}
                   class:list={[
                     "font-display text-[10px] font-semibold uppercase tracking-[0.15em] transition-colors duration-200",
                     loc === locale
@@ -201,6 +205,39 @@ const locales = ["es", "en", "it"] as const;
       toggle.setAttribute("aria-expanded", String(open));
     });
   };
+
+  const updateActiveStates = () => {
+    // Detect current locale from URL path segment
+    const locale = window.location.pathname.split("/")[1] || "es";
+
+    // Update language switcher buttons
+    document.querySelectorAll("[data-locale-btn]").forEach((el) => {
+      const btnLocale = (el as HTMLElement).dataset.localeBtn;
+      const isActive = btnLocale === locale;
+      el.classList.toggle("text-paper", isActive);
+      el.classList.toggle("text-paper/40", !isActive);
+      el.classList.toggle("hover:text-paper", !isActive);
+    });
+
+    // Update nav links — match href pathname to current pathname
+    const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+    document.querySelectorAll("[data-nav-slug]").forEach((el) => {
+      const href = el.getAttribute("href") || "";
+      const linkPath = href.replace(/\/$/, "") || "/";
+      const isActive = linkPath === currentPath;
+      const isMobile = el.hasAttribute("data-mobile-nav");
+      el.classList.toggle("text-paper", isActive);
+      el.classList.toggle("text-paper/85", !isActive);
+      if (!isMobile) {
+        el.classList.toggle("hover:text-paper", !isActive);
+      }
+    });
+  };
+
   setupNav();
-  document.addEventListener("astro:page-load", setupNav);
+  updateActiveStates();
+  document.addEventListener("astro:page-load", () => {
+    setupNav();
+    updateActiveStates();
+  });
 </script>
