@@ -152,9 +152,10 @@ export const rrss: Tier[] = [
     name: "Pack Esencial",
     price: "220 €/mes",
     tagline:
-      "Presencia básica sin gastar mucho. Ideal si querés empezar con cabeza.",
+      "Presencia sólida y profesional.",
     features: [
       "5 posts en feed",
+      "2 Reels sencillos (sin edición compleja)",
       "4 plantillas editables para stories",
       "Estrategia mensual básica de contenido",
       "Calendario estratégico básico",
@@ -185,11 +186,10 @@ export const rrss: Tier[] = [
     badge: "Recomendado",
     featured: true,
     features: [
-      "5 posts + 2 Reels + 2 stories diseñadas con interacción + 2 stories editables (Canva)",
+      "5 posts + 2 Reels + 2 stories diseñadas con interacción + 2 stories editables",
       "Estrategia mensual de contenido",
       "Calendario estratégico + evaluación de métricas",
-      "Sesión mensual de 1,5 h: 15 fotos + 4 brutos para 3 Reels",
-      "Regalo: portadas para destacadas + optimización de bio",
+      "Sesión mensual de filmmaking",
     ],
     cta: { label: "Quiero el PRO", href: "/contacto" },
   },
@@ -200,9 +200,9 @@ export const rrss: Tier[] = [
     tagline: "Máximo impacto. Para marcas que quieren dominar su nicho.",
     features: [
       "10 posts + 4 Reels + 4 stories diseñadas",
-      "4 stories interactivas (enfoque captación) + 2 stories editables (Canva)",
+      "4 stories interactivas (enfoque captación) + 2 stories editables",
       "Estrategia + calendario + evaluación de métricas",
-      "2 sesiones de fotos y vídeos al mes (1 h cada una o una de 2 h)",
+      "2 sesiones de fotos y vídeos al mes",
     ],
     cta: { label: "Quiero el Elite", href: "/contacto" },
   },

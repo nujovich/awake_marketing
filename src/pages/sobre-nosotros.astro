@@ -3,7 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import ValueCard from "../components/ValueCard.astro";
-import { brand, mision, vision, valores, sinceridad, glosario } from "../data/content";
+import {
+  brand,
+  mision,
+  vision,
+  valores,
+  sinceridad,
+  glosario,
+} from "../data/content";
 
 const icons: Array<"radar" | "flame" | "compass" | "spark" | "diamond"> = [
   "radar",
@@ -35,7 +42,8 @@ const icons: Array<"radar" | "flame" | "compass" | "spark" | "diamond"> = [
         class="reveal mt-5 font-display text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight text-space-indigo-900"
       >
         Despertamos la claridad estratégica para que las marcas dejen de ser
-        <span class="italic text-vintage-grape-700">simplemente una opción</span>
+        <span class="italic text-vintage-grape-700">simplemente una opción</span
+        >
         y se conviertan en
         <span class="italic text-powder-petal-600">la solución</span>.
       </h1>
@@ -108,12 +116,12 @@ const icons: Array<"radar" | "flame" | "compass" | "spark" | "diamond"> = [
       <p
         class="reveal text-xs uppercase tracking-[0.22em] text-powder-petal-300"
       >
-        Sinceridad ante todo
+        {sinceridad.title}
       </p>
       <blockquote
         class="reveal mt-5 font-display text-2xl sm:text-3xl md:text-4xl leading-snug"
       >
-        “{sinceridad.body}”
+        {sinceridad.body}
       </blockquote>
       <div class="reveal mt-10">
         <Button href="/contacto" variant="secondary">

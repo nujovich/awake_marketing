@@ -65,8 +65,7 @@ export const coreMethodCompact = [
   {
     letter: "R",
     title: "Realce",
-    // TODO: completar texto de Realce
-    body: "TODO: completar texto de Realce",
+    body: "Construimos una narrativa y estética visual coherente que proyecte solvencia profesional. Desarrollamos sistemas visuales (branding, tipografía, dirección de arte) diseñados para generar confianza inmediata. Entendemos que la excelencia estética es el vehículo necesario para validar la capacidad de tu negocio.",
   },
   {
     letter: "E",
@@ -104,10 +103,9 @@ export const coreMethodFull = [
 ];
 
 export const mision =
-  "Despertar el potencial oculto de los negocios a través del orden estratégico y el diseño con propósito. Utilizamos nuestra Visión de Radar para detectar y solucionar las fallas que invisibilizan a las marcas, transformando el caos en estructuras rentables con autoridad y estilo propio.";
-
+  "Transformar negocios mediante orden\nestratégico y diseño de alto impacto.\nResolvemos fallas estructurales para\nconvertir marcas invisibles en activos\nrentables y con autoridad.\n";
 export const vision =
-  "Ser la agencia líder en reestructuración de marcas a nivel internacional, reconocida por convertir negocios dormidos en referentes de sus nichos. Aspiramos a elevar el estándar del marketing digital, demostrando que la verdadera potencia nace de la combinación entre la disciplina estratégica y una creatividad que no tiene límites.";
+  "Escalar nuestro impacto global\nayudando a marcas de todo el mundo a\nalcanzar su máximo potencial.\nAspiramos a democratizar el acceso a la\nestrategia de alto nivel y el diseño de\nautoridad.";
 
 export const valores = [
   {
@@ -138,8 +136,8 @@ export const valores = [
 ];
 
 export const sinceridad = {
-  title: "Sinceridad ante todo",
-  body: "No vamos a decirte que somos las mejores de España. Somos un equipo joven, con mucha hambre, energía de guerreras y una metodología clara (CORE). Nos tomamos tu proyecto como algo personal porque vuestro éxito es nuestro mejor portfolio.",
+  title: "Tu negocio merece existir",
+  body: "Trabajamos con negocios\nfísicos consolidados que no\nlogran su presencia en medios\ndigitales. Tienen clientes\nREALES, pero sus redes no\nmuestran su potencial.",
 };
 
 export const glosario = [
