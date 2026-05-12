@@ -31,3 +31,11 @@ pnpm-debug.log*
 # editor
 .vscode/
 .idea/
+
+# Playwright
+.playwright-mcp/
+playwright-report/
+test-results/
+*.jpeg
+*.png
+*.webp
