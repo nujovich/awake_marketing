@@ -5,9 +5,17 @@ interface Props {
   nameItalic?: string;
   desc: string;
   href?: string;
+  learnMore?: string;
 }
 
-const { idx, name, nameItalic, desc, href = "#" } = Astro.props;
+const {
+  idx,
+  name,
+  nameItalic,
+  desc,
+  href = "#",
+  learnMore = "Saber más",
+} = Astro.props;
 ---
 
 <a
@@ -18,17 +26,21 @@ const { idx, name, nameItalic, desc, href = "#" } = Astro.props;
     {idx}
   </span>
 
-  <span class="font-display font-bold text-[clamp(28px,5vw,56px)] leading-none tracking-[-0.02em] text-paper">
-    {name}{nameItalic && (
-      <em class="font-body italic font-light"> {nameItalic}</em>
-    )}
+  <span
+    class="font-display font-bold text-[clamp(28px,5vw,56px)] leading-none tracking-[-0.02em] text-paper"
+  >
+    {name}{
+      nameItalic && <em class="font-body italic font-light"> {nameItalic}</em>
+    }
   </span>
 
   <span class="font-body text-sm leading-relaxed text-paper/85 max-w-[460px]">
     {desc}
   </span>
 
-  <span class="font-display text-xs tracking-[0.18em] uppercase text-paper/0 group-hover:text-paper/80 transition-colors duration-300 text-right">
-    Saber más →
+  <span
+    class="font-display text-xs tracking-[0.18em] uppercase text-paper/0 group-hover:text-paper/80 transition-colors duration-300 text-right"
+  >
+    {learnMore} →
   </span>
 </a>
