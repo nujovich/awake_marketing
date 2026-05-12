@@ -1,10 +1,11 @@
 ---
-import type { Tier } from "../data/services";
+import type { Tier } from "../types";
 
 interface Props {
   tier: Tier;
+  timeLabel?: string;
 }
-const { tier } = Astro.props;
+const { tier, timeLabel = "Tiempo ·" } = Astro.props;
 const featured = !!tier.featured;
 ---
 
@@ -50,7 +51,8 @@ const featured = !!tier.featured;
     </p>
   </header>
 
-  <div class:list={["mt-8 h-px w-12", featured ? "bg-coral" : "bg-violet"]}></div>
+  <div class:list={["mt-8 h-px w-12", featured ? "bg-coral" : "bg-violet"]}>
+  </div>
 
   <div class="mt-6 flex items-baseline gap-2">
     <span
@@ -82,7 +84,7 @@ const featured = !!tier.featured;
           featured ? "text-paper/60" : "text-violet",
         ]}
       >
-        Tiempo · {tier.time}
+        {timeLabel} {tier.time}
       </p>
     )
   }
@@ -122,8 +124,21 @@ const featured = !!tier.featured;
         ]}
       >
         {tier.cta.label}
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        <svg
+          width="13"
+          height="13"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <>
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </>
         </svg>
       </a>
     )

@@ -39,3 +39,6 @@ test-results/
 *.jpeg
 *.png
 *.webp
+
+# Claude Code (local overrides)
+.claude/settings.local.json

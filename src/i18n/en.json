@@ -1,0 +1,376 @@
+{
+  "brand": {
+    "name": "Awake",
+    "full": "Awake Marketing",
+    "tagline": "We awaken strategic clarity so brands stop being just an option and become the solution.",
+    "shortTagline": "We awaken brands with radar vision.",
+    "email": "hola@awakemkt.com",
+    "whatsapp": "+34 600 000 000",
+    "city": "Alicante / Valencia · Spain",
+    "metodoCore": "CORE Method",
+    "footerTagline": "No excuses. Measurable results."
+  },
+  "nav": {
+    "inicio": "Home",
+    "sobreNosotros": "About us",
+    "servicios": "Services",
+    "contacto": "Contact",
+    "diagnostico": "Free diagnosis",
+    "navegacion": "Navigation",
+    "contactoLabel": "Contact"
+  },
+  "home": {
+    "metaTitle": "Awake Marketing — We awaken brands with radar vision.",
+    "metaDescription": "We transform invisible businesses into creative brands and thoughtful strategies.",
+    "hero": {
+      "location": "Valencia · Alicante",
+      "title": "We power your brand.",
+      "body": "We transform invisible businesses into creative brands and thoughtful strategies.",
+      "bodyBold": "We build real connections",
+      "bodyItalic": "between the business and your community.",
+      "ctaPrimary": "Free diagnosis",
+      "ctaSecondary": "Discover our method",
+      "marqueeWords": ["Clarity", "Order", "Enhancement", "Expansion", "Authority", "Results", "Honesty", "Structure"]
+    },
+    "manifesto": {
+      "eyebrow": "Manifesto",
+      "title": "We don't sell smoke. We sell structure.",
+      "body": "There are brands with enormous potential trapped in a disorganized operation.",
+      "bodyItalic": "We wake them up",
+      "bodyRest": ". We diagnose what's blocking growth, organize execution, and build a visual presence that conveys authority from the very first second.",
+      "statMethodLabel": "Method",
+      "statMethodValue": "CORE",
+      "statPhasesLabel": "Phases",
+      "statPhasesValue": "04",
+      "statCommitmentLabel": "Lock-in",
+      "statCommitmentValue": "Zero"
+    },
+    "method": {
+      "number": "02",
+      "eyebrow": "CORE Method",
+      "title": "Four phases. Zero filler.",
+      "intro": "From diagnosis to measurable impact. Each phase has clear deliverables and progress criteria.",
+      "ctaLabel": "See full method",
+      "ctaHref": "/en/services#core",
+      "phases": [
+        { "letter": "C", "name": "Clarity", "stage": "Diagnosis", "body": "Technical audit of the digital ecosystem. SWOT analysis and competitive positioning. We identify the frictions blocking growth." },
+        { "letter": "O", "name": "Order", "stage": "Structure", "body": "Action matrix that converts diagnosis into roadmap. We define execution criteria and the brand's strategic direction." },
+        { "letter": "R", "name": "Enhancement", "stage": "Projection", "body": "Coherent narrative and visual system. Branding, typography, and art direction that validates your capability and builds immediate trust." },
+        { "letter": "E", "name": "Expansion", "stage": "Execution", "body": "Channel management and high-impact communication. The brand grows constantly, measurably, and strategically." }
+      ]
+    },
+    "pillars": {
+      "number": "03",
+      "eyebrow": "Our values",
+      "title": "We are built on 4 pillars.",
+      "intro": "Four principles that guide how we make every decision for your brand.",
+      "items": [
+        { "title": "Empathy", "body": "Your brand is not a number, it's our priority. We tune in to your purpose so our energy works in harmony with yours. Achievements backed by your peace of mind." },
+        { "title": "Creativity", "body": "We believe in beauty with purpose. Without strategy there are no sales, but without visual impact there's no memory. We fuse art with data so your brand not only looks good, but performs." },
+        { "title": "Energy", "body": "We work with our feet on the ground and energy high. Having the right energy is fundamental to keeping the process flowing, while maintaining the technical rigor your business demands." },
+        { "title": "Tenacity", "body": "We are defined by a healthy obsession with success. We are not observers, we are allies who fight for your market share. At Awake, giving up is not a strategic option." }
+      ]
+    },
+    "services": {
+      "number": "04",
+      "eyebrow": "Services",
+      "title": "What we do for your brand.",
+      "intro": "Four lines of work. One single obsession: getting your business back where it matters.",
+      "ctaLabel": "See all services",
+      "ctaHref": "/en/services",
+      "items": [
+        { "idx": "01", "name": "Branding", "nameItalic": "& identity", "desc": "Complete visual system, naming, usage guide and art direction." },
+        { "idx": "02", "name": "Social media", "nameItalic": null, "desc": "Strategy, content, monthly photo session and community management." },
+        { "idx": "03", "name": "Web", "nameItalic": "& e-commerce", "desc": "Design and development that converts. Technical SEO and monthly analytics." },
+        { "idx": "04", "name": "Paid campaigns", "nameItalic": null, "desc": "Meta Ads and Google Ads focused on local. Transparent reporting from day one." }
+      ]
+    },
+    "voiceAndTone": {
+      "number": "05",
+      "eyebrow": "Voice & tone",
+      "title": "Friendly but serious. Direct. No gimmicks.",
+      "intro": "We speak person to person. What we say, we deliver. What we can't deliver, we don't promise.",
+      "yesLabel": "✓ We say",
+      "noLabel": "✗ We don't say",
+      "yesItems": [
+        "Your profile is losing customers every day.",
+        "I'll tell you exactly what's wrong. Free.",
+        "Visible results in 60 days or we stop.",
+        "We take your project personally.",
+        "No lock-in. Month to month."
+      ],
+      "noItems": [
+        "We're the best agency in Spain.",
+        "We offer comprehensive 360° solutions.",
+        "We guarantee your brand's success.",
+        "We have extensive experience.",
+        "Flexible plans tailored to you."
+      ]
+    },
+    "cta": {
+      "sinceridad": "Your business deserves to exist",
+      "quote": "We work with established physical businesses that struggle to achieve presence in digital media. They have REAL clients, but their social media doesn't show their potential.",
+      "eyebrow": "Shall we talk?",
+      "body": "Book a free diagnosis. We'll tell you exactly what's failing in your digital ecosystem, and whether we can help. No commitment.",
+      "ctaLabel": "Book diagnosis",
+      "ctaHref": "/en/contact"
+    }
+  },
+  "about": {
+    "metaTitle": "About us — Awake Marketing",
+    "metaDescription": "Who we are, why we're called Awake and how we work. Mission, vision and values.",
+    "heroEyebrow": "Why we're called Awake",
+    "heroTitle": "We awaken strategic clarity so brands stop being just an option and become the solution.",
+    "heroTitleItalic1": "just an option",
+    "heroTitleItalic2": "the solution",
+    "misionEyebrow": "Mission",
+    "misionTitle": "What we do every day.",
+    "mision": "Transform businesses through strategic order and high-impact design. We resolve structural failures to convert invisible brands into profitable and authoritative assets.",
+    "visionEyebrow": "Vision",
+    "visionTitle": "Where we want to go.",
+    "vision": "Scale our global impact helping brands from around the world reach their maximum potential. We aspire to democratize access to high-level strategy and authority design.",
+    "valoresEyebrow": "Values",
+    "valoresTitle": "Non-negotiable principles. The warriors' DNA.",
+    "valoresIntro": "Not decorations: these are the criteria we use to make every decision for your brand.",
+    "valores": [
+      { "title": "Insight", "subtitle": "Radar Vision", "body": "We don't stay on the surface. We analyze what others ignore to find the diamond in the rough." },
+      { "title": "Stubborn commitment", "subtitle": "We don't stop until we get there", "body": "Our client's challenge is our personal battle." },
+      { "title": "Radical clarity", "subtitle": "No noise", "body": "We speak the truth, diagnose with precision and eliminate noise so the client's message is direct." },
+      { "title": "Empathic energy", "subtitle": "Good vibes with grit", "body": "We work with good energy, but with our feet on the ground. We understand the human behind the brand to boost their business with drive and determination." },
+      { "title": "Aesthetic excellence", "subtitle": "Strategy + beauty", "body": "Strategy without beauty doesn't impact, and beauty without strategy doesn't sell. We seek the perfect balance." }
+    ],
+    "sinceridad": {
+      "title": "Your business deserves to exist",
+      "body": "We work with established physical businesses that struggle to achieve presence in digital media. They have REAL clients, but their social media doesn't show their potential.",
+      "ctaLabel": "Start with the free consultation",
+      "ctaHref": "/en/contact"
+    },
+    "glosarioEyebrow": "Glossary",
+    "glosarioTitle": "Three words you'll hear us repeat.",
+    "glosario": [
+      { "term": "CORE", "def": "Means nucleus. It reinforces our mission to get to the root of the problem and solve it from within." },
+      { "term": "Radar", "def": "Our ability to cut through the noise and locate the brand's diamond even in the darkness of chaos." },
+      { "term": "Stubbornness", "def": "Our refusal to give up on our clients' challenges." }
+    ]
+  },
+  "services": {
+    "metaTitle": "Services — Awake Marketing",
+    "metaDescription": "Diagnosis, branding and social media management. The CORE Method applied to clear packages and honest pricing.",
+    "heroEyebrow": "Services",
+    "heroTitle": "Clear packages. No fine print.",
+    "heroBody": "We make your brand stand out, connect, inspire and attract. Strategy + creativity + presence",
+    "navDiagnostico": "Diagnosis",
+    "navBranding": "Branding",
+    "navWeb": "Web",
+    "navRrss": "Social Media",
+    "navCore": "CORE Method",
+    "coreEyebrow": "CORE Method",
+    "coreTitle": "The transformation system we apply to every client.",
+    "coreIntro": "Four stages that go straight to the core. Each package uses this method according to your brand's current moment.",
+    "coreMethodFull": [
+      { "letter": "C", "title": "Clarity", "summary": "Diagnosis phase", "body": "We understand your brand in depth." },
+      { "letter": "O", "title": "Order", "summary": "Structure phase", "body": "We fix, confront, maintain and exploit opportunities. We make key decisions and define the direction. It's the bridge where analysis becomes judgment." },
+      { "letter": "R", "title": "Enhancement", "summary": "Manifestation phase", "body": "TODO: complete Enhancement text" },
+      { "letter": "E", "title": "Expansion", "summary": "The Brand Awakens", "body": "With a solid foundation, your brand is ready to scale." }
+    ],
+    "diagnosticoEyebrow": "01 · Starting point",
+    "diagnosticoTitle": "Diagnosis and boost.",
+    "diagnosticoIntro": "Before spending a euro on design or social media, you need to understand what's holding your brand back. We always start here.",
+    "brandingEyebrow": "02 · Identity",
+    "brandingTitle": "Branding packages.",
+    "brandingIntro": "Identity, image, construction, tone and brand DNA. Three levels, one single objective: looking like what it is.",
+    "brandingNote": "Note: at a senior agency in Alicante / Valencia, the CORE + Total Branding Pack would cost around €2,500. The €990 price is promotional for 2026.",
+    "webEyebrow": "03 · Web & E-commerce",
+    "webTitle": "Your digital presence, tailored.",
+    "webIntro": "From a clean institutional website to a full e-commerce. Every project is designed respecting the established brand identity.",
+    "rrssEyebrow": "04 · Awake Momentum",
+    "rrssTitle": "Monthly social media management.",
+    "rrssIntro": "Five packages designed for your brand's lifecycle. PRO is our recommendation: the right balance between design and growth.",
+    "pagosEyebrow": "Pricing and payment policy",
+    "pagosIntro": "Everything clear from minute one. So Awake remains a healthy business and you know what you're getting into.",
+    "timeLabel": "Time ·",
+    "ctaTitle": "Which one fits your brand?",
+    "ctaBody": "If you're not sure, we'll figure it out together in the free consultation. 30 minutes, no commitment, with an honest recommendation.",
+    "ctaLabel": "Book free consultation",
+    "ctaHref": "/en/contact",
+    "condicionesPago": {
+      "title": "Payment terms",
+      "items": [
+        { "title": "50% / 50%", "body": "50% upfront to reserve your slot and start the Radar. Remaining 50% before delivery of final files or publication." },
+        { "title": "−5% for single payment", "body": "If you pay the full cycle upfront (3 or 6 months), we apply a 5% discount for immediate single transfer." },
+        { "title": "Methods", "body": "Bank transfer, Revolut or PayPal (PayPal fees are charged to the client)." },
+        { "title": "VAT", "body": "If you need an invoice, VAT is added to the published price." }
+      ]
+    },
+    "diagnosticoTiers": [
+      {
+        "id": "consultoria",
+        "name": "Discovery Consultation",
+        "price": "Free",
+        "priceNote": "30 min session by video call",
+        "tagline": "We get to know each other, understand what your brand needs and give you a quote. If your brand is fine, we'll tell you. If we can't help you, we'll tell you too.",
+        "features": ["30 minutes by video call", "No commitment, no fine print", "Honest recommendation on next steps"],
+        "cta": { "label": "Book consultation", "href": "/en/contact" }
+      },
+      {
+        "id": "radar",
+        "name": "RADAR Diagnosis",
+        "price": "€150",
+        "priceNote": "+ VAT · offset against CORE Pack",
+        "tagline": "The first step of the CORE Method. Current situation audit, SWOT and actionable roadmap.",
+        "features": ["Brand, numbers and competition audit", "SWOT analysis and CAME matrix", "Prioritised roadmap", "Strategic debrief session"],
+        "cta": { "label": "Request diagnosis", "href": "/en/contact" }
+      }
+    ],
+    "brandingTiers": [
+      {
+        "id": "rebranding-basico",
+        "name": "Basic Rebranding",
+        "price": "€150",
+        "tagline": "For those who already exist. Brands with a base that look outdated or disorganised.",
+        "time": "2 – 3 weeks",
+        "features": ["Current brand audit", "Logo redesign (2 proposals)", "Colour palette and typography", "Mini style guide"],
+        "cta": { "label": "I want the basic", "href": "/en/contact" }
+      },
+      {
+        "id": "rebranding-redes",
+        "name": "Rebranding + Social",
+        "price": "€290",
+        "tagline": "The boost. For those who want to refresh their image and start showing it with strategy.",
+        "time": "~1 month",
+        "features": ["Everything in Basic Rebranding", "Basic CORE strategy", "Launch pack: 6 posts + 4 stories", "Bio optimisation"],
+        "cta": { "label": "I want the boost", "href": "/en/contact" }
+      },
+      {
+        "id": "core-total",
+        "name": "CORE Pack + Total Branding",
+        "price": "€990 – €1,200",
+        "priceNote": "+ VAT · 2026 promotional price (€2,500 at a senior agency)",
+        "tagline": "The full awakening. For a brand that is born or reinvents itself from scratch.",
+        "time": "1 to 1.5 months",
+        "badge": "Star",
+        "featured": true,
+        "features": [
+          "CORE strategy: clarity, objective and strategic guide",
+          "Visual identity: logo (3 proposals + revisions), palette, typography and mini brand guide",
+          "Launch kit: 8 Instagram posts (sales strategy), 4 capture stories and logo animation for Reels",
+          "Pro tools: digital card, quote and services templates, email/WhatsApp signature and 5 Canva templates",
+          "Commercial dossier in PDF + personalised advisory session"
+        ],
+        "cta": { "label": "I want the awakening", "href": "/en/contact" }
+      }
+    ],
+    "webTiers": [
+      {
+        "id": "web-basica",
+        "name": "Basic Website",
+        "price": "€300",
+        "tagline": "Solid digital presence for freelancers and small businesses that need to convey professionalism from day one.",
+        "time": "2 – 3 weeks",
+        "features": ["Institutional site up to 4 main sections", "Responsive design adapted to your brand identity", "Basic speed optimisation and technical SEO", "One full round of minor adjustments"],
+        "cta": { "label": "I want the Basic Web", "href": "/en/contact" }
+      },
+      {
+        "id": "web-ampliada",
+        "name": "Extended Website",
+        "price": "€400",
+        "tagline": "For businesses looking to stand out with a more sophisticated digital image and greater content capacity.",
+        "time": "3 – 5 weeks",
+        "features": ["Full website up to 6 sections with editorial structure", "Subtle animations and custom iconography", "Blog or cases / portfolio section", "Two rounds of minor adjustments for maximum customisation"],
+        "cta": { "label": "I want the Extended Web", "href": "/en/contact" }
+      },
+      {
+        "id": "web-ecommerce",
+        "name": "E-commerce & Complex Projects",
+        "price": "Quote",
+        "priceNote": "Budget according to scope and features",
+        "tagline": "Online stores, payment integrations, memberships, portals and any project that goes beyond standard design.",
+        "badge": "Custom",
+        "features": ["Requirements analysis and personalised technical proposal", "E-commerce with cart, payment gateway and stock management", "ERP, CRM or external system integrations", "Support and maintenance defined per project"],
+        "cta": { "label": "Request quote", "href": "/en/contact" }
+      }
+    ],
+    "rrsssTiers": [
+      {
+        "id": "esencial",
+        "name": "Essential Pack",
+        "price": "€220/mo",
+        "tagline": "Solid and professional presence.",
+        "features": ["5 feed posts", "2 simple Reels (no complex editing)", "4 editable story templates", "Basic monthly content strategy", "Basic strategic calendar", "Monthly metrics review"],
+        "cta": { "label": "Start with Essential", "href": "/en/contact" }
+      },
+      {
+        "id": "gold",
+        "name": "Gold Pack — Awakening",
+        "price": "€330/mo",
+        "tagline": "So you feel like \"someone finally handles everything\" at a price you can afford.",
+        "features": ["8 monthly publications (6 posts + 2 simple Reels)", "4 stories + 2 editable templates", "1 hour of basic photos and videos", "Objective definition and 4 content pillars", "Gift: bio adjustment and highlight covers (first month)"],
+        "cta": { "label": "Start with Gold", "href": "/en/contact" }
+      },
+      {
+        "id": "pro",
+        "name": "PRO Pack",
+        "price": "€450/mo",
+        "tagline": "The perfect balance between design and growth.",
+        "badge": "Recommended",
+        "featured": true,
+        "features": ["5 posts + 2 Reels + 2 designed interaction stories + 2 editable stories", "Monthly content strategy", "Strategic calendar + metrics review", "Monthly filmmaking session"],
+        "cta": { "label": "I want PRO", "href": "/en/contact" }
+      },
+      {
+        "id": "elite",
+        "name": "Elite Pack",
+        "price": "€650/mo",
+        "tagline": "Maximum impact. For brands that want to dominate their niche.",
+        "features": ["10 posts + 4 Reels + 4 designed stories", "4 interactive stories (capture focus) + 2 editable stories", "Strategy + calendar + metrics review", "2 monthly photo and video sessions"],
+        "cta": { "label": "I want Elite", "href": "/en/contact" }
+      },
+      {
+        "id": "libre",
+        "name": "Custom Pack",
+        "price": "Quote",
+        "priceNote": "According to Reels, management and brand stage",
+        "tagline": "When no pack fits. We start with the free consultation and build something tailored to you.",
+        "features": ["Free discovery session (30 min)", "Personalised proposal according to brand lifecycle", "Combines branding, content and/or audiovisual production", "If it's not needed or we can't help, we'll tell you"],
+        "cta": { "label": "Request quote", "href": "/en/contact" }
+      }
+    ]
+  },
+  "contact": {
+    "metaTitle": "Contact — Awake Marketing",
+    "metaDescription": "Book your free discovery consultation: 30 minutes by video call to understand what your brand needs.",
+    "heroEyebrow": "Discovery Consultation — Free",
+    "heroTitle1": "30 minutes to",
+    "heroTitleItalic": "get to know each other",
+    "heroTitle2": "and understand what your brand needs.",
+    "heroBody": "If your brand is fine, we'll tell you. If we can't help you, we'll also tell you. No fine print.",
+    "benefits": [
+      "30 min video call, no commitment.",
+      "Initial diagnosis and honest recommendation on next steps.",
+      "If we're a match, we'll quote you on the spot."
+    ],
+    "emailLabel": "Email",
+    "whatsappLabel": "WhatsApp",
+    "formEyebrow": "Book consultation",
+    "formTitle": "Tell us about your brand.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailFieldLabel": "Email",
+    "emailPlaceholder": "hello@yourbrand.com",
+    "brandLabel": "Brand or business",
+    "brandPlaceholder": "What's it called",
+    "serviceLabel": "How can we help you?",
+    "serviceOptions": ["Free consultation", "RADAR Diagnosis", "Branding", "Social media management", "Custom pack", "Web design", "Other"],
+    "messageLabel": "Tell us a bit more",
+    "messagePlaceholder": "What's holding you back today? What do you need?",
+    "submitLabel": "Send message",
+    "responseNote": "We'll reply within 24 business hours.",
+    "faqEyebrow": "Frequently asked questions",
+    "faqTitle": "What people ask us before we start.",
+    "faq": [
+      { "q": "How does payment work?", "a": "50% on booking and 50% before delivery or publication. You get −5% if you pay the full cycle upfront (3 or 6 months)." },
+      { "q": "Do prices include VAT?", "a": "Published prices are excluding VAT. If you need an invoice, we add it." },
+      { "q": "Do you do custom packages?", "a": "Yes. The Custom Pack is quoted according to your brand's specific needs and business stage." }
+    ]
+  }
+}

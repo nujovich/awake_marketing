@@ -1,0 +1,150 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Button from "../../components/Button.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import ValueCard from "../../components/ValueCard.astro";
+import t from "../../i18n/it.json";
+import { getLocalizedUrl } from "../../i18n/utils";
+
+const locale = "it";
+const currentSlug = "chi-siamo";
+const contactHref = getLocalizedUrl(locale, "contacto");
+
+const icons = ["radar", "flame", "compass", "spark", "diamond"] as const;
+---
+
+<Layout
+    locale={locale}
+    currentSlug={currentSlug}
+    title={t.about.metaTitle}
+    description={t.about.metaDescription}
+>
+    {/* HERO */}
+    <section class="relative overflow-hidden bg-bone-50 py-20 sm:py-28">
+        <div
+            class="absolute inset-0 -z-10 opacity-50"
+            style="background: radial-gradient(50% 50% at 70% 30%, rgba(108,91,164,0.18), transparent 60%);"
+        >
+        </div>
+        <div class="mx-auto max-w-4xl px-5 sm:px-8 text-center">
+            <p
+                class="reveal text-xs font-medium uppercase tracking-[0.22em] text-powder-petal-600"
+            >
+                {t.about.heroEyebrow}
+            </p>
+            <h1
+                class="reveal mt-5 font-display text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight text-space-indigo-900"
+            >
+                {t.about.heroTitle}
+            </h1>
+        </div>
+    </section>
+
+    {/* MISSION + VISION */}
+    <section class="bg-bone-50 py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 grid gap-10 md:grid-cols-2">
+            <article
+                class="reveal rounded-3xl bg-bone-100 p-8 sm:p-10 ring-1 ring-space-indigo-900/5"
+            >
+                <p
+                    class="text-xs uppercase tracking-[0.22em] text-jungle-teal-700"
+                >
+                    {t.about.misionEyebrow}
+                </p>
+                <h2
+                    class="mt-3 font-display text-2xl sm:text-3xl font-semibold text-space-indigo-900"
+                >
+                    {t.about.misionTitle}
+                </h2>
+                <p class="mt-5 leading-relaxed text-space-indigo-800/80">
+                    {t.about.mision}
+                </p>
+            </article>
+            <article
+                class="reveal rounded-3xl bg-space-indigo-900 p-8 sm:p-10 text-bone-50"
+            >
+                <p
+                    class="text-xs uppercase tracking-[0.22em] text-powder-petal-300"
+                >
+                    {t.about.visionEyebrow}
+                </p>
+                <h2
+                    class="mt-3 font-display text-2xl sm:text-3xl font-semibold text-bone-50"
+                >
+                    {t.about.visionTitle}
+                </h2>
+                <p class="mt-5 leading-relaxed text-bone-200/85">
+                    {t.about.vision}
+                </p>
+            </article>
+        </div>
+    </section>
+
+    {/* VALUES */}
+    <section class="bg-bone-50 py-20 sm:py-28">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8">
+            <SectionTitle
+                eyebrow={t.about.valoresEyebrow}
+                title={t.about.valoresTitle}
+                intro={t.about.valoresIntro}
+            />
+            <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {
+                    t.about.valores.map((v, i) => (
+                        <ValueCard
+                            title={v.title}
+                            subtitle={v.subtitle}
+                            body={v.body}
+                            icon={icons[i % icons.length]}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    {/* SINCERITY */}
+    <section class="bg-vintage-grape-900 py-20 sm:py-28 text-bone-50">
+        <div class="mx-auto max-w-4xl px-5 sm:px-8 text-center">
+            <p
+                class="reveal text-xs uppercase tracking-[0.22em] text-powder-petal-300"
+            >
+                {t.about.sinceridad.title}
+            </p>
+            <blockquote
+                class="reveal mt-5 font-display text-2xl sm:text-3xl md:text-4xl leading-snug"
+            >
+                {t.about.sinceridad.body}
+            </blockquote>
+            <div class="reveal mt-10">
+                <Button href={contactHref} variant="secondary"
+                    >{t.about.sinceridad.ctaLabel}</Button
+                >
+            </div>
+        </div>
+    </section>
+
+    {/* GLOSSARY */}
+    <section class="bg-bone-50 py-20 sm:py-24">
+        <div class="mx-auto max-w-4xl px-5 sm:px-8">
+            <SectionTitle
+                eyebrow={t.about.glosarioEyebrow}
+                title={t.about.glosarioTitle}
+            />
+            <dl class="mt-10 divide-y divide-space-indigo-900/10">
+                {
+                    t.about.glosario.map((g) => (
+                        <div class="reveal grid gap-3 py-6 sm:grid-cols-[140px_1fr] sm:gap-8">
+                            <dt class="font-display text-2xl text-space-indigo-900">
+                                {g.term}
+                            </dt>
+                            <dd class="text-base leading-relaxed text-space-indigo-800/80">
+                                {g.def}
+                            </dd>
+                        </div>
+                    ))
+                }
+            </dl>
+        </div>
+    </section>
+</Layout>

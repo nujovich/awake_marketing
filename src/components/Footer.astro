@@ -1,8 +1,26 @@
 ---
 import Logo from "./Logo.astro";
-import { brand, nav } from "../data/content";
+import { getLocalizedUrl } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+interface Props {
+  t: Record<string, any>;
+  locale: string;
+}
+
+const { t, locale } = Astro.props;
 
 const year = new Date().getFullYear();
+
+const navItems = [
+  { href: getRelativeLocaleUrl(locale, "/"), label: t.nav.inicio },
+  {
+    href: getLocalizedUrl(locale, "sobre-nosotros"),
+    label: t.nav.sobreNosotros,
+  },
+  { href: getLocalizedUrl(locale, "servicios"), label: t.nav.servicios },
+  { href: getLocalizedUrl(locale, "contacto"), label: t.nav.contacto },
+];
 ---
 
 <footer class="bg-violet text-paper">
@@ -11,13 +29,13 @@ const year = new Date().getFullYear();
       <div class="md:col-span-5">
         <Logo variant="light" />
         <p class="mt-8 max-w-sm text-sm leading-relaxed text-paper/70">
-          {brand.tagline}
+          {t.brand.tagline}
         </p>
         <div class="mt-10 h-px w-16 bg-coral"></div>
         <p
           class="mt-6 font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/70"
         >
-          Método CORE
+          {t.brand.metodoCore}
         </p>
       </div>
 
@@ -25,11 +43,11 @@ const year = new Date().getFullYear();
         <h3
           class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/40"
         >
-          Navegación
+          {t.nav.navegacion}
         </h3>
         <ul class="mt-6 space-y-3">
           {
-            nav.map((item) => (
+            navItems.map((item) => (
               <li>
                 <a
                   href={item.href}
@@ -47,19 +65,19 @@ const year = new Date().getFullYear();
         <h3
           class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/40"
         >
-          Contacto
+          {t.nav.contactoLabel}
         </h3>
         <ul class="mt-6 space-y-3 text-sm">
           <li>
             <a
-              href={`mailto:${brand.email}`}
+              href={`mailto:${t.brand.email}`}
               class="hover:text-coral transition-colors"
             >
-              {brand.email}
+              {t.brand.email}
             </a>
           </li>
-          <li class="text-paper/70">{brand.whatsapp}</li>
-          <li class="text-paper/70">{brand.city}</li>
+          <li class="text-paper/70">{t.brand.whatsapp}</li>
+          <li class="text-paper/70">{t.brand.city}</li>
         </ul>
       </div>
     </div>
@@ -67,8 +85,8 @@ const year = new Date().getFullYear();
     <div
       class="mt-20 pt-8 border-t border-paper/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] uppercase tracking-[0.22em] text-paper/40 font-display font-medium"
     >
-      <span>© {year} · {brand.full}</span>
-      <span class="text-coral">Sin excusas. Resultados medibles.</span>
+      <span>© {year} · {t.brand.full}</span>
+      <span class="text-coral">{t.brand.footerTagline}</span>
     </div>
   </div>
 </footer>

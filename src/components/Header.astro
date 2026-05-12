@@ -1,10 +1,46 @@
 ---
 import Logo from "./Logo.astro";
-import { nav } from "../data/content";
+import { getLocalizedUrl } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
-const { pathname } = Astro.url;
-const isActive = (href: string) =>
-  href === "/" ? pathname === "/" : pathname.startsWith(href);
+interface Props {
+  t: Record<string, any>;
+  locale: string;
+  currentSlug: string;
+}
+
+const { t, locale, currentSlug } = Astro.props;
+
+const navItems = [
+  { slug: "", label: t.nav.inicio, href: getRelativeLocaleUrl(locale, "/") },
+  {
+    slug: "sobre-nosotros",
+    label: t.nav.sobreNosotros,
+    href: getLocalizedUrl(locale, "sobre-nosotros"),
+  },
+  {
+    slug: "servicios",
+    label: t.nav.servicios,
+    href: getLocalizedUrl(locale, "servicios"),
+  },
+  {
+    slug: "contacto",
+    label: t.nav.contacto,
+    href: getLocalizedUrl(locale, "contacto"),
+  },
+];
+
+const allSlugs: Record<string, string[]> = {
+  "": [""],
+  "sobre-nosotros": ["sobre-nosotros", "about-us", "chi-siamo"],
+  servicios: ["servicios", "services", "servizi"],
+  contacto: ["contacto", "contact", "contatto"],
+};
+
+const isActive = (slug: string) =>
+  (allSlugs[slug] ?? [slug]).includes(currentSlug);
+const contactHref = getLocalizedUrl(locale, "contacto");
+const locales = ["es", "en", "it"] as const;
 ---
 
 <header
@@ -17,12 +53,12 @@ const isActive = (href: string) =>
 
       <nav class="hidden md:flex items-center gap-10">
         {
-          nav.map((item) => (
+          navItems.map((item) => (
             <a
               href={item.href}
               class:list={[
                 "font-display text-[11px] font-semibold uppercase tracking-[0.22em] transition-colors duration-200",
-                isActive(item.href)
+                isActive(item.slug)
                   ? "text-paper"
                   : "text-paper/85 hover:text-paper",
               ]}
@@ -33,13 +69,47 @@ const isActive = (href: string) =>
         }
       </nav>
 
-      <div class="hidden md:block">
+      <div class="hidden md:flex items-center gap-6">
+        <div class="flex items-center">
+          {
+            locales.map((loc, i) => (
+              <span class="flex items-center">
+                {i > 0 && (
+                  <span class="mx-1.5 text-paper/40 font-display text-[10px] font-semibold select-none">
+                    ·
+                  </span>
+                )}
+                <a
+                  href={getLocalizedUrl(loc, currentSlug)}
+                  class:list={[
+                    "font-display text-[10px] font-semibold uppercase tracking-[0.15em] transition-colors duration-200",
+                    loc === locale
+                      ? "text-paper"
+                      : "text-paper/40 hover:text-paper",
+                  ]}
+                >
+                  {loc.toUpperCase()}
+                </a>
+              </span>
+            ))
+          }
+        </div>
+
         <a
-          href="/contacto"
+          href={contactHref}
           class="inline-flex items-center gap-2 border border-paper/60 text-paper px-5 py-3 font-display text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-paper hover:text-violet transition-colors"
         >
-          Diagnóstico
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          {t.nav.diagnostico}
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
           </svg>
         </a>
@@ -52,21 +122,34 @@ const isActive = (href: string) =>
         aria-expanded="false"
         aria-controls="mobile-nav"
       >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 6h18"></path><path d="M3 12h18"></path><path d="M3 18h18"></path>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 6h18"></path><path d="M3 12h18"></path><path d="M3 18h18"
+          ></path>
         </svg>
       </button>
     </div>
 
-    <div id="mobile-nav" class="md:hidden hidden pb-6 pt-2 border-t border-paper/20">
+    <div
+      id="mobile-nav"
+      class="md:hidden hidden pb-6 pt-2 border-t border-paper/20"
+    >
       <nav class="flex flex-col">
         {
-          nav.map((item) => (
+          navItems.map((item) => (
             <a
               href={item.href}
               class:list={[
                 "py-4 font-display text-xs font-semibold uppercase tracking-[0.22em] border-b border-rule",
-                isActive(item.href) ? "text-paper" : "text-paper/85",
+                isActive(item.slug) ? "text-paper" : "text-paper/85",
               ]}
             >
               {item.label}
@@ -74,11 +157,35 @@ const isActive = (href: string) =>
           ))
         }
         <a
-          href="/contacto"
+          href={contactHref}
           class="mt-6 inline-flex items-center justify-center gap-2 bg-paper text-violet px-5 py-4 font-display text-xs font-semibold uppercase tracking-[0.2em]"
         >
-          Diagnóstico gratis →
+          {t.nav.diagnostico} →
         </a>
+        <div class="mt-6 flex items-center justify-center">
+          {
+            locales.map((loc, i) => (
+              <span class="flex items-center">
+                {i > 0 && (
+                  <span class="mx-2 text-paper/40 font-display text-[10px] font-semibold select-none">
+                    ·
+                  </span>
+                )}
+                <a
+                  href={getLocalizedUrl(loc, currentSlug)}
+                  class:list={[
+                    "font-display text-[10px] font-semibold uppercase tracking-[0.15em] transition-colors duration-200",
+                    loc === locale
+                      ? "text-paper"
+                      : "text-paper/40 hover:text-paper",
+                  ]}
+                >
+                  {loc.toUpperCase()}
+                </a>
+              </span>
+            ))
+          }
+        </div>
       </nav>
     </div>
   </div>
