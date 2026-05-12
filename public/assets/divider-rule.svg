@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 12" role="img" aria-label="Section divider">
+  <line x1="0" y1="6" x2="1000" y2="6" stroke="#6B2470" stroke-width="1"></line>
+  <circle cx="500" cy="6" r="4" fill="#6B2470"></circle>
+</svg>

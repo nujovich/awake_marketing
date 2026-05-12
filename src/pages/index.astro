@@ -63,15 +63,16 @@ const marqueeWords = [
 <Layout>
   {/* ========= HERO ========= */}
   <section class="relative bg-violet overflow-hidden">
-    <div class="mx-auto max-w-[1280px] px-6 sm:px-14 pt-20 sm:pt-28 pb-24 sm:pb-32">
+    <div
+      class="mx-auto max-w-[1280px] px-6 sm:px-14 pt-20 sm:pt-28 pb-24 sm:pb-32"
+    >
       <div class="grid gap-12 lg:grid-cols-12 lg:gap-16 items-end">
         <div class="lg:col-span-8">
           <div class="reveal flex items-center gap-4">
-            <span class="font-display text-[11px] font-semibold uppercase tracking-[0.32em] text-paper/70">
-              v2.0 / 2026
-            </span>
             <span class="h-px flex-1 bg-paper/20"></span>
-            <span class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/50">
+            <span
+              class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/50"
+            >
               Valencia · Alicante
             </span>
           </div>
@@ -79,55 +80,33 @@ const marqueeWords = [
           <h1
             class="reveal mt-12 font-display text-5xl sm:text-6xl md:text-7xl lg:text-[84px] font-extrabold leading-[0.95] tracking-[-0.03em] text-paper"
           >
-            Transformamos<br />
-            negocios <span class="italic font-light text-coral">invisibles</span><br />
-            en marcas con<br />
+            Potenciamos <br />
+            tu
             <span class="relative inline-block">
-              autoridad
-              <span class="absolute left-0 -bottom-1 h-1 w-full bg-coral"></span>
+              marca
+              <span class="absolute left-0 -bottom-1 h-1 w-full bg-coral"
+              ></span>
             </span>.
           </h1>
 
           <p
             class="reveal mt-10 max-w-xl text-base sm:text-lg font-light leading-relaxed text-paper/80"
           >
-            Estructura, narrativa y resultados medibles. Aplicamos el
-            <span class="font-semibold text-paper">Método CORE</span> para eliminar
-            el caos operativo y consolidar marcas que dejan de competir por precio.
-            <span class="italic">Sin excusas.</span>
+            Transformamos negocios invisibles en marcas creativas y estrategias
+            cuidadas.
+            <span class="font-semibold text-paper"
+              >Cremos conexiones reales</span
+            >
+            <span class="italic">entre la empresa y tu comunidad.</span>
           </p>
 
           <div class="reveal mt-12 flex flex-wrap items-center gap-6">
             <Button href="/contacto" variant="outline" onDark={true}>
               Diagnóstico gratis
             </Button>
-            <Button href="#metodo" variant="ghost" onDark={true}>Ver el método</Button>
-          </div>
-        </div>
-
-        <div class="reveal lg:col-span-4">
-          <div class="border-t border-paper/20 pt-8">
-            <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/50">
-              — Método CORE
-            </p>
-            <ul class="mt-6 space-y-4 font-display text-sm font-semibold">
-              {
-                coreRows.map((row) => (
-                  <li class="flex items-baseline gap-4 border-b border-paper/10 pb-3">
-                    <span class="font-extrabold text-2xl text-coral w-6">
-                      {row.letter}
-                    </span>
-                    <span class="flex-1 text-paper">{row.name}</span>
-                    <span class="text-[10px] font-light uppercase tracking-[0.2em] text-paper/40">
-                      {row.stage}
-                    </span>
-                  </li>
-                ))
-              }
-            </ul>
-            <p class="mt-8 text-xs font-light italic text-paper/40 leading-relaxed">
-              "Si una frase no transmite claridad, honestidad o compromiso, se reescribe."
-            </p>
+            <Button href="#metodo" variant="ghost" onDark={true}
+              >Conoce nuestro método</Button
+            >
           </div>
         </div>
       </div>
@@ -135,12 +114,16 @@ const marqueeWords = [
 
     {/* Marquee */}
     <div class="border-t border-paper/10 overflow-hidden bg-violet-deep py-6">
-      <div class="marquee-track flex whitespace-nowrap font-display text-2xl sm:text-3xl font-extrabold uppercase tracking-[-0.01em] text-paper/90">
+      <div
+        class="marquee-track flex whitespace-nowrap font-display text-2xl sm:text-3xl font-extrabold uppercase tracking-[-0.01em] text-paper/90"
+      >
         {
           [...marqueeWords, ...marqueeWords].map((w, i) => (
             <span class="px-8 flex items-center gap-8">
               {w}
-              <span class={i % 3 === 1 ? "text-paper/40" : "text-coral"}>●</span>
+              <span class={i % 3 === 1 ? "text-paper/40" : "text-coral"}>
+                ●
+              </span>
             </span>
           ))
         }
@@ -160,16 +143,23 @@ const marqueeWords = [
           />
         </div>
         <div class="lg:col-span-7 lg:col-start-6">
-          <p class="reveal font-display text-2xl sm:text-3xl font-light leading-[1.25] tracking-[-0.01em] text-ink">
+          <p
+            class="reveal font-display text-2xl sm:text-3xl font-light leading-[1.25] tracking-[-0.01em] text-ink"
+          >
             Hay marcas con potencial enorme atrapadas en una operación
-            desordenada. <span class="italic text-violet font-light">Las
-            despertamos</span>. Diagnosticamos lo que frena el crecimiento,
-            ordenamos la ejecución y construimos una presencia visual que
-            transmite autoridad desde el primer segundo.
+            desordenada. <span class="italic text-violet font-light"
+              >Las despertamos</span
+            >. Diagnosticamos lo que frena el crecimiento, ordenamos la
+            ejecución y construimos una presencia visual que transmite autoridad
+            desde el primer segundo.
           </p>
-          <div class="reveal mt-12 grid grid-cols-3 gap-8 border-t border-rule pt-8">
+          <div
+            class="reveal mt-12 grid grid-cols-3 gap-8 border-t border-rule pt-8"
+          >
             <div>
-              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60">
+              <p
+                class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60"
+              >
                 Método
               </p>
               <p class="mt-2 font-display text-3xl font-extrabold text-ink">
@@ -177,7 +167,9 @@ const marqueeWords = [
               </p>
             </div>
             <div>
-              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60">
+              <p
+                class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60"
+              >
                 Fases
               </p>
               <p class="mt-2 font-display text-3xl font-extrabold text-ink">
@@ -185,7 +177,9 @@ const marqueeWords = [
               </p>
             </div>
             <div>
-              <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60">
+              <p
+                class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-graphite/60"
+              >
                 Permanencia
               </p>
               <p class="mt-2 font-display text-3xl font-extrabold text-violet">
@@ -238,7 +232,9 @@ const marqueeWords = [
         </div>
       </div>
 
-      <div class="grid gap-px bg-violet-line border border-violet-line sm:grid-cols-2 lg:grid-cols-4">
+      <div
+        class="grid gap-px bg-violet-line border border-violet-line sm:grid-cols-2 lg:grid-cols-4"
+      >
         {
           pillarsSection.pillars.map((pillar, i) => (
             <article
@@ -249,7 +245,7 @@ const marqueeWords = [
                 <span class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-violet group-hover:text-coral">
                   0{i + 1}
                 </span>
-                <span class="h-1.5 w-1.5 bg-violet group-hover:bg-coral"></span>
+                <span class="h-1.5 w-1.5 bg-violet group-hover:bg-coral" />
               </div>
               <h3 class="mt-10 font-display text-2xl font-bold tracking-[-0.01em]">
                 {pillar.title}
@@ -280,19 +276,23 @@ const marqueeWords = [
       </div>
 
       <div>
-        {serviceList.map((svc) => (
-          <ServiceRow
-            idx={svc.idx}
-            name={svc.name}
-            nameItalic={svc.nameItalic}
-            desc={svc.desc}
-            href={svc.href}
-          />
-        ))}
+        {
+          serviceList.map((svc) => (
+            <ServiceRow
+              idx={svc.idx}
+              name={svc.name}
+              nameItalic={svc.nameItalic}
+              desc={svc.desc}
+              href={svc.href}
+            />
+          ))
+        }
       </div>
 
       <div class="reveal mt-16">
-        <Button href="/servicios" variant="outline" onDark={true}>Ver todos los servicios</Button>
+        <Button href="/servicios" variant="outline" onDark={true}
+          >Ver todos los servicios</Button
+        >
       </div>
     </div>
   </section>
@@ -313,14 +313,16 @@ const marqueeWords = [
 
       <div class="grid gap-px bg-rule border border-rule lg:grid-cols-2">
         <div class="bg-paper p-10 sm:p-12">
-          <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-violet">
+          <p
+            class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-violet"
+          >
             ✓ Sí decimos
           </p>
           <ul class="mt-8 space-y-5">
             {
               yesItems.map((t) => (
                 <li class="reveal flex items-start gap-4 border-b border-rule pb-5 last:border-b-0">
-                  <span class="mt-2 h-1.5 w-1.5 flex-none bg-coral"></span>
+                  <span class="mt-2 h-1.5 w-1.5 flex-none bg-coral" />
                   <p class="font-display text-lg sm:text-xl font-semibold leading-snug tracking-[-0.01em] text-ink">
                     "{t}"
                   </p>
@@ -331,14 +333,16 @@ const marqueeWords = [
         </div>
 
         <div class="bg-ink text-paper p-10 sm:p-12">
-          <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-coral">
+          <p
+            class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-coral"
+          >
             ✗ No decimos
           </p>
           <ul class="mt-8 space-y-5">
             {
               noItems.map((t) => (
                 <li class="reveal flex items-start gap-4 border-b border-paper/15 pb-5 last:border-b-0">
-                  <span class="mt-2 h-px w-4 flex-none bg-paper/40"></span>
+                  <span class="mt-2 h-px w-4 flex-none bg-paper/40" />
                   <p class="text-lg sm:text-xl font-light italic leading-snug text-paper/60 line-through decoration-paper/20">
                     {t}
                   </p>
@@ -356,7 +360,9 @@ const marqueeWords = [
     <div class="mx-auto max-w-[1280px] px-6 sm:px-14 py-28 sm:py-40">
       <div class="grid gap-12 lg:grid-cols-12 items-end">
         <div class="lg:col-span-8">
-          <p class="reveal font-display text-[11px] font-semibold uppercase tracking-[0.32em] text-paper/60">
+          <p
+            class="reveal font-display text-[11px] font-semibold uppercase tracking-[0.32em] text-paper/60"
+          >
             — Sinceridad ante todo
           </p>
           <blockquote
@@ -367,7 +373,9 @@ const marqueeWords = [
         </div>
         <div class="lg:col-span-4">
           <div class="reveal border-t border-paper/20 pt-8">
-            <p class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/50">
+            <p
+              class="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-paper/50"
+            >
               ¿Hablamos?
             </p>
             <p class="mt-6 text-base font-light leading-relaxed text-paper/70">

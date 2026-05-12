@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Square placeholder">
+  <rect width="600" height="600" fill="#6B2470"></rect>
+  <rect x="40" y="40" width="520" height="520" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="6 6" opacity=".5"></rect>
+  <text x="300" y="305" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="120" letter-spacing="10" fill="#FFFFFF">AWAKE</text>
+  <rect x="180" y="324" width="240" height="22" fill="#FFFFFF"></rect>
+  <text x="300" y="340" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="500" font-size="12" letter-spacing="9" fill="#6B2470">MARKETING</text>
+</svg>

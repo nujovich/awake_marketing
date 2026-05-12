@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Landscape placeholder">
+  <rect width="800" height="480" fill="#F3E9F7"></rect>
+  <rect x="20" y="20" width="760" height="440" fill="none" stroke="#6B2470" stroke-width="1" stroke-dasharray="6 6"></rect>
+  <path d="M120 360 L300 220 L420 300 L560 160 L700 360 Z" fill="none" stroke="#6B2470" stroke-width="1.4"></path>
+  <circle cx="620" cy="140" r="32" fill="none" stroke="#6B2470" stroke-width="1.2"></circle>
+  <text x="400" y="430" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="11" letter-spacing="4" fill="#6B2470">LANDSCAPE · 5 : 3</text>
+</svg>

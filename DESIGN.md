@@ -3,188 +3,311 @@
 **Estudio:** Marketing Digital · Valencia · Alicante
 **CEO:** Stefania Franco
 **Método:** CORE
-**Versión:** 2.0 — Mayo 2026
+**Versión:** 2.1 — Mayo 2026
 
-> "Transformamos negocios invisibles en marcas con autoridad, estructura y resultados medibles. Sin excusas."
-
----
-
-## 01 · Método CORE
-
-Cuatro fases para eliminar el caos operativo y consolidar una marca con autoridad: del diagnóstico al impacto medible.
-
-| Fase | Nombre | Etapa | Descripción |
-|---|---|---|---|
-| **C** | Claridad | Diagnóstico | Auditoría técnica del ecosistema digital. Análisis DAFO y posicionamiento competitivo. Identificamos las fricciones que detienen el crecimiento. |
-| **O** | Orden | Estructura | Matriz de acción que convierte el diagnóstico en hoja de ruta. Definimos criterios de ejecución y rumbo estratégico de la marca. |
-| **R** | Realce | Proyección | Narrativa y sistema visual coherentes. Branding, tipografía y dirección de arte que validan tu capacidad y generan confianza inmediata. |
-| **E** | Expansión | Ejecución | Gestión de canales y comunicación de alto impacto. La marca crece de forma constante, medible y estratégica. |
+> "Cuidamos tu marca como si fuera la nuestra."
+> Despertamos el potencial oculto de los negocios físicos: identidad, estructura y resultados medibles.
 
 ---
 
-## 02 · Identidad gráfica
+## Resumen ejecutivo
 
-Wordmark **AWAKE** en Montserrat Bold con descriptor "Marketing Digital" en tracking amplio. Monograma circular para usos reducidos.
+La identidad AWAKE convive en dos universos: un **violeta saturado** que ocupa todo el lienzo (presencia, autoridad, energía) y un **monocromo editorial** sobre blanco/negro (silencio, sofisticación, oficio). El sistema no elige uno u otro: los alterna como ritmo a lo largo de la web — secciones violetas a pantalla completa, intercaladas con secciones blancas tipo portfolio.
 
-### Versiones del logo
-- **Lockup principal** (positivo) — `awake-lockup.svg`
-- **Monograma** circular sobre violeta — `awake-mark.svg`
-- **Lockup vertical con tagline** sobre tinte claro — `awake-vertical.svg`
-- **Versión invertida** sobre fondos oscuros, acentos en oro — `awake-dark.svg`
-
-### Reglas de construcción
-
-| Regla | Valor | Notas |
+| Eje | Modo "Saturado" | Modo "Editorial" |
 |---|---|---|
-| Zona de protección | ≥ 1× altura "A" | Margen mínimo alrededor del logo, en todos los lados. |
-| Tamaño mínimo | 24 px digital · 15 mm impreso | Por debajo, sustituir por el monograma. |
-| Versión monocromática | Negro `#0A0A0A` o Blanco `#FFFFFF` | Para impresión a una tinta y aplicaciones B/N. |
-| Formatos disponibles | SVG · PDF · PNG (1×, 2×, 3×) · EPS | Todos sobre rejilla original, sin pérdida. |
+| Fondo | `--violet` `#6B2470` | `--paper` `#FFFFFF` / `--offwhite` `#F4F4F4` |
+| Tipografía | Montserrat blanco, grande | Montserrat negro, condensado |
+| Imagen | Plana, simbólica, llena de aire | Fotografía real, marco fino |
+| Uso | Hero, CTA, divisores narrativos | Servicios, casos, equipo, listas |
+
+---
+
+## 01 · Identidad gráfica
+
+Wordmark **AWAKE** en Montserrat Bold con letterspacing amplio. Debajo, una tira blanca centrada con la palabra **MARKETING** (tracking ≥ 6 px), opcionalmente acompañada de la tagline en cursiva. Para portfolio se admite la versión sin tira, todo en blanco sobre violeta.
+
+### Versiones disponibles (en `/assets/`)
+
+| Archivo | Uso |
+|---|---|
+| `logo-awake-primary.svg` | Lockup violeta sobre fondo claro |
+| `logo-awake-inverse.svg` | Lockup blanco sobre violeta — versión por defecto en hero/social |
+| `logo-awake-mono-black.svg` | Versión 1-tinta negro sobre blanco |
+| `logo-awake-monogram.svg` | Círculo violeta con "A" — favicon, avatar IG, sello |
+
+### Construcción
+
+| Regla | Valor |
+|---|---|
+| Zona de protección | ≥ 1× altura "A" en todos los lados |
+| Tamaño mínimo digital | 96 px de ancho (lockup) · 32 px (monograma) |
+| Tamaño mínimo impreso | 22 mm de ancho (lockup) · 8 mm (monograma) |
+| Tira "MARKETING" | Siempre centrada, fondo blanco puro, tracking 6–11 px |
+| Tagline (opcional) | Raleway Italic 300, 1.5 px letterspacing |
 
 ### Usos prohibidos
-- No rotar el logo.
-- No deformar ni escalar de forma no proporcional.
-- No usar otros colores fuera de la paleta oficial.
-- No aplicar sombras, brillos ni efectos.
+
+- No rotar ni inclinar el wordmark.
+- No estirar, comprimir ni añadir contornos.
+- No usar la tira "MARKETING" en otro color que blanco.
+- No aplicar sombras paralelas, brillos, neón o degradados al wordmark.
+- No reemplazar Montserrat por otra sans (incluidas system-ui o Arial).
 
 ---
 
-## 03 · Paleta cromática
+## 02 · Paleta cromática
 
-Neutros de alto contraste con violetas de autoridad y un acento cálido. El violeta primario representa creatividad estratégica; el amarillo, llamada a la acción.
+Sistema dual: violeta saturado para presencia + neutros para lectura. El **coral** es un acento bajo, solo en composiciones de portfolio o stories. Sin colores secundarios saturados.
 
-| Token | Nombre | HEX | Uso |
-|---|---|---|---|
-| `--ink` | Negro profundo | `#0A0A0A` | Tipografía principal, fondos |
-| `--graphite` | Grafito | `#2C2C2C` | Cuerpo de texto, subtítulos secundarios |
-| `--paper` | Blanco puro | `#FFFFFF` | Fondos, texto sobre oscuro |
-| `--violet` | Violeta primario | `#8F3AB2` | CTA, acentos, links, color de marca |
-| `--violet-dark` | Violeta profundo | `#513F73` | Headers, fondos, cards de autoridad |
-| `--violet-soft` | Tinte violeta | `#F3E9F7` | Fondos suaves |
-| `--violet-line` | Borde violeta | `#E6D5EE` | Bordes y separadores |
-| `--gold` | Gold accent | `#F5C842` | Highlights, precios, énfasis puntual |
-| `--offwhite` | Off-white | `#F4F4F4` | Fondos de sección, cards neutras |
-| `--rule` | Línea | `#E8E4EA` | Separadores finos |
+| Token | HEX | Rol |
+|---|---|---|
+| `--violet` | `#6B2470` | Primario · fondos saturados · CTA |
+| `--violet-deep` | `#3A1840` | Cabecera oscura · profundidad · sombras |
+| `--violet-soft` | `#F3E9F7` | Tinte de sección, fondos de card |
+| `--violet-line` | `#E6D5EE` | Bordes finos, separadores |
+| `--ink` | `#0A0A0A` | Tipografía sobre blanco |
+| `--graphite` | `#2C2C2C` | Cuerpo de texto secundario |
+| `--paper` | `#FFFFFF` | Fondo editorial · tira de logo |
+| `--offwhite` | `#F4F4F4` | Fondo de sección alterna |
+| `--coral` | `#E89B7B` | Acento puntual (portfolio, social) |
+| `--rule` | `#E8E4EA` | Líneas de 1 px |
 
-### Pares de contraste (WCAG · AAA)
+### Contraste (WCAG)
 
-| Combinación | Ratio |
-|---|---|
-| Violeta sobre blanco | 8.6 : 1 — AAA |
-| Blanco sobre violeta | 8.6 : 1 — AAA |
-| Blanco sobre violeta profundo | 11.2 : 1 — AAA |
-| Oro sobre negro | 12.1 : 1 — AAA |
+| Combinación | Ratio | Nivel |
+|---|---|---|
+| Blanco sobre `--violet` | 9.1 : 1 | AAA |
+| Blanco sobre `--violet-deep` | 14.4 : 1 | AAA |
+| `--violet` sobre blanco | 9.1 : 1 | AAA |
+| `--ink` sobre `--offwhite` | 19.7 : 1 | AAA |
 
 ---
 
-## 04 · Sistema tipográfico
+## 03 · Sistema tipográfico
 
-**Montserrat** para titulares y datos. **Raleway** para cuerpo y acentos itálicos. Tres pesos clave: Bold para autoridad, Regular para lectura, Italic para tono editorial.
+**Montserrat** para todo lo display y de marca. **Raleway** para cuerpo extenso y cursivas editoriales. Los headings se trabajan con letter-spacing **positivo amplio** (4–12 px) — es la huella visual del lockup.
 
-### Familias
-- **Display · Titulares** — Montserrat (Light 300, Regular 400, Medium 500, SemiBold 600, Bold 700, ExtraBold 800)
-- **Body · Lectura** — Raleway (Light 300, Regular 400, Medium 500, SemiBold 600, Italic)
-
-### Escala tipográfica
-
-| Rol | Familia / Peso | Tamaño | Line / Track | Uso |
+| Rol | Familia / Peso | Tamaño (desktop) | Tracking | Notas |
 |---|---|---|---|---|
-| **H1 · Portada** | Montserrat Bold / ExtraBold | 48 – 68 pt | Line .95 · Track −3% | Hero / Cover |
-| **H2 · Sección** | Montserrat Bold | 28 – 36 pt | Line 1 · Track −2% | Inicio de capítulo |
-| **H3 · Subsección** | Raleway Medium | 16 – 20 pt | Line 1.2 · Track 0 | Dentro de capítulo |
-| **H4 · Epígrafe** | Montserrat SemiBold | 12 – 14 pt | Track +4%, UPPERCASE | Labels, tags |
-| **Body** | Raleway Light / Regular | 15 – 16 pt | Line 1.5 · Track 0 | Todo el cuerpo |
-| **Caption** | Raleway Italic | 11 – 13 pt | Italic | Quotes, notas |
+| **Display XXL** | Montserrat Bold 700 | 140–200 px | +6 a +12 px | Hero "AWAKE" |
+| **H1** | Montserrat Bold 700 | 72–96 px | −0.02 em | Portadas de sección |
+| **H2** | Montserrat SemiBold 600 | 40–56 px | −0.01 em | Título de sección |
+| **H3** | Montserrat Medium 500 | 22–28 px | +1 px | Cards y bloques |
+| **Eyebrow** | Montserrat Medium 500 | 11–13 px | +0.22 em UPPER | Pre-titular, etiquetas |
+| **Body** | Raleway Regular 400 | 15–17 px | 0 · 1.55 line | Lectura larga |
+| **Caption / Quote** | Raleway Italic 300 | 13–15 px | 0 | Pies, citas |
+| **Tag pill** | Montserrat Medium 500 | 12 px | +6 a +11 px UPPER | Tira "MARKETING" |
+
+### Reglas de escritura
+
+- Mayúsculas con tracking solo para etiquetas, tags y la tira del logo. Nunca para párrafos.
+- Cursiva Raleway para frases-tagline ("Cuidamos tu marca como si fuera la nuestra"), citas y pies.
+- Sin subrayados decorativos. Los enlaces usan color violeta + underline en hover.
 
 ---
 
-## 05 · Voz & tono
+## 04 · Composición y rejilla
 
-Cercana pero seria. Directa, sin artificios. Confiada sin arrogancia. Hablamos de tú a tú porque entendemos el mundo del cliente.
+### Contenedor
 
-### Sí decimos
-- "Tu perfil está perdiendo clientes cada día."
-- "Te digo exactamente qué falla. Gratis."
-- "Resultados visibles en 60 días o no seguimos."
-- "Nos tomamos tu proyecto como algo personal."
-- "Sin permanencia. Mes a mes."
+| Breakpoint | Ancho contenedor | Padding lateral |
+|---|---|---|
+| Móvil (≤ 480 px) | 100% | 20 px |
+| Tablet (481–1023 px) | 100% | 32 px |
+| Laptop (1024–1279 px) | máx. 1120 px | 40 px |
+| Desktop (≥ 1280 px) | máx. 1280 px | 56 px |
+| Wide (≥ 1600 px) | máx. 1400 px | 80 px |
 
-### No decimos
-- "Somos la mejor agencia de España."
-- "Ofrecemos soluciones integrales 360°."
-- "Garantizamos el éxito de tu marca."
-- "Contamos con amplia experiencia."
-- "Planes flexibles adaptados a ti."
+### Rejilla
 
-> Nunca usamos relleno. Nunca prometemos lo que no podemos cumplir. Si una frase no transmite **claridad**, **honestidad** o **compromiso**, se reescribe.
+- **12 columnas** en desktop con gutter 24 px.
+- **8 columnas** en tablet con gutter 16 px.
+- **4 columnas** en móvil con gutter 12 px.
+- Padding vertical de sección: `clamp(56px, 8vw, 120px)`.
+
+### Ritmo de secciones (web home)
+
+| # | Sección | Modo | Alto típico (desktop) |
+|---|---|---|---|
+| 01 | Hero "AWAKE" | Saturado violeta full-bleed | 100 vh (mín. 720 px) |
+| 02 | Tagline + manifesto | Editorial blanco | auto · 80–96 px padding |
+| 03 | Método CORE (4 letras) | Editorial blanco con tinte `--violet-soft` | auto · 120 px padding |
+| 04 | Servicios | Saturado violeta · tipografía grande | 90 vh |
+| 05 | Casos / Portfolio | Editorial blanco · grid 12 col | auto |
+| 06 | Quote / CEO | Saturado `--violet-deep` | 60 vh |
+| 07 | Pricing | Editorial blanco · 3 columnas | auto · 120 px padding |
+| 08 | FAQ + Contacto | Editorial `--offwhite` | auto · 96 px padding |
+| 09 | Footer | Saturado violeta | auto · 80 px padding |
+
+Regla simple: nunca dos secciones saturadas seguidas. Siempre alternancia para descansar el ojo.
+
+---
+
+## 05 · Media queries (referencia)
+
+```css
+/* Mobile-first base. Override up. */
+:root {
+  --container: 100%;
+  --pad: 20px;
+  --h-display: clamp(64px, 18vw, 200px);
+  --h1: clamp(40px, 8vw, 96px);
+  --h2: clamp(28px, 5vw, 56px);
+  --section-y: clamp(56px, 8vw, 120px);
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+  :root { --pad: 32px; }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+  :root { --container: 1120px; --pad: 40px; }
+  .grid-2-up   { grid-template-columns: 1fr 1fr; }
+  .grid-3-up   { grid-template-columns: repeat(3, 1fr); }
+  .grid-4-up   { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  :root { --container: 1280px; --pad: 56px; }
+}
+
+/* Wide */
+@media (min-width: 1600px) {
+  :root { --container: 1400px; --pad: 80px; }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Print — vuelca todo a editorial monocromo */
+@media print {
+  .bg-violet, .bg-violet-deep { background: #fff !important; color: #0A0A0A !important; }
+  .no-print { display: none !important; }
+}
+```
+
+### Comportamientos por breakpoint
+
+| Componente | Móvil | Tablet | Desktop |
+|---|---|---|---|
+| Topbar | Logo + hamburguesa | Logo + 3 links + CTA | Logo + 5 links + CTA |
+| Hero AWAKE | wordmark al 70 vw, centrado | 60 vw | 50 vw, tagline en cursiva |
+| Método CORE | Stack vertical (1 col) | 2 × 2 | 4 × 1 |
+| Servicios | 1 col, cards full-width | 2 col | 3 col, hover reveal |
+| Casos | 1 col 4:5 portrait | 2 col | 12-col mosaico (1+2 / 2+1) |
+| Pricing | 1 col, featured primero | 1 col | 3 col, featured central |
+| Footer | 1 col, todo apilado | 2 col | 4 col |
 
 ---
 
 ## 06 · Componentes UI
 
-Biblioteca para web, propuestas y materiales digitales. Bordes simples, mucho espacio en blanco, sin sombras agresivas: la jerarquía la marca el contraste violeta–blanco.
-
 ### Botones (`.btn`)
-- **Solid** (`.btn-solid`) — fondo violeta, texto blanco. CTA principal.
-- **Outline** (`.btn`) — borde violeta 1px, hover invierte.
-- **Ink** (`.btn-ink`) — fondo negro, hover dorado.
-- **Ghost** (`.btn-ghost`) — sin borde, flecha → animada al hover.
-- Tracking amplio + uppercase = autoridad. Sin border-radius.
 
-### Formularios (`.input`)
-- Padding 18 × 20 px, borde 1 px `--violet-line`, fondo blanco.
-- Placeholder en violeta a opacidad 0.4, itálica.
-- Focus: borde violeta sólido.
+| Variante | Fondo | Texto | Uso |
+|---|---|---|---|
+| `.btn-solid` | `--violet` | blanco | CTA principal |
+| `.btn-outline` | transparente | `--violet`, borde 1 px | Secundario |
+| `.btn-ink` | `--ink` | blanco | Énfasis editorial |
+| `.btn-ghost` | transparente | `--violet` + flecha "→" | Inline |
 
-### Etiquetas (`.tag`)
-- `.tag-line` — outline violeta para categorías.
-- `.tag-fill` — fondo violeta, texto blanco. Recomendado.
-- `.tag-gold` — fondo oro, texto negro. Premium.
-- `.tag-dark` — fondo negro, texto blanco. Casos reales.
+Todos: padding `16px 28px`, Montserrat SemiBold 13 px, tracking +0.14 em, **sin border-radius**, transición de 200 ms en hover (invierte fondo/texto).
 
-### Tarjeta de precio (`.price-card`)
-- Borde violeta 1 px, padding 32 px, fondo blanco.
-- Variante **featured**: fondo violeta, texto blanco, bullets dorados.
-- Ribbon en uppercase, nombre Montserrat 28 pt, precio Montserrat Light 42 pt.
+### Tag pill (firma de la marca)
+
+- Fondo blanco puro, texto `--violet` Montserrat Medium, tracking 6–11 px.
+- Altura fija 22–26 px, padding lateral 12 px, **sin radius**.
+- Modo inverso: fondo `--violet`, texto blanco — solo cuando va sobre fondo de imagen.
+
+### Card · Servicio
+
+- Borde 1 px `--violet-line`, fondo `--paper`, padding 32 px.
+- Header con eyebrow + número (01, 02…), título Montserrat 22 px, descripción Raleway 15 px.
+- Hover (desktop ≥ 1024 px): fondo se llena de `--violet`, texto invierte, micro-translateY −2 px.
+
+### Card · Caso / Portfolio
+
+- Imagen 4:5 portrait (móvil), 3:4 o 1:1 en desktop según slot del mosaico.
+- Pie: cliente (Montserrat Medium 12 px tracking) + métrica destacada (Montserrat Bold 28 px).
+- Sin marco — la imagen es el marco.
+
+### Pricing card
+
+- Borde 1 px `--violet`, padding 32 px, fondo `--paper`.
+- Featured: fondo `--violet`, texto blanco, ribbon Montserrat 10 px tracking +0.22 em.
+- Precio Montserrat Light 42 px con `<small>` de unidad.
+
+### Inputs y formulario
+
+- Borde 1 px `--violet-line`, padding `18px 20px`, fondo `--paper`.
+- Placeholder en `--violet` opacidad 0.4 italic.
+- Focus: borde sólido `--violet`, sin outline-ring.
+- Mensaje de error en `--ink` (no rojo) con icono "!" mínimo.
 
 ---
 
-## 07 · La marca en uso
+## 07 · Voz & tono
 
-Sistema vivo: mismas reglas, distintos formatos.
+Cercana pero seria. Directa, sin artificios. Confiada sin arrogancia.
 
-- **Web / hero** — navbar con CTA "Diagnóstico", H1 con itálicas Raleway intercaladas, párrafo de bajada en grafito.
-- **Instagram · perfil** — avatar circular violeta, bio directa con método CORE, grid 3×N alternando tiles violetas, ink y soft.
-- **Tarjeta de visita** (85 × 55 mm) — degradado violeta-profundo a violeta-primario, línea dorada de 2 px como acento, info de contacto en Montserrat Light.
-- **Instagram · post** (1080 × 1080) — fondo blanco editorial, eyebrow mono-label, H3 Montserrat 48 pt con itálicas Raleway, punto dorado en pie.
+**Sí decimos**
+- "Cuidamos tu marca como si fuera la nuestra."
+- "Despertamos el potencial oculto de tu marca."
+- "Resultados visibles en 60 días o no seguimos."
+- "Sin permanencia. Mes a mes."
+
+**No decimos**
+- "Soluciones integrales 360°."
+- "Garantizamos el éxito de tu marca."
+- "Amplia experiencia en el sector."
+- Inglés innecesario, jerga de agencia, superlativos.
 
 ---
 
-## Tokens (referencia rápida)
+## 08 · Activos en `/assets/`
+
+| Archivo | Tipo | Notas |
+|---|---|---|
+| `logo-awake-primary.svg` | SVG | Lockup violeta sobre fondo claro |
+| `logo-awake-inverse.svg` | SVG | Lockup blanco sobre violeta |
+| `logo-awake-mono-black.svg` | SVG | 1 tinta negro |
+| `logo-awake-monogram.svg` | SVG | Avatar / favicon |
+| `pattern-grid.svg` | SVG | Trama editorial (12 col) |
+| `divider-rule.svg` | SVG | Línea de sección |
+| `swatch-violet.svg` | SVG | Muestra de color primaria |
+| `swatch-coral.svg` | SVG | Muestra de acento |
+| `icon-core-c.svg` | SVG | Icono Claridad |
+| `icon-core-o.svg` | SVG | Icono Orden |
+| `icon-core-r.svg` | SVG | Icono Realce |
+| `icon-core-e.svg` | SVG | Icono Expansión |
+| `placeholder-portrait.svg` | SVG | Slot 4:5 (equipo, retratos) |
+| `placeholder-landscape.svg` | SVG | Slot 5:3 (casos, paisaje) |
+| `placeholder-square.svg` | SVG | Slot 1:1 (social, intro) |
+
+---
+
+## Tokens — copia rápida
 
 ```css
 :root {
-  /* Color */
-  --violet:        #8F3AB2;
-  --violet-dark:   #513F73;
-  --violet-soft:   #F3E9F7;
-  --violet-line:   #E6D5EE;
-  --ink:           #0A0A0A;
-  --graphite:      #2C2C2C;
-  --gold:          #F5C842;
-  --offwhite:      #F4F4F4;
-  --paper:         #FFFFFF;
-  --rule:          #E8E4EA;
+  --violet:       #6B2470;
+  --violet-deep:  #3A1840;
+  --violet-soft:  #F3E9F7;
+  --violet-line:  #E6D5EE;
+  --ink:          #0A0A0A;
+  --graphite:     #2C2C2C;
+  --paper:        #FFFFFF;
+  --offwhite:     #F4F4F4;
+  --coral:        #E89B7B;
+  --rule:         #E8E4EA;
 
-  /* Type */
-  --font-display:  "Montserrat", system-ui, sans-serif;
-  --font-body:     "Raleway", system-ui, sans-serif;
+  --font-display: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Raleway", system-ui, sans-serif;
 }
 ```
-
-### Principios de layout
-- Contenedor max-width **1280 px**, padding lateral **56 px**.
-- Secciones con padding vertical **96 px**, separadas por `1px solid --rule`.
-- Cabeceras de sección con grilla `120px 1fr 1fr` (número · título · descripción).
-- Sin border-radius en componentes de marca. Bordes simples de 1 px.
-- Jerarquía por contraste y espacio, no por sombras.

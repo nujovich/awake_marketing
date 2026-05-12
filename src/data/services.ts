@@ -101,7 +101,6 @@ export const web: Tier[] = [
     id: "web-basica",
     name: "Web Básica",
     price: "300 €",
-    priceNote: "+ IVA",
     tagline:
       "Presencia digital sólida para autónomos y pequeños negocios que necesitan transmitir profesionalidad desde el día uno.",
     time: "2 – 3 semanas",
@@ -117,7 +116,7 @@ export const web: Tier[] = [
     id: "web-ampliada",
     name: "Web Ampliada",
     price: "400 €",
-    priceNote: "+ IVA",
+
     tagline:
       "Para empresas que buscan destacar con una imagen digital más sofisticada y mayor capacidad de contenido.",
     time: "3 – 5 semanas",

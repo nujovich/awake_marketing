@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Editorial grid pattern">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#6B2470" stroke-opacity=".12" stroke-width="1"></path>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="#F4F4F4"></rect>
+  <rect width="400" height="400" fill="url(#g)"></rect>
+  <rect x="60" y="60" width="280" height="280" fill="none" stroke="#6B2470" stroke-width="1.2"></rect>
+</svg>
