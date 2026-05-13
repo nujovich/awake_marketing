@@ -12,6 +12,12 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['@vercel/analytics'],
+    },
+    ssr: {
+      noExternal: ['@vercel/analytics'],
+    },
   },
   output: 'server',
   adapter: vercel({

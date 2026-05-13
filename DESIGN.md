@@ -70,7 +70,7 @@ Sistema dual: violeta saturado para presencia + neutros para lectura. El **coral
 | `--graphite` | `#2C2C2C` | Cuerpo de texto secundario |
 | `--paper` | `#FFFFFF` | Fondo editorial · tira de logo |
 | `--offwhite` | `#F4F4F4` | Fondo de sección alterna |
-| `--coral` | `#E89B7B` | Acento puntual (portfolio, social) |
+| `--coral` | `#FFCE65` | Acento puntual (portfolio, social) |
 | `--rule` | `#E8E4EA` | Líneas de 1 px |
 
 ### Contraste (WCAG)
