@@ -1,6 +1,7 @@
 # build output
 dist/
 .output/
+.vercel/
 
 # generated types
 .astro/
@@ -27,6 +28,7 @@ pnpm-debug.log*
 
 # Visual brainstorming sessions
 .superpowers/
+docs/superpowers/
 
 # editor
 .vscode/

@@ -304,7 +304,7 @@ Cercana pero seria. Directa, sin artificios. Confiada sin arrogancia.
   --graphite:     #2C2C2C;
   --paper:        #FFFFFF;
   --offwhite:     #F4F4F4;
-  --coral:        #E89B7B;
+  --coral:        #FFCE65;
   --rule:         #E8E4EA;
 
   --font-display: "Montserrat", "Helvetica Neue", Arial, sans-serif;
