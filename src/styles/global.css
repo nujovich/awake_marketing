@@ -14,6 +14,27 @@
   --color-violet-line:  #e6d5ee;
   --color-coral:        #ffCe65;
 
+  /* ====== Paleta extendida (contacto, sobre nosotros) ====== */
+  --color-bone-50:              #fafaf8;
+  --color-bone-100:             #f2ede5;
+  --color-bone-200:             #ddd8cf;
+
+  --color-space-indigo-700:     #3d3175;
+  --color-space-indigo-800:     #2a2158;
+  --color-space-indigo-900:     #1b1540;
+  --color-space-indigo-950:     #0f0b28;
+
+  --color-powder-petal-300:     #d4aabf;
+  --color-powder-petal-400:     #c18faa;
+  --color-powder-petal-500:     #ad7494;
+  --color-powder-petal-600:     #9a5a7e;
+
+  --color-vintage-grape-700:    #6b2470;
+  --color-vintage-grape-900:    #3a1840;
+
+  --color-jungle-teal-600:      #2a9b88;
+  --color-jungle-teal-700:      #228070;
+
   /* ====== Tipografía ====== */
   --font-sans:     "Raleway", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-display:  "Montserrat", ui-sans-serif, system-ui, -apple-system, sans-serif;
