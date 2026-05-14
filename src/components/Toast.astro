@@ -1,0 +1,105 @@
+---
+interface Props {
+  successMsg:     string;
+  errorMsg:       string;
+  successEyebrow: string;
+  errorEyebrow:   string;
+}
+
+const { successMsg, errorMsg, successEyebrow, errorEyebrow } = Astro.props;
+---
+
+<div
+  id="toast"
+  role="status"
+  aria-live="polite"
+  aria-atomic="true"
+  data-success-msg={successMsg}
+  data-error-msg={errorMsg}
+  data-success-eyebrow={successEyebrow}
+  data-error-eyebrow={errorEyebrow}
+  class="fixed z-50 inline-flex items-center gap-[10px] bg-space-indigo-950 ring-1 ring-bone-50/10 shadow-[0_16px_40px_rgba(15,11,40,0.40)] px-[22px] py-[13px] rounded-full font-display text-bone-50 whitespace-nowrap pointer-events-none"
+>
+  <span
+    id="toast-icon"
+    class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 text-[10px] font-bold text-white"
+  ></span>
+  <span>
+    <span id="toast-eyebrow" class="block text-[9px] font-semibold uppercase tracking-[0.22em] opacity-50 mb-0.5"></span>
+    <span id="toast-msg" class="block text-[13px] font-medium tracking-[0.01em]"></span>
+  </span>
+</div>
+
+<style>
+  #toast {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(-100% - 20px));
+    opacity: 0;
+  }
+  #toast.toast-show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    transition:
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity   0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  #toast.toast-hide {
+    transform: translateX(-50%) translateY(calc(-100% - 20px));
+    opacity: 0;
+    transition:
+      transform 0.3s ease-in,
+      opacity   0.3s ease-in;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #toast,
+    #toast.toast-show,
+    #toast.toast-hide {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+
+<script>
+  declare global {
+    interface Window {
+      showToast: (type: "success" | "error") => void;
+    }
+  }
+
+  const el      = document.getElementById("toast") as HTMLElement;
+  const icon    = document.getElementById("toast-icon") as HTMLElement;
+  const eyebrow = document.getElementById("toast-eyebrow") as HTMLElement;
+  const msgEl   = document.getElementById("toast-msg") as HTMLElement;
+
+  let timer: ReturnType<typeof setTimeout> | null = null;
+
+  window.showToast = (type) => {
+    if (timer) clearTimeout(timer);
+
+    el.style.transition = "none";
+    el.classList.remove("toast-show", "toast-hide");
+    void el.offsetWidth; // force reflow so transition resets cleanly
+
+    if (type === "success") {
+      icon.style.background = "var(--color-jungle-teal-600)";
+      icon.textContent = "✓";
+      eyebrow.textContent = el.dataset.successEyebrow!;
+      msgEl.textContent = el.dataset.successMsg!;
+    } else {
+      icon.style.background = "var(--color-powder-petal-500)";
+      icon.textContent = "✕";
+      eyebrow.textContent = el.dataset.errorEyebrow!;
+      msgEl.textContent = el.dataset.errorMsg!;
+    }
+
+    el.style.transition = "";
+    el.classList.add("toast-show");
+
+    timer = setTimeout(() => {
+      el.classList.remove("toast-show");
+      el.classList.add("toast-hide");
+    }, 5000);
+  };
+</script>
