@@ -11,13 +11,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.9",
     "@astrojs/vercel": "^10.0.6",
     "@tailwindcss/vite": "^4.0.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "astro": "^6.0.0",
     "resend": "^6.12.3",
-    "tailwindcss": "^4.0.0"
+    "tailwindcss": "^4.0.0",
+    "typescript": "^6.0.3"
   },
   "overrides": {
     "vite": "^7"

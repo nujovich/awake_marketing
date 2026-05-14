@@ -6,19 +6,24 @@ const resend = new Resend(import.meta.env.RESEND_API_KEY);
 export const POST: APIRoute = async (context) => {
   try {
     const data = await context.request.json();
-    console.log('Received contact data:', data);
+    
+    const nombre = String(data?.nombre ?? '');
+    const email = String(data?.email ?? '');
+    const marca = String(data?.marca ?? '');
+    const servicio = String(data?.servicio ?? '');
+    const mensaje = String(data?.mensaje ?? '');
 
     await resend.emails.send({
       from: 'noreply@awakemarketing.es',
       to: 'hola@awakemarketing.es',
-      subject: `Nuevo contacto: ${data.nombre}`,
+      subject: `Nuevo contacto: ${nombre}`,
       html: `
-        <h2>Nuevo mensaje de ${data.nombre}</h2>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Marca:</strong> ${data.marca || 'No especificada'}</p>
-        <p><strong>Servicio:</strong> ${data.servicio || 'No especificado'}</p>
+        <h2>Nuevo mensaje de ${nombre}</h2>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Marca:</strong> ${marca || 'No especificada'}</p>
+        <p><strong>Servicio:</strong> ${servicio || 'No especificado'}</p>
         <p><strong>Mensaje:</strong></p>
-        <p>${(data.mensaje || '').replace(/\n/g, '<br>')}</p>
+        <p>${mensaje.replace(/\n/g, '<br>')}</p>
       `,
     });
 
