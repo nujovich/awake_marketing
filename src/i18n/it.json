@@ -366,6 +366,10 @@
     "messagePlaceholder": "Cosa ti frena oggi? Di cosa hai bisogno?",
     "submitLabel": "Invia messaggio",
     "responseNote": "Ti risponderemo entro 24 ore lavorative.",
+    "toastSuccessEyebrow": "Inviato",
+    "toastSuccess": "Messaggio ricevuto. Ti risponderemo presto.",
+    "toastErrorEyebrow": "Errore",
+    "toastError": "Qualcosa è andato storto. Riprova più tardi.",
     "faqEyebrow": "Domande frequenti",
     "faqTitle": "Quello che ci chiedono prima di iniziare.",
     "faq": [

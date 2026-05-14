@@ -366,6 +366,10 @@
     "messagePlaceholder": "What's holding you back today? What do you need?",
     "submitLabel": "Send message",
     "responseNote": "We'll reply within 24 business hours.",
+    "toastSuccessEyebrow": "Sent",
+    "toastSuccess": "Message received. We'll be in touch soon.",
+    "toastErrorEyebrow": "Error",
+    "toastError": "Something went wrong. Please try again.",
     "faqEyebrow": "Frequently asked questions",
     "faqTitle": "What people ask us before we start.",
     "faq": [
