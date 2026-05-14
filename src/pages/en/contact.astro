@@ -254,14 +254,15 @@ const currentSlug = "contact";
 </Layout>
 
 <script>
-    const form = document.getElementById("contactForm");
+    const setupContactForm = () => {
+        const form = document.getElementById("contactForm") as HTMLFormElement | null;
+        if (!form || form.dataset.ready) return;
+        form.dataset.ready = "true";
 
-    if (form) {
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
 
-            const formData = new FormData(form as HTMLFormElement);
-            const data = Object.fromEntries(formData);
+            const data = Object.fromEntries(new FormData(form));
 
             try {
                 const response = await fetch("/api/contact", {
@@ -272,7 +273,7 @@ const currentSlug = "contact";
 
                 if (response.ok) {
                     window.showToast("success");
-                    (form as HTMLFormElement).reset();
+                    form.reset();
                 } else {
                     window.showToast("error");
                 }
@@ -280,5 +281,8 @@ const currentSlug = "contact";
                 window.showToast("error");
             }
         });
-    }
+    };
+
+    setupContactForm();
+    document.addEventListener("astro:page-load", setupContactForm);
 </script>
