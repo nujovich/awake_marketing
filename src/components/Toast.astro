@@ -68,38 +68,45 @@ const { successMsg, errorMsg, successEyebrow, errorEyebrow } = Astro.props;
     }
   }
 
-  const el      = document.getElementById("toast") as HTMLElement;
-  const icon    = document.getElementById("toast-icon") as HTMLElement;
-  const eyebrow = document.getElementById("toast-eyebrow") as HTMLElement;
-  const msgEl   = document.getElementById("toast-msg") as HTMLElement;
-
   let timer: ReturnType<typeof setTimeout> | null = null;
 
-  window.showToast = (type) => {
-    if (timer) clearTimeout(timer);
+  const setup = () => {
+    const el      = document.getElementById("toast") as HTMLElement | null;
+    const icon    = document.getElementById("toast-icon") as HTMLElement | null;
+    const eyebrow = document.getElementById("toast-eyebrow") as HTMLElement | null;
+    const msgEl   = document.getElementById("toast-msg") as HTMLElement | null;
 
-    el.style.transition = "none";
-    el.classList.remove("toast-show", "toast-hide");
-    void el.offsetWidth; // force reflow so transition resets cleanly
+    if (!el || !icon || !eyebrow || !msgEl) return;
 
-    if (type === "success") {
-      icon.style.background = "var(--color-jungle-teal-600)";
-      icon.textContent = "✓";
-      eyebrow.textContent = el.dataset.successEyebrow!;
-      msgEl.textContent = el.dataset.successMsg!;
-    } else {
-      icon.style.background = "var(--color-powder-petal-500)";
-      icon.textContent = "✕";
-      eyebrow.textContent = el.dataset.errorEyebrow!;
-      msgEl.textContent = el.dataset.errorMsg!;
-    }
+    window.showToast = (type) => {
+      if (timer) clearTimeout(timer);
 
-    el.style.transition = "";
-    el.classList.add("toast-show");
+      el.style.transition = "none";
+      el.classList.remove("toast-show", "toast-hide");
+      void el.offsetWidth; // force reflow so transition resets cleanly
 
-    timer = setTimeout(() => {
-      el.classList.remove("toast-show");
-      el.classList.add("toast-hide");
-    }, 5000);
+      if (type === "success") {
+        icon.style.background = "var(--color-jungle-teal-600)";
+        icon.textContent = "✓";
+        eyebrow.textContent = el.dataset.successEyebrow ?? "";
+        msgEl.textContent = el.dataset.successMsg ?? "";
+      } else {
+        icon.style.background = "var(--color-powder-petal-500)";
+        icon.textContent = "✕";
+        eyebrow.textContent = el.dataset.errorEyebrow ?? "";
+        msgEl.textContent = el.dataset.errorMsg ?? "";
+      }
+
+      el.style.transition = "";
+      el.classList.add("toast-show");
+
+      timer = setTimeout(() => {
+        el.classList.remove("toast-show");
+        el.classList.add("toast-hide");
+      }, 5000);
+    };
   };
+
+  setup();
+  document.addEventListener("astro:page-load", setup);
 </script>
