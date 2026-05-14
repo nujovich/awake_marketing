@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Button from "../../components/Button.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
+import Toast from "../../components/Toast.astro";
 import t from "../../i18n/en.json";
 
 const locale = "en";
@@ -93,9 +94,8 @@ const currentSlug = "contact";
             {/* FORM */}
             <div class="lg:col-span-6">
                 <form
+                    id="contactForm"
                     class="reveal rounded-3xl bg-space-indigo-950 p-8 sm:p-10 text-bone-100 shadow-xl shadow-space-indigo-900/15"
-                    action={`mailto:${t.brand.email}`}
-                    method="post"
                     enctype="text/plain"
                 >
                     <p
@@ -244,4 +244,41 @@ const currentSlug = "contact";
             </div>
         </div>
     </section>
+
+    <Toast
+        successMsg={t.contact.toastSuccess}
+        errorMsg={t.contact.toastError}
+        successEyebrow={t.contact.toastSuccessEyebrow}
+        errorEyebrow={t.contact.toastErrorEyebrow}
+    />
 </Layout>
+
+<script>
+    const form = document.getElementById("contactForm");
+
+    if (form) {
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form as HTMLFormElement);
+            const data = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    window.showToast("success");
+                    (form as HTMLFormElement).reset();
+                } else {
+                    window.showToast("error");
+                }
+            } catch {
+                window.showToast("error");
+            }
+        });
+    }
+</script>
