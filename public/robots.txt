@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://awakemarketing.es/sitemap.xml
+Sitemap: https://www.awakemarketing.es/sitemap.xml

@@ -30,7 +30,7 @@ const pageGroups: Array<{
 ];
 
 export const GET: APIRoute = ({ site }) => {
-  const siteUrl = site?.toString().replace(/\/$/, '') ?? 'https://awakemarketing.es';
+  const siteUrl = site?.toString().replace(/\/$/, '') ?? 'https://www.awakemarketing.es';
 
   const urlEntries = pageGroups.flatMap((group) =>
     Object.entries(group.urls).map(([, path]) => {
